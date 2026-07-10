@@ -2,31 +2,236 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V2</title>
+<title>AutoRadar.lu V3 – Moderne Fahrzeugsuche</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
+
+.card{cursor:pointer;transition:.2s transform,.2s border-color}.card:hover{transform:translateY(-3px);border-color:#49617f}.detailgrid{display:grid;grid-template-columns:1.35fr 1fr;gap:20px}.galleryMain{position:relative;background:#0a111c;border:1px solid var(--l);border-radius:18px;overflow:hidden}.galleryMain img{width:100%;height:430px;object-fit:contain;display:block;background:#080d15}.galleryNav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}.galleryNav button{pointer-events:auto;margin:10px;width:46px;height:46px;border-radius:50%;border:1px solid #ffffff55;background:#000a;color:#fff;font-size:24px;cursor:pointer}.thumbs{display:flex;gap:9px;overflow-x:auto;margin-top:10px;padding-bottom:4px}.thumbs img{width:92px;height:68px;object-fit:cover;border-radius:10px;border:2px solid transparent;cursor:pointer;opacity:.7}.thumbs img.active{border-color:var(--a);opacity:1}.detailPrice{font-size:34px;font-weight:950;margin:2px 0 8px}.specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.spec{background:#0c1420;border:1px solid var(--l);border-radius:12px;padding:11px}.spec b{display:block;font-size:12px;color:var(--m);margin-bottom:4px}.detailActions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.closeX{font-size:20px}.imageCount{position:absolute;right:14px;bottom:14px;background:#000b;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800}@media(max-width:820px){.detailgrid{grid-template-columns:1fr}.galleryMain img{height:300px}.detailActions{grid-template-columns:1fr}}
 </style>
+
+<style id="autoradar-modern-v3">
+:root{
+  --b:#050811;
+  --p:#0d1422;
+  --p2:#131e31;
+  --t:#f8fafc;
+  --m:#9eabc1;
+  --l:rgba(148,163,184,.20);
+  --a:#ff3546;
+  --a2:#ff6673;
+  --g:#16a56f;
+  --shadow:0 24px 70px rgba(0,0,0,.38);
+}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 12% 6%,rgba(61,90,145,.23),transparent 29%),
+    radial-gradient(circle at 86% 18%,rgba(255,53,70,.10),transparent 25%),
+    linear-gradient(180deg,#070b13 0%,#050811 100%);
+  background-attachment:fixed;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,black,transparent 72%);
+}
+.wrap{width:min(1240px,calc(100% - 36px))}
+header{
+  background:rgba(5,8,17,.74);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  box-shadow:0 8px 30px rgba(0,0,0,.14);
+}
+nav{height:78px}
+.brand{font-size:24px;letter-spacing:-.8px}
+.btn{
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:14px;
+  padding:12px 17px;
+  background:linear-gradient(180deg,rgba(34,49,74,.94),rgba(19,30,49,.94));
+  box-shadow:inset 0 1px rgba(255,255,255,.07),0 8px 18px rgba(0,0,0,.16);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,filter .18s ease;
+}
+.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.25);box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.primary{background:linear-gradient(135deg,var(--a2),#e61931 70%);border-color:rgba(255,120,130,.65);box-shadow:0 10px 28px rgba(255,53,70,.24)}
+.success{background:linear-gradient(135deg,#27bd85,#0b8558);border-color:rgba(80,230,168,.35)}
+.hero{padding:82px 0 30px;position:relative}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:460px;height:460px;border-radius:50%;
+  right:4%;top:4%;
+  background:radial-gradient(circle,rgba(65,93,145,.20),transparent 65%);
+  filter:blur(10px);pointer-events:none;
+}
+.heroEyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  color:#ff7b86;font-size:12px;font-weight:900;letter-spacing:1.7px;
+  margin-bottom:16px;
+}
+.heroEyebrow:before{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--a),transparent)}
+.hero h1{
+  max-width:850px;
+  font-size:clamp(48px,7.2vw,88px);
+  line-height:.92;
+  letter-spacing:-4px;
+  margin-bottom:20px;
+  text-shadow:0 18px 50px rgba(0,0,0,.35);
+}
+.hero h1 span{
+  background:linear-gradient(100deg,#fff 0%,#c7d4e9 55%,#7f94b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.heroText{max-width:700px;color:#b4bfd2;font-size:17px;line-height:1.65;margin:0}
+.heroBenefits{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.heroBenefits span{
+  padding:9px 12px;border-radius:999px;
+  color:#cdd7e7;background:rgba(15,25,41,.72);
+  border:1px solid rgba(148,163,184,.14);
+  font-size:12px;font-weight:750;
+}
+.searchbox,.panel,.side,.card,.stat{
+  background:linear-gradient(155deg,rgba(19,30,49,.94),rgba(10,17,29,.94));
+  border:1px solid rgba(148,163,184,.17);
+  box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.045);
+}
+.searchbox{
+  padding:20px;
+  margin-top:34px;
+  border-radius:24px;
+  position:relative;z-index:2;
+}
+.searchTitle{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:16px}
+.searchTitle strong{display:block;font-size:19px}
+.searchTitle small{display:block;color:var(--m);margin-top:4px}
+.searchBadge{
+  border:1px solid rgba(255,83,98,.30);
+  color:#ff8992;background:rgba(255,53,70,.08);
+  border-radius:999px;padding:8px 11px;font-size:11px;font-weight:850;
+}
+.search-main{grid-template-columns:2fr repeat(3,minmax(155px,1fr)) auto;gap:11px}
+.advanced{gap:11px}
+.control{
+  min-height:50px;
+  padding:13px 15px;
+  border-radius:14px;
+  border:1px solid rgba(148,163,184,.18);
+  background:linear-gradient(180deg,rgba(8,14,25,.96),rgba(12,21,35,.96));
+  color:#f8fafc;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+  transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
+}
+.control:hover{border-color:rgba(148,163,184,.36)}
+.control:focus{
+  outline:none;border-color:rgba(255,73,89,.72);
+  box-shadow:0 0 0 4px rgba(255,53,70,.11),inset 0 1px rgba(255,255,255,.05);
+}
+.control::placeholder{color:#738199}
+select.control{
+  appearance:none;-webkit-appearance:none;
+  padding-right:44px;
+  background-image:
+    linear-gradient(45deg,transparent 50%,#b9c5d8 50%),
+    linear-gradient(135deg,#b9c5d8 50%,transparent 50%),
+    linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));
+  background-position:
+    calc(100% - 20px) 21px,
+    calc(100% - 14px) 21px,
+    0 0;
+  background-size:6px 6px,6px 6px,100% 100%;
+  background-repeat:no-repeat;
+  cursor:pointer;
+}
+select.control option{background:#111a29;color:#fff}
+#public h2{font-size:26px;letter-spacing:-.7px}
+.grid{gap:22px;padding-top:26px}
+.card{
+  border-radius:22px;
+  overflow:hidden;
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease;
+}
+.card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(255,72,89,.38);
+  box-shadow:0 28px 65px rgba(0,0,0,.45),0 0 0 1px rgba(255,53,70,.08);
+}
+.photo{height:230px}
+.photo:after{
+  content:"";position:absolute;inset:auto 0 0;height:42%;
+  background:linear-gradient(transparent,rgba(5,8,17,.82));pointer-events:none;
+}
+.badge,.status,.imageCount{backdrop-filter:blur(9px);box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.badge{border:1px solid rgba(255,255,255,.12)}
+.status{background:linear-gradient(135deg,#22b879,#0a8154)}
+.cardbody{padding:19px}
+.price{font-size:27px;letter-spacing:-.8px}
+.title{font-size:20px;letter-spacing:-.45px}
+.meta{color:#9faec2}
+.modal{background:linear-gradient(145deg,#121d2e,#0b1320);box-shadow:0 35px 100px rgba(0,0,0,.65)}
+.spec{background:linear-gradient(180deg,#0b1422,#09101b)}
+.galleryMain{box-shadow:0 18px 40px rgba(0,0,0,.35)}
+footer{background:rgba(4,7,13,.55)}
+@media(max-width:950px){
+  .search-main{grid-template-columns:1fr 1fr}
+  .search-main .primary{grid-column:1/-1}
+}
+@media(max-width:650px){
+  .wrap{width:min(100% - 22px,1240px)}
+  .hero{padding-top:48px}
+  .hero h1{font-size:46px;letter-spacing:-2.5px}
+  .heroBenefits{gap:7px}
+  .heroBenefits span{font-size:11px}
+  .searchTitle{align-items:flex-start}
+  .searchBadge{display:none}
+  .search-main,.advanced{grid-template-columns:1fr}
+  .search-main .primary{grid-column:auto}
+  .control{min-height:52px;font-size:16px}
+  .searchbox{padding:14px;border-radius:20px}
+  .photo{height:245px}
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><div class="brand">Auto<span>Radar</span>.lu</div><div class="row"><button class="btn" onclick="showPublic()">Fahrzeuge</button><button class="btn primary" onclick="openLogin()">Händler-Login</button></div></nav></div></header>
-<main id="public"><section class="hero"><div class="wrap"><h1>Alle Fahrzeuge.<br>Eine Suche.</h1><p class="muted">Fahrzeuge verschiedener Händler zentral durchsuchen und vergleichen.</p><div class="searchbox"><div class="search-main"><input id="q" class="control" placeholder="Marke oder Modell"><select id="sf" class="control"><option value="">Alle Kraftstoffe</option><option>Benzin</option><option>Diesel</option><option>Hybrid</option><option>Elektro</option></select><select id="sg" class="control"><option value="">Alle Getriebe</option><option>Automatik</option><option>Schaltung</option></select><select id="sd" class="control"><option value="">Alle Händler</option></select><button class="btn primary" onclick="renderPublic()">Suchen</button></div><div class="advanced"><input id="maxPrice" type="number" class="control" placeholder="Preis maximal"><input id="maxKm" type="number" class="control" placeholder="Kilometer maximal"><input id="minYear" type="number" class="control" placeholder="Baujahr ab"><select id="ss" class="control"><option value="">Alle Status</option><option>Verfügbar</option><option>Reserviert</option></select></div></div><h2 style="margin-top:30px">Aktuelle Fahrzeuge</h2><div id="count" class="muted"></div><div id="cars" class="grid"><div class="loader">Fahrzeuge werden geladen …</div></div></div></section></main>
+<main id="public"><section class="hero"><div class="wrap">
+<div class="heroEyebrow">LUXEMBURGS ZENTRALE FAHRZEUGBÖRSE</div>
+<h1>Dein nächstes Auto.<br><span>Einfach gefunden.</span></h1>
+<p class="heroText">Durchsuche Angebote verschiedener Händler an einem Ort – modern, schnell und übersichtlich.</p>
+<div class="heroBenefits">
+  <span>✓ Geprüfte Händlerprofile</span>
+  <span>✓ Direkter WhatsApp-Kontakt</span>
+  <span>✓ Mehrere Fahrzeugbilder</span>
+</div>
+<div class="searchbox">
+<div class="searchTitle"><div><strong>Fahrzeug finden</strong><small>Filter auswählen und passende Angebote entdecken</small></div><span class="searchBadge">AutoRadar Search</span></div><div class="search-main"><input id="q" class="control" placeholder="Marke oder Modell" aria-label="Marke oder Modell"><select id="sf" class="control modernSelect" aria-label="Kraftstoff"><option value="">Alle Kraftstoffe</option><option>Benzin</option><option>Diesel</option><option>Hybrid</option><option>Elektro</option></select><select id="sg" class="control modernSelect" aria-label="Getriebe"><option value="">Alle Getriebe</option><option>Automatik</option><option>Schaltung</option></select><select id="sd" class="control modernSelect" aria-label="Händler"><option value="">Alle Händler</option></select><button class="btn primary" onclick="renderPublic()">Suchen</button></div><div class="advanced"><input id="maxPrice" type="number" class="control" aria-label="Maximaler Preis" placeholder="Preis maximal"><input id="maxKm" type="number" class="control" aria-label="Maximale Kilometer" placeholder="Kilometer maximal"><input id="minYear" type="number" class="control" aria-label="Baujahr ab" placeholder="Baujahr ab"><select id="ss" class="control modernSelect" aria-label="Status"><option value="">Alle Status</option><option>Verfügbar</option><option>Reserviert</option></select></div></div><h2 style="margin-top:30px">Aktuelle Fahrzeuge</h2><div id="count" class="muted"></div><div id="cars" class="grid"><div class="loader">Fahrzeuge werden geladen …</div></div></div></section></main>
 <main id="dealer" class="hidden"><div class="wrap dashboard"><div class="row space"><div><h1 style="margin:0">Händler-Dashboard</h1><p id="welcome" class="muted"></p></div><button class="btn" onclick="logout()">Abmelden</button></div><div class="notice">V2-Basis: Händler und Fahrzeuge werden zentral in Supabase gespeichert. Der Zugang ist vorerst noch ein Demo-Login; echte sichere Händlerkonten folgen als nächster Schritt.</div><div class="stats"><div class="stat"><span class="muted">Fahrzeuge</span><strong id="stAll">0</strong></div><div class="stat"><span class="muted">Verfügbar</span><strong id="stA">0</strong></div><div class="stat"><span class="muted">Reserviert</span><strong id="stR">0</strong></div><div class="stat"><span class="muted">Verkauft</span><strong id="stS">0</strong></div></div><div class="dashgrid"><aside class="side"><button class="btn primary" onclick="openForm()">+ Fahrzeug hinzufügen</button><button class="btn" onclick="renderDealer()">Meine Fahrzeuge</button><button class="btn" onclick="openProfileForm()">Händlerprofil bearbeiten</button><button class="btn" onclick="showPublic()">Öffentliche Seite</button></aside><section class="panel"><div class="row space"><h2>Meine Fahrzeuge</h2><span id="statsText" class="muted"></span></div><div class="tablewrap"><table><thead><tr><th>Fahrzeug</th><th>Preis</th><th>Status</th><th>Aktionen</th></tr></thead><tbody id="tbody"></tbody></table></div></section></div></div></main>
 <div id="loginModal" class="overlay hidden"><div class="modal small"><div class="row space"><h2>Händler anmelden</h2><button class="btn" onclick="closeLogin()">×</button></div><p class="muted">Demo: <b>ddd@autoradar.lu</b> / <b>demo123</b></p><label>E-Mail</label><input id="loginEmail" class="control" value="ddd@autoradar.lu"><label style="margin-top:12px">Passwort</label><input id="loginPass" type="password" class="control" value="demo123"><button class="btn primary" style="width:100%;margin-top:14px" onclick="doLogin()">Einloggen</button></div></div>
 <div id="vehicleModal" class="overlay hidden"><div class="modal"><div class="row space"><h2 id="formTitle">Fahrzeug hinzufügen</h2><button class="btn" onclick="closeForm()">×</button></div><input type="hidden" id="vid"><div class="formgrid"><div><label>Marke *</label><input id="brand" class="control"></div><div><label>Modell *</label><input id="model" class="control"></div><div><label>Preis € *</label><input id="price" type="number" class="control"></div><div><label>Baujahr *</label><input id="year" type="number" class="control"></div><div><label>Kilometer *</label><input id="mileage" type="number" class="control"></div><div><label>Leistung in PS</label><input id="horsepower" type="number" class="control"></div><div><label>Kraftstoff</label><select id="fuelType" class="control"><option>Benzin</option><option>Diesel</option><option>Hybrid</option><option>Elektro</option></select></div><div><label>Getriebe</label><select id="transmission" class="control"><option>Automatik</option><option>Schaltung</option></select></div><div><label>Standort</label><input id="vehicleLocation" class="control" value="Luxembourg"></div><div><label>Status</label><select id="vehicleStatus" class="control" onchange="soldToggle()"><option>Verfügbar</option><option>Reserviert</option><option>Verkauft</option></select></div><div id="soldPriceBox" class="hidden"><label>Verkaufspreis €</label><input id="soldPrice" type="number" class="control"></div><div id="soldAtBox" class="hidden"><label>Verkaufsdatum</label><input id="soldAt" type="datetime-local" class="control"></div><div class="full"><label>Fotos direkt auswählen (max. 5)</label><input id="imageFiles" type="file" accept="image/*" multiple class="control" onchange="previewFiles()"><div class="muted" style="font-size:12px;margin-top:6px">Die Bilder werden verkleinert und für diese MVP-Version direkt in der Datenbank gespeichert.</div><div id="preview" class="preview"></div></div><div class="full"><label>Beschreibung</label><textarea id="description" rows="5" class="control"></textarea></div></div><div class="row" style="justify-content:flex-end;margin-top:16px"><button class="btn" onclick="closeForm()">Abbrechen</button><button id="saveBtn" class="btn primary" onclick="saveVehicle()">Speichern</button></div></div></div>
 <div id="profileModal" class="overlay hidden"><div class="modal"><div class="row space"><h2>Händlerprofil</h2><button class="btn" onclick="closeProfileForm()">×</button></div><div class="formgrid"><div><label>Firmenname *</label><input id="companyName" class="control"></div><div><label>Logo-URL</label><input id="logoUrl" class="control"></div><div><label>Telefon</label><input id="phone" class="control"></div><div><label>WhatsApp</label><input id="whatsapp" class="control"></div><div><label>E-Mail</label><input id="dealerEmail" class="control"></div><div><label>Webseite</label><input id="website" class="control"></div><div class="full"><label>Adresse / Standort</label><input id="dealerLocation" class="control"></div><div class="full"><label>Beschreibung</label><textarea id="dealerDescription" rows="5" class="control"></textarea></div></div><div class="row" style="justify-content:flex-end;margin-top:16px"><button class="btn" onclick="closeProfileForm()">Abbrechen</button><button class="btn primary" onclick="saveProfile()">Speichern</button></div></div></div>
+
+<div id="detailModal" class="overlay hidden"><div class="modal"><div class="row space"><div><div class="muted" style="font-size:12px">FAHRZEUGANGEBOT</div><h2 id="detailTitle" style="margin:4px 0 0"></h2></div><button class="btn closeX" onclick="closeVehicleDetail()">×</button></div><div class="detailgrid" style="margin-top:16px"><div><div class="galleryMain"><img id="detailImage" alt="Fahrzeugbild"><div class="galleryNav"><button onclick="changeDetailImage(-1)" aria-label="Vorheriges Bild">‹</button><button onclick="changeDetailImage(1)" aria-label="Nächstes Bild">›</button></div><span id="imageCount" class="imageCount"></span></div><div id="detailThumbs" class="thumbs"></div></div><div><div id="detailStatus" class="muted"></div><div id="detailPrice" class="detailPrice"></div><div id="detailSpecs" class="specs"></div><h3>Beschreibung</h3><p id="detailDescription" class="muted" style="line-height:1.65;white-space:pre-wrap"></p><div id="detailDealerName" style="font-weight:900;margin:16px 0 10px"></div><div id="detailActions" class="detailActions"></div></div></div></div></div>
 <div id="dealerModal" class="overlay hidden"><div class="modal small"><div class="row space"><h2>Händlerprofil</h2><button class="btn" onclick="closeDealer()">×</button></div><div id="dealerContent"></div></div></div>
-<footer><div class="wrap">AutoRadar.lu V2 · zentrale Supabase-Datenbank</div></footer>
+<footer><div class="wrap">AutoRadar.lu V3 · zentrale Supabase-Datenbank</div></footer>
 <script>
 const SUPABASE_URL='https://lfgbuncgqkvtclvvqgvs.supabase.co';
 const SUPABASE_KEY='sb_publishable_LSk555Qic_V--sijIMazWw_Bvj3wLqH';
 const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-let vehicles=[],dealers=[],current=null,images=[];
+let vehicles=[],dealers=[],current=null,images=[],detailImages=[],detailIndex=0,detailVehicle=null;
 const e=id=>document.getElementById(id),money=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(Number(n||0)),num=n=>new Intl.NumberFormat('de-DE').format(Number(n||0)),safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 function parseImages(v){if(!v)return[];try{let x=JSON.parse(v);return Array.isArray(x)?x:[v]}catch{return[v]}}
 async function load(){let[d,v]=await Promise.all([db.from('dealers').select('*').order('id'),db.from('vehicles').select('*').order('created_at',{ascending:false})]);if(d.error||v.error){console.error(d.error,v.error);e('cars').innerHTML='<div class="loader">Supabase-Daten konnten nicht geladen werden.</div>';return}dealers=d.data||[];vehicles=v.data||[];if(current)current=dealers.find(x=>x.id===current.id)||current;e('sd').innerHTML='<option value="">Alle Händler</option>'+dealers.map(x=>`<option value="${x.id}">${safe(x.company_name||'Händler')}</option>`).join('');renderPublic();if(!e('dealer').classList.contains('hidden'))renderDealer()}
 function dealer(id){return dealers.find(x=>Number(x.id)===Number(id))}
-function renderPublic(){let q=e('q').value.toLowerCase(),fuel=e('sf').value,gear=e('sg').value,d=e('sd').value,s=e('ss').value,p=+e('maxPrice').value||0,k=+e('maxKm').value||0,y=+e('minYear').value||0;let a=vehicles.filter(v=>v.status!=='Verkauft'&&(!q||`${v.brand||''} ${v.model||''}`.toLowerCase().includes(q))&&(!fuel||v.fuel_type===fuel)&&(!gear||v.transmission===gear)&&(!d||Number(v.dealer_id)===Number(d))&&(!s||v.status===s)&&(!p||v.price<=p)&&(!k||v.mileage<=k)&&(!y||v.year>=y));e('count').textContent=a.length+' Fahrzeuge gefunden';e('cars').innerHTML=a.map(v=>{let dd=dealer(v.dealer_id),img=parseImages(v.image_url)[0]||'https://placehold.co/1200x700/182231/ffffff?text=AutoRadar.lu',sc=(v.status||'').toLowerCase().replace('ü','u');return`<article class="card"><div class="photo" style="background-image:url('${img}')"><span class="badge">${safe(dd?.company_name||'Autohaus')}</span><span class="status ${sc}">${safe(v.status||'Verfügbar')}</span></div><div class="cardbody"><div class="price">${money(v.price)}</div><div class="title">${safe(v.brand)} ${safe(v.model)}</div><div class="meta">${v.year||''} · ${num(v.mileage)} km · ${v.horsepower||'–'} PS<br>${safe(v.fuel_type||'–')} · ${safe(v.transmission||'–')} · ${safe(v.location||'Luxembourg')}</div><p class="meta">${safe(v.description||'')}</p><button class="btn primary" style="width:100%" onclick="openDealer(${Number(v.dealer_id)})">Händler ansehen</button></div></article>`}).join('')||'<div class="loader">Keine Fahrzeuge gefunden.</div>'}
+function renderPublic(){let q=e('q').value.toLowerCase(),fuel=e('sf').value,gear=e('sg').value,d=e('sd').value,s=e('ss').value,p=+e('maxPrice').value||0,k=+e('maxKm').value||0,y=+e('minYear').value||0;let a=vehicles.filter(v=>v.status!=='Verkauft'&&(!q||`${v.brand||''} ${v.model||''}`.toLowerCase().includes(q))&&(!fuel||v.fuel_type===fuel)&&(!gear||v.transmission===gear)&&(!d||Number(v.dealer_id)===Number(d))&&(!s||v.status===s)&&(!p||v.price<=p)&&(!k||v.mileage<=k)&&(!y||v.year>=y));e('count').textContent=a.length+' Fahrzeuge gefunden';e('cars').innerHTML=a.map(v=>{let dd=dealer(v.dealer_id),imgs=parseImages(v.image_url),img=imgs[0]||'https://placehold.co/1200x700/182231/ffffff?text=AutoRadar.lu',sc=(v.status||'').toLowerCase().replace('ü','u');return`<article class="card" onclick="openVehicleDetail(${Number(v.id)})"><div class="photo" style="background-image:url('${img}')"><span class="badge">${safe(dd?.company_name||'Autohaus')}</span><span class="status ${sc}">${safe(v.status||'Verfügbar')}</span>${imgs.length>1?`<span class="imageCount">📷 ${imgs.length}</span>`:''}</div><div class="cardbody"><div class="price">${money(v.price)}</div><div class="title">${safe(v.brand)} ${safe(v.model)}</div><div class="meta">${v.year||''} · ${num(v.mileage)} km · ${v.horsepower||'–'} PS<br>${safe(v.fuel_type||'–')} · ${safe(v.transmission||'–')} · ${safe(v.location||'Luxembourg')}</div><p class="meta">${safe(v.description||'')}</p><button class="btn primary" style="width:100%" onclick="event.stopPropagation();openDealer(${Number(v.dealer_id)})">Händler ansehen</button></div></article>`}).join('')||'<div class="loader">Keine Fahrzeuge gefunden.</div>'}
+function openVehicleDetail(id){let v=vehicles.find(x=>Number(x.id)===Number(id));if(!v)return;detailVehicle=v;detailImages=parseImages(v.image_url);if(!detailImages.length)detailImages=['https://placehold.co/1200x700/182231/ffffff?text=AutoRadar.lu'];detailIndex=0;let d=dealer(v.dealer_id),wa=(d?.whatsapp||'').replace(/\D/g,'');e('detailTitle').textContent=`${v.brand||''} ${v.model||''}`.trim();e('detailStatus').textContent=`${v.status||'Verfügbar'} · ${v.location||'Luxembourg'}`;e('detailPrice').textContent=money(v.price);e('detailSpecs').innerHTML=`<div class="spec"><b>Baujahr</b>${safe(v.year||'–')}</div><div class="spec"><b>Kilometer</b>${num(v.mileage)} km</div><div class="spec"><b>Leistung</b>${safe(v.horsepower||'–')} PS</div><div class="spec"><b>Kraftstoff</b>${safe(v.fuel_type||'–')}</div><div class="spec"><b>Getriebe</b>${safe(v.transmission||'–')}</div><div class="spec"><b>Standort</b>${safe(v.location||'Luxembourg')}</div>`;e('detailDescription').textContent=v.description||'Keine Beschreibung vorhanden.';e('detailDealerName').textContent=d?`Anbieter: ${d.company_name||'Autohaus'}`:'Anbieter';e('detailActions').innerHTML=`<button class="btn" onclick="openDealer(${Number(v.dealer_id)})">Händlerprofil</button>${d?.phone?`<a class="btn" href="tel:${safe(d.phone)}">📞 Anrufen</a>`:''}${wa?`<a class="btn success" target="_blank" href="https://wa.me/${wa}?text=${encodeURIComponent('Hallo, ich interessiere mich für '+(v.brand||'')+' '+(v.model||'')+' auf AutoRadar.lu.')}">WhatsApp</a>`:''}${v.original_link?`<a class="btn primary" target="_blank" href="${safe(v.original_link)}">Originalanzeige</a>`:''}`;renderDetailImage();e('detailModal').classList.remove('hidden');document.body.style.overflow='hidden'}
+function renderDetailImage(){e('detailImage').src=detailImages[detailIndex];e('imageCount').textContent=`${detailIndex+1} / ${detailImages.length}`;e('detailThumbs').innerHTML=detailImages.map((x,i)=>`<img src="${x}" class="${i===detailIndex?'active':''}" onclick="setDetailImage(${i})" alt="Bild ${i+1}">`).join('')}
+function changeDetailImage(step){detailIndex=(detailIndex+step+detailImages.length)%detailImages.length;renderDetailImage()}
+function setDetailImage(i){detailIndex=i;renderDetailImage()}
+function closeVehicleDetail(){e('detailModal').classList.add('hidden');document.body.style.overflow=''}
 function openLogin(){e('loginModal').classList.remove('hidden')}function closeLogin(){e('loginModal').classList.add('hidden')}function doLogin(){if(e('loginEmail').value!=='ddd@autoradar.lu'||e('loginPass').value!=='demo123')return alert('E-Mail oder Passwort falsch.');current=dealers.find(x=>Number(x.id)===1)||dealers[0];if(!current)return alert('Kein Händler in Supabase gefunden.');closeLogin();showDealer()}function showDealer(){e('public').classList.add('hidden');e('dealer').classList.remove('hidden');e('welcome').textContent='Angemeldet als '+current.company_name;renderDealer();scrollTo(0,0)}function showPublic(){e('dealer').classList.add('hidden');e('public').classList.remove('hidden');renderPublic();scrollTo(0,0)}function logout(){current=null;showPublic()}
 function renderDealer(){let a=vehicles.filter(v=>Number(v.dealer_id)===Number(current.id));e('statsText').textContent=a.length+' Fahrzeuge';e('stAll').textContent=a.length;e('stA').textContent=a.filter(x=>x.status==='Verfügbar').length;e('stR').textContent=a.filter(x=>x.status==='Reserviert').length;e('stS').textContent=a.filter(x=>x.status==='Verkauft').length;e('tbody').innerHTML=a.map(v=>`<tr><td><b>${safe(v.brand)} ${safe(v.model)}</b><br><span class="muted">${v.year} · ${num(v.mileage)} km</span></td><td>${money(v.price)}</td><td>${safe(v.status)}</td><td><div class="row"><button class="btn" onclick="editVehicle(${v.id})">Bearbeiten</button><button class="btn danger" onclick="deleteVehicle(${v.id})">Löschen</button></div></td></tr>`).join('')||'<tr><td colspan="4">Noch keine Fahrzeuge.</td></tr>'}
 function openForm(){e('formTitle').textContent='Fahrzeug hinzufügen';['vid','brand','model','price','year','mileage','horsepower','soldPrice','soldAt','description'].forEach(x=>e(x).value='');e('fuelType').value='Benzin';e('transmission').value='Automatik';e('vehicleLocation').value='Luxembourg';e('vehicleStatus').value='Verfügbar';e('imageFiles').value='';images=[];drawPreview();soldToggle();e('vehicleModal').classList.remove('hidden')}function closeForm(){e('vehicleModal').classList.add('hidden')}function soldToggle(){let x=e('vehicleStatus').value==='Verkauft';e('soldPriceBox').classList.toggle('hidden',!x);e('soldAtBox').classList.toggle('hidden',!x)}
