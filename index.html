@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.2-B – Detailseiten Layout</title>
+<title>AutoRadar.lu V5.2-C – Händlerprofil Pro</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -498,6 +498,34 @@ footer{background:rgba(4,7,13,.55)}
 }
 </style>
 
+
+<style id="autoradar-v5-2c">
+.dealerBannerUpload{padding:16px;border-radius:18px;border:1px dashed rgba(148,163,184,.28);background:rgba(8,14,25,.52)}
+.bannerPreview{height:190px;margin-top:12px;border-radius:18px;background:#111a28 center/cover no-repeat;display:grid;place-items:center;color:#7f8da0;font-weight:900;border:1px solid rgba(255,255,255,.1)}
+.dealerServicesBlock{padding:16px;border-radius:18px;background:#0b1523;border:1px solid rgba(148,163,184,.14)}
+.dealerServicesPicker{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:12px}
+.dealerServiceOption{display:flex;align-items:center;gap:8px;padding:10px;border-radius:12px;background:#101c2e;border:1px solid rgba(148,163,184,.12);font-size:13px;cursor:pointer}
+.dealerServiceOption input{width:17px;height:17px;accent-color:#ff3546}
+.dealerProHero{position:relative;min-height:260px;border-radius:22px;overflow:hidden;background:#0d1726 center/cover no-repeat;margin-bottom:18px}
+.dealerProHero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,8,15,.94),rgba(4,8,15,.55),rgba(4,8,15,.22))}
+.dealerProHeroContent{position:relative;z-index:2;display:grid;grid-template-columns:130px 1fr;gap:20px;align-items:end;padding:28px;min-height:260px}
+.dealerProLogo{width:130px;height:130px;border-radius:24px;background:#fff center/contain no-repeat;border:4px solid rgba(255,255,255,.18);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.dealerProMeta h1{font-size:clamp(32px,5vw,54px);margin:0 0 8px;letter-spacing:-1.5px}
+.dealerServiceChips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.dealerServiceChip{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);font-size:12px;font-weight:800}
+.topDealersSection{width:min(1220px,calc(100% - 28px));margin:10px auto 0}
+.topDealersHeader{display:flex;justify-content:space-between;align-items:end;margin-bottom:14px}
+.topDealersGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.topDealerCard{padding:16px;border-radius:18px;background:linear-gradient(180deg,#121f33,#0a1320);border:1px solid rgba(148,163,184,.15);cursor:pointer}
+.topDealerCard:hover{transform:translateY(-4px);border-color:rgba(255,74,85,.45)}
+.topDealerTop{display:flex;align-items:center;gap:12px}
+.topDealerLogo{width:58px;height:58px;border-radius:15px;background:#fff center/contain no-repeat}
+.topDealerCard strong{display:block}.topDealerCard small{color:#8fa0b8}
+.topDealerStats{display:flex;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:1px solid rgba(148,163,184,.12);font-size:12px;color:#aab5c6}
+@media(max-width:950px){.dealerServicesPicker,.topDealersGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.dealerServicesPicker,.topDealersGrid{grid-template-columns:1fr}.dealerProHeroContent{grid-template-columns:1fr;align-items:end}.dealerProLogo{width:100px;height:100px}}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><div class="brand">Auto<span>Radar</span>.lu</div><div class="row"><button class="btn" onclick="showPublic()">Fahrzeuge</button><button class="btn primary" onclick="openLogin()">Händler-Login</button></div></nav></div></header>
@@ -543,7 +571,7 @@ footer{background:rgba(4,7,13,.55)}
   <div><h2>Aktuelle Fahrzeuge</h2><div id="count" class="muted"></div></div>
   <div class="row"><button class="btn" onclick="showFavoritesOnly()">♡ Favoriten</button><button class="btn" onclick="openCompare()">Vergleich <span id="compareCount">0</span></button></div>
 </div>
-<div id="featuredSection"></div>
+<div id="featuredSection"></div><section id="topDealersSection" class="topDealersSection"></section>
 <div id="cars" class="grid"><div class="loader">Fahrzeuge werden geladen …</div></div></div></section></main>
 <main id="dealer" class="hidden"><div class="wrap dashboard"><div class="row space"><div><h1 style="margin:0">Händler-Dashboard</h1><p id="welcome" class="muted"></p></div><button class="btn" onclick="logout()">Abmelden</button></div><div class="notice">Marketplace Edition: kostenlose Inserate, echte Händlerkonten, Statistiken und kostenpflichtige Hervorhebungs-Anfragen. Zahlungen werden erst nach sicherer Stripe-Anbindung automatisch freigeschaltet.</div><div class="stats"><div class="stat"><span class="muted">Fahrzeuge</span><strong id="stAll">0</strong></div><div class="stat"><span class="muted">Verfügbar</span><strong id="stA">0</strong></div><div class="stat"><span class="muted">Aufrufe</span><strong id="stViews">0</strong></div><div class="stat"><span class="muted">Hervorgehoben</span><strong id="stFeatured">0</strong></div><div class="stat"><span class="muted">Favoriten</span><strong id="stFavorites">0</strong></div></div><div class="dashgrid"><aside class="side"><button class="btn primary" onclick="openForm()">+ Fahrzeug hinzufügen</button><button class="btn" onclick="renderDealer()">Meine Fahrzeuge</button><button class="btn" onclick="openProfileForm()">Händlerprofil bearbeiten</button><button class="btn premiumBtn" onclick="openPromotionCenter()">⭐ Anzeigen hervorheben</button><button class="btn" onclick="showPublic()">Öffentliche Seite</button></aside><section class="panel"><div class="row space"><h2>Meine Fahrzeuge</h2><span id="statsText" class="muted"></span></div><div class="tablewrap"><table><thead><tr><th>Fahrzeug</th><th>Preis</th><th>Aufrufe</th><th>Favoriten</th><th>Status</th><th>Aktionen</th></tr></thead><tbody id="tbody"></tbody></table></div></section></div></div></main>
 <div id="loginModal" class="overlay hidden"><div class="modal small authModal">
@@ -609,6 +637,18 @@ footer{background:rgba(4,7,13,.55)}
   <div class="muted">JPG, PNG oder WEBP auswählen. Das Bild wird automatisch verkleinert und direkt im Händlerprofil gespeichert.</div>
 </div>
 <input id="logoUrl" type="hidden">
+</div>
+<div class="full dealerBannerUpload">
+  <label>Titelbild des Autohauses</label>
+  <input id="bannerFile" type="file" accept="image/*" class="control" onchange="previewDealerBanner(this)">
+  <div id="bannerPreview" class="bannerPreview">Titelbild-Vorschau</div>
+  <input id="bannerUrl" type="hidden">
+</div>
+<div><label>Gründungsjahr</label><input id="foundedYear" type="number" min="1900" max="2100" class="control" placeholder="z. B. 2012"></div>
+<div><label>USt.-/TVA-Nummer</label><input id="vatNumber" class="control" placeholder="z. B. LU12345678"></div>
+<div class="full dealerServicesBlock">
+  <label>Leistungen des Autohauses</label>
+  <div id="dealerServicesPicker" class="dealerServicesPicker"></div>
 </div><div><label>Telefon</label><input id="phone" class="control"></div><div><label>WhatsApp</label><input id="whatsapp" class="control"></div><div><label>E-Mail</label><input id="dealerEmail" class="control"></div><div><label>Webseite</label><input id="website" class="control"></div><div class="full"><label>Genaue Adresse *</label><input id="dealerLocation" class="control" placeholder="z. B. 12, Rue de Luxembourg, L-4000 Esch-sur-Alzette"></div><div class="full"><label>Öffnungszeiten</label><textarea id="openingHours" rows="6" class="control" placeholder="Montag–Freitag: 09:00–18:00&#10;Samstag: 09:00–14:00&#10;Sonntag: Geschlossen"></textarea></div><div class="full"><label>Beschreibung des Autohauses</label><textarea id="dealerDescription" rows="5" class="control" placeholder="Erzähle Kunden kurz etwas über dein Autohaus, deine Leistungen und deinen Fahrzeugbestand."></textarea></div></div><div class="row" style="justify-content:flex-end;margin-top:16px"><button class="btn" onclick="closeProfileForm()">Abbrechen</button><button class="btn primary" onclick="saveProfile()">Speichern</button></div></div></div>
 
 <div id="detailModal" class="overlay hidden">
@@ -658,7 +698,7 @@ footer{background:rgba(4,7,13,.55)}
 <div class="paymentNotice">Die Anfrage wird gespeichert. Für echte automatische Zahlungen muss anschließend Stripe Checkout mit einem sicheren Server/Webhook verbunden werden. Bis dahin kannst du Anfragen manuell prüfen und freischalten.</div>
 </div></div>
 
-<footer><div class="wrap">AutoRadar.lu V5.2-B · Detailseiten Layout</div></footer>
+<footer><div class="wrap">AutoRadar.lu V5.2-C · Händlerprofil Pro</div></footer>
 <script>
 const SUPABASE_URL='https://lfgbuncgqkvtclvvqgvs.supabase.co';
 const SUPABASE_KEY='sb_publishable_LSk555Qic_V--sijIMazWw_Bvj3wLqH';
@@ -1497,6 +1537,130 @@ openVehicleDetail=async function(id){
   v.view_count=Number(v.view_count||0)+1;
   try{await db.from('vehicles').update({view_count:v.view_count}).eq('id',Number(id))}catch(_){}
 }
+</script>
+
+
+<script id="autoradar-v5-2c-js">
+const DEALER_SERVICES=["Finanzierung","Inzahlungnahme","Garantie","Werkstatt","Inspektion","Reifenservice","Fahrzeugankauf","Leasing","Versicherung","Zulassungsservice","Lieferung","Export"];
+let pendingDealerBanner='';
+
+function parseDealerServices(value){
+  if(!value)return [];
+  if(Array.isArray(value))return value;
+  try{let x=typeof value==='string'?JSON.parse(value):value;return Array.isArray(x)?x:[]}catch(_){return []}
+}
+function drawDealerServices(selected=[]){
+  let set=new Set(selected);
+  e('dealerServicesPicker').innerHTML=DEALER_SERVICES.map(x=>`<label class="dealerServiceOption"><input type="checkbox" class="dealerServiceCheck" value="${x}" ${set.has(x)?'checked':''}>${x}</label>`).join('');
+}
+function selectedDealerServices(){
+  return [...document.querySelectorAll('.dealerServiceCheck:checked')].map(x=>x.value);
+}
+async function previewDealerBanner(input){
+  let file=input.files&&input.files[0];if(!file)return;
+  if(!file.type.startsWith('image/'))return alert('Bitte eine Bilddatei auswählen.');
+  try{
+    pendingDealerBanner=await resize(file);
+    e('bannerUrl').value=pendingDealerBanner;
+    e('bannerPreview').style.backgroundImage=`url("${pendingDealerBanner}")`;
+    e('bannerPreview').textContent='';
+  }catch(_){alert('Titelbild konnte nicht verarbeitet werden.')}
+}
+
+const openProfileFormV52B=openProfileForm;
+openProfileForm=function(){
+  openProfileFormV52B();
+  pendingDealerBanner=current.banner_url||'';
+  e('bannerUrl').value=pendingDealerBanner;
+  e('bannerFile').value='';
+  e('foundedYear').value=current.founded_year||'';
+  e('vatNumber').value=current.vat_number||'';
+  drawDealerServices(parseDealerServices(current.services));
+  if(pendingDealerBanner){
+    e('bannerPreview').style.backgroundImage=`url("${pendingDealerBanner}")`;
+    e('bannerPreview').textContent='';
+  }else{
+    e('bannerPreview').style.backgroundImage='none';
+    e('bannerPreview').textContent='Titelbild-Vorschau';
+  }
+}
+
+saveProfile=async function(){
+  if(!e('companyName').value.trim())return alert('Firmenname fehlt.');
+  if(!e('dealerLocation').value.trim())return alert('Bitte eine genaue Adresse eintragen.');
+  let p={
+    company_name:e('companyName').value.trim(),
+    logo_url:e('logoUrl').value.trim(),
+    banner_url:e('bannerUrl').value.trim(),
+    phone:e('phone').value.trim(),
+    whatsapp:e('whatsapp').value.trim(),
+    email:e('dealerEmail').value.trim(),
+    website:e('website').value.trim(),
+    location:e('dealerLocation').value.trim(),
+    opening_hours:e('openingHours').value.trim(),
+    description:e('dealerDescription').value.trim(),
+    founded_year:e('foundedYear').value?+e('foundedYear').value:null,
+    vat_number:e('vatNumber').value.trim()||null,
+    services:selectedDealerServices()
+  };
+  let {error}=await db.from('dealers').update(p).eq('id',current.id);
+  if(error)return alert('Fehler: '+error.message);
+  closeProfileForm();await load();e('welcome').textContent='Angemeldet als '+current.company_name;
+}
+
+function renderTopDealers(){
+  let ranked=dealers.map(d=>{
+    let rd=dealerRatingData(d.id);
+    let count=vehicles.filter(v=>Number(v.dealer_id)===Number(d.id)&&v.status!=='Verkauft').length;
+    return {d,avg:rd.avg,reviews:rd.list.length,count};
+  }).filter(x=>x.count>0).sort((a,b)=>(b.avg*10+b.reviews+b.count)-(a.avg*10+a.reviews+a.count)).slice(0,4);
+  e('topDealersSection').innerHTML=ranked.length?`
+    <div class="topDealersHeader"><div><div class="dealerEyebrow">VERTRAUENSWÜRDIGE PARTNER</div><h2 style="margin:4px 0 0">Top-Händler</h2></div></div>
+    <div class="topDealersGrid">${ranked.map(x=>`<article class="topDealerCard" onclick="openDealer(${Number(x.d.id)})">
+      <div class="topDealerTop"><div class="topDealerLogo" style="background-image:url('${safe(x.d.logo_url||'https://placehold.co/300x300/ffffff/111827?text=Autohaus')}')"></div><div><strong>${safe(x.d.company_name||'Autohaus')}</strong><small>${safe(x.d.location||'Luxembourg')}</small></div></div>
+      <div class="ratingSummary"><span class="ratingStars">${x.reviews?starsText(x.avg):'☆☆☆☆☆'}</span><span>${x.reviews?x.avg.toFixed(1):'Neu'}</span></div>
+      <div class="topDealerStats"><span>${x.count} Fahrzeuge</span><span>${x.reviews} Bewertungen</span></div>
+    </article>`).join('')}</div>`:'';
+}
+
+openDealer=function(id){
+  let d=dealer(id);if(!d)return alert('Händler nicht gefunden.');
+  let wa=(d.whatsapp||'').replace(/\D/g,''),dealerCars=vehicles.filter(v=>Number(v.dealer_id)===Number(d.id)&&v.status!=='Verkauft'),maps=d.location?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.location):'',hours=safe(d.opening_hours||'Noch keine Öffnungszeiten eingetragen.').replace(/\n/g,'<br>'),rd=dealerRatingData(d.id),services=parseDealerServices(d.services);
+  let reviewHtml=rd.list.slice(0,8).map(r=>`<article class="reviewCard"><div class="reviewCardHeader"><strong>${safe(r.reviewer_name||'Kunde')}</strong><span class="ratingStars">${starsText(r.rating)}</span></div><div class="reviewDate">${new Date(r.created_at).toLocaleDateString('de-DE')}</div><p>${safe(r.comment||'')}</p></article>`).join('');
+  e('dealerContent').innerHTML=`
+    <section class="dealerProHero" style="background-image:url('${safe(d.banner_url||'https://images.unsplash.com/photo-1562141961-b5d7f4a4e237?auto=format&fit=crop&w=1600&q=80')}')">
+      <div class="dealerProHeroContent">
+        <div class="dealerProLogo" style="background-image:url('${safe(d.logo_url||'https://placehold.co/500x500/ffffff/111827?text=Autohaus')}')"></div>
+        <div class="dealerProMeta">
+          <div class="dealerEyebrow">${d.verified?'VERIFIZIERTER HÄNDLER':'HÄNDLERPROFIL'}</div>
+          <h1>${safe(d.company_name||'Autohaus')}</h1>
+          <div class="ratingSummary"><span class="ratingStars">${rd.list.length?starsText(rd.avg):'☆☆☆☆☆'}</span><span class="ratingBadge">${rd.list.length?rd.avg.toFixed(1):'Noch keine Bewertung'} ${rd.list.length?`· ${rd.list.length} Bewertungen`:''}</span></div>
+          <div class="dealerServiceChips">${services.slice(0,8).map(x=>`<span class="dealerServiceChip">${safe(x)}</span>`).join('')}</div>
+        </div>
+      </div>
+    </section>
+    <section class="dealerInfoGrid">
+      <div class="dealerInfoCard"><span>Adresse</span><strong>${safe(d.location||'Noch keine Adresse eingetragen')}</strong></div>
+      <div class="dealerInfoCard"><span>Telefon</span><strong>${safe(d.phone||'Nicht angegeben')}</strong></div>
+      <div class="dealerInfoCard"><span>E-Mail</span><strong>${safe(d.email||'Nicht angegeben')}</strong></div>
+      <div class="dealerInfoCard"><span>Seit</span><strong>${safe(d.founded_year||'Nicht angegeben')}</strong></div>
+      <div class="dealerInfoCard dealerHours"><span>Öffnungszeiten</span><strong>${hours}</strong></div>
+    </section>
+    <section class="proSection">
+      <div class="row space"><div><div class="dealerEyebrow">ÜBER DAS AUTOHAUS</div><h2>${safe(d.company_name||'Autohaus')}</h2></div><div class="dealerQuickActions">${d.phone?`<a class="btn" href="tel:${safe(d.phone)}">📞 Anrufen</a>`:''}${wa?`<a class="btn success" target="_blank" href="https://wa.me/${wa}">WhatsApp</a>`:''}${d.website?`<a class="btn" target="_blank" href="${safe(d.website)}">Webseite</a>`:''}${maps?`<a class="btn primary" target="_blank" href="${maps}">Route</a>`:''}</div></div>
+      <p class="descriptionText">${safe(d.description||'Dieser Händler hat noch keine Beschreibung eingetragen.')}</p>
+    </section>
+    <section class="dealerVehicles"><div class="dealerEyebrow">FAHRZEUGBESTAND</div><h2>${dealerCars.length} verfügbare Fahrzeuge</h2><div class="dealerMiniGrid">${dealerCars.slice(0,12).map(v=>{let img=parseImages(v.image_url)[0]||'';return `<article class="dealerMiniCar" onclick="closeDealer();openVehicleDetail(${Number(v.id)})"><img src="${img}"><div><strong>${safe(v.brand)} ${safe(v.model)}</strong><span>${money(v.price)} · ${num(v.mileage)} km</span></div></article>`}).join('')||'<p class="muted">Aktuell sind keine Fahrzeuge verfügbar.</p>'}</div></section>
+    <section class="reviewsSection"><div class="row space"><div><div class="dealerEyebrow">KUNDENERFAHRUNGEN</div><h2>Bewertungen</h2></div><button class="btn primary" onclick="openReviewModal(${Number(d.id)})">Bewertung schreiben</button></div><div class="reviewGrid">${reviewHtml||'<div class="reviewCard"><p>Noch keine Bewertungen vorhanden.</p></div>'}</div></section>`;
+  e('dealerModal').classList.remove('hidden');
+}
+
+const loadV52C=load;
+load=async function(){
+  await loadV52C();
+  renderTopDealers();
+}
+load();
 </script>
 
 </body></html>
