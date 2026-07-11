@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.2-D – Mehrsprachig</title>
+<title>AutoRadar.lu V5.3 – Vollständig mehrsprachig</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -536,6 +536,10 @@ footer{background:rgba(4,7,13,.55)}
 }
 </style>
 
+
+<style id="autoradar-v5-3">
+[data-i18n]{transition:opacity .12s ease}.languageSwitcher button{min-width:44px}
+</style>
 </head>
 <body>
 <header><div class="wrap"><nav><div class="brand">Auto<span>Radar</span>.lu</div><div class="row">
@@ -549,16 +553,16 @@ footer{background:rgba(4,7,13,.55)}
   <button class="btn primary" onclick="openLogin()" data-i18n="dealerLogin">Händler-Login</button>
 </div></nav></div></header>
 <main id="public"><section class="hero"><div class="wrap">
-<div class="heroEyebrow">LUXEMBURGS ZENTRALE FAHRZEUGBÖRSE</div>
-<h1>Dein nächstes Auto.<br><span>Einfach gefunden.</span></h1>
-<p class="heroText">Durchsuche Angebote verschiedener Händler an einem Ort – modern, schnell und übersichtlich.</p>
+<div class="heroEyebrow" data-i18n="heroEyebrow">LUXEMBURGS ZENTRALE FAHRZEUGBÖRSE</div>
+<h1><span data-i18n="heroLine1">Dein nächstes Auto.</span><br><span data-i18n="heroLine2">Einfach gefunden.</span></h1>
+<p class="heroText" data-i18n="heroText">Durchsuche Angebote verschiedener Händler an einem Ort – modern, schnell und übersichtlich.</p>
 <div class="heroBenefits">
-  <span>✓ Geprüfte Händlerprofile</span>
-  <span>✓ Direkter WhatsApp-Kontakt</span>
-  <span>✓ Mehrere Fahrzeugbilder</span>
+  <span data-i18n="benefit1">✓ Geprüfte Händlerprofile</span>
+  <span data-i18n="benefit2">✓ Direkter WhatsApp-Kontakt</span>
+  <span data-i18n="benefit3">✓ Mehrere Fahrzeugbilder</span>
 </div>
 <div class="searchbox">
-<div class="searchTitle"><div><strong>Fahrzeug finden</strong><small>Mehr Filter, Sortierung, Favoriten und Vergleich</small></div><span class="searchBadge">AutoRadar Smart Search</span></div>
+<div class="searchTitle"><div><strong data-i18n="searchTitle">Fahrzeug finden</strong><small data-i18n="searchSubtitle">Mehr Filter, Sortierung, Favoriten und Vergleich</small></div><span class="searchBadge" data-i18n="smartSearch">AutoRadar Smart Search</span></div>
 <div class="search-main">
   <input id="q" class="control" placeholder="Marke oder Modell" aria-label="Marke oder Modell">
   <select id="sf" class="control modernSelect" aria-label="Kraftstoff"><option value="">Alle Kraftstoffe</option><option>Benzin</option><option>Diesel</option><option>Hybrid</option><option>Elektro</option></select>
@@ -587,7 +591,7 @@ footer{background:rgba(4,7,13,.55)}
   <button class="btn" onclick="resetFilters()">Filter zurücksetzen</button>
 </div></div>
 <div class="marketToolbar">
-  <div><h2>Aktuelle Fahrzeuge</h2><div id="count" class="muted"></div></div>
+  <div><h2 data-i18n="currentVehicles">Aktuelle Fahrzeuge</h2><div id="count" class="muted"></div></div>
   <div class="row"><button class="btn" onclick="showFavoritesOnly()">♡ Favoriten</button><button class="btn" onclick="openCompare()">Vergleich <span id="compareCount">0</span></button></div>
 </div>
 <div id="featuredSection"></div><section id="topDealersSection" class="topDealersSection"></section>
@@ -717,7 +721,7 @@ footer{background:rgba(4,7,13,.55)}
 <div class="paymentNotice">Die Anfrage wird gespeichert. Für echte automatische Zahlungen muss anschließend Stripe Checkout mit einem sicheren Server/Webhook verbunden werden. Bis dahin kannst du Anfragen manuell prüfen und freischalten.</div>
 </div></div>
 
-<footer><div class="wrap">AutoRadar.lu V5.2-D · Mehrsprachig</div></footer>
+<footer><div class="wrap">AutoRadar.lu V5.3 · Vollständig mehrsprachig</div></footer>
 <script>
 const SUPABASE_URL='https://lfgbuncgqkvtclvvqgvs.supabase.co';
 const SUPABASE_KEY='sb_publishable_LSk555Qic_V--sijIMazWw_Bvj3wLqH';
@@ -1861,4 +1865,4 @@ document.addEventListener('DOMContentLoaded',()=>setLanguage(currentLang));
 setLanguage(currentLang);
 </script>
 
-</body></html>
+\n<script id="autoradar-v5-3-js">\nObject.assign(I18N.de,{heroEyebrow:"LUXEMBURGS ZENTRALE FAHRZEUGBÖRSE",heroLine1:"Dein nächstes Auto.",heroLine2:"Einfach gefunden.",heroText:"Durchsuche Angebote verschiedener Händler an einem Ort – modern, schnell und übersichtlich.",benefit1:"✓ Geprüfte Händlerprofile",benefit2:"✓ Direkter WhatsApp-Kontakt",benefit3:"✓ Mehrere Fahrzeugbilder",smartSearch:"AutoRadar Smart Search",trustedPartners:"VERTRAUENSWÜRDIGE PARTNER",topDealers:"Top-Händler",dealerDashboard:"Händler-Dashboard",logout:"Abmelden",myVehicles:"Meine Fahrzeuge",addVehicle:"+ Fahrzeug hinzufügen",editDealerProfile:"Händlerprofil bearbeiten",publicPage:"Öffentliche Seite",save:"Speichern",cancel:"Abbrechen",login:"Einloggen",register:"Registrieren",freeRegister:"Kostenlos registrieren"});\nObject.assign(I18N.fr,{heroEyebrow:"LA PLACE DE MARCHÉ AUTOMOBILE DU LUXEMBOURG",heroLine1:"Votre prochaine voiture.",heroLine2:"Trouvée simplement.",heroText:"Parcourez les offres de plusieurs vendeurs au même endroit – rapidement, clairement et facilement.",benefit1:"✓ Profils vendeurs vérifiés",benefit2:"✓ Contact WhatsApp direct",benefit3:"✓ Plusieurs photos par véhicule",smartSearch:"Recherche intelligente AutoRadar",trustedPartners:"PARTENAIRES DE CONFIANCE",topDealers:"Meilleurs vendeurs",dealerDashboard:"Tableau de bord vendeur",logout:"Déconnexion",myVehicles:"Mes véhicules",addVehicle:"+ Ajouter un véhicule",editDealerProfile:"Modifier le profil vendeur",publicPage:"Page publique",save:"Enregistrer",cancel:"Annuler",login:"Se connecter",register:"S'inscrire",freeRegister:"S'inscrire gratuitement"});\nObject.assign(I18N.en,{heroEyebrow:"LUXEMBOURG'S CENTRAL CAR MARKETPLACE",heroLine1:"Your next car.",heroLine2:"Found easily.",heroText:"Browse vehicles from multiple dealers in one place – modern, fast and easy to understand.",benefit1:"✓ Verified dealer profiles",benefit2:"✓ Direct WhatsApp contact",benefit3:"✓ Multiple vehicle photos",smartSearch:"AutoRadar Smart Search",trustedPartners:"TRUSTED PARTNERS",topDealers:"Top dealers",dealerDashboard:"Dealer dashboard",logout:"Log out",myVehicles:"My vehicles",addVehicle:"+ Add vehicle",editDealerProfile:"Edit dealer profile",publicPage:"Public page",save:"Save",cancel:"Cancel",login:"Log in",register:"Register",freeRegister:"Register for free"});\nObject.assign(I18N.lu,{heroEyebrow:"LËTZEBUERGS ZENTRAL AUTOSPLATTFORM",heroLine1:"Däin nächsten Auto.",heroLine2:"Einfach fonnt.",heroText:"Kuck Offere vu verschiddenen Händler op enger Plaz – modern, séier an iwwersiichtlech.",benefit1:"✓ Gepréiften Händlerprofiler",benefit2:"✓ Direkte WhatsApp-Kontakt",benefit3:"✓ Méi Biller pro Gefier",smartSearch:"AutoRadar Smart Search",trustedPartners:"VERTRAUENSWIERDEG PARTNER",topDealers:"Top-Händler",dealerDashboard:"Händler-Dashboard",logout:"Ofmellen",myVehicles:"Meng Gefierer",addVehicle:"+ Gefier dobäisetzen",editDealerProfile:"Händlerprofil änneren",publicPage:"Ëffentlech Säit",save:"Späicheren",cancel:"Ofbriechen",login:"Aloggen",register:"Registréieren",freeRegister:"Gratis registréieren"});\nconst V53_STATIC={\n  'Fahrzeuge':'vehicles','Händler-Login':'dealerLogin','Aktuelle Fahrzeuge':'currentVehicles','Favoriten':'favorites','Vergleich':'compare',\n  'Händler-Dashboard':'dealerDashboard','Abmelden':'logout','Meine Fahrzeuge':'myVehicles','+ Fahrzeug hinzufügen':'addVehicle',\n  'Händlerprofil bearbeiten':'editDealerProfile','Öffentliche Seite':'publicPage','Speichern':'save','Abbrechen':'cancel',\n  'Einloggen':'login','Registrieren':'register','Kostenlos registrieren':'freeRegister'\n};\nfunction translateV53(){\n  document.querySelectorAll('[data-i18n]').forEach(el=>{let k=el.dataset.i18n;if(I18N[currentLang]?.[k])el.textContent=I18N[currentLang][k]});\n  document.querySelectorAll('button,h1,h2,h3,h4,th,label,span,strong,small,p').forEach(el=>{if(el.children.length&&!el.dataset.i18n)return;let raw=el.textContent.trim(),k=V53_STATIC[raw];if(k&&I18N[currentLang]?.[k])el.textContent=I18N[currentLang][k]});\n}\nconst v53SetLanguage=setLanguage;setLanguage=function(lang){v53SetLanguage(lang);setTimeout(translateV53,0)};\nconst v53RenderPublic=renderPublic;renderPublic=function(){v53RenderPublic();setTimeout(translateV53,0)};\nconst v53RenderDealer=renderDealer;renderDealer=function(){v53RenderDealer();setTimeout(translateV53,0)};\nconst v53OpenProfile=openProfileForm;openProfileForm=function(){v53OpenProfile();setTimeout(translateV53,0)};\nconst v53OpenForm=openForm;openForm=function(){v53OpenForm();setTimeout(translateV53,0)};\nconst v53EditVehicle=editVehicle;editVehicle=function(id){v53EditVehicle(id);setTimeout(translateV53,0)};\nsetTimeout(()=>setLanguage(currentLang),120);\n</script>\n</body></html>
