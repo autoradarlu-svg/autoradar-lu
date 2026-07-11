@@ -1881,4 +1881,237 @@ document.addEventListener('DOMContentLoaded',()=>setLanguage(currentLang));
 setLanguage(currentLang);
 </script>
 
-\n<script id="autoradar-v5-3-js">\nObject.assign(I18N.de,{heroEyebrow:"LUXEMBURGS ZENTRALE FAHRZEUGBÖRSE",heroLine1:"Dein nächstes Auto.",heroLine2:"Einfach gefunden.",heroText:"Durchsuche Angebote verschiedener Händler an einem Ort – modern, schnell und übersichtlich.",benefit1:"✓ Geprüfte Händlerprofile",benefit2:"✓ Direkter WhatsApp-Kontakt",benefit3:"✓ Mehrere Fahrzeugbilder",smartSearch:"AutoRadar Smart Search",trustedPartners:"VERTRAUENSWÜRDIGE PARTNER",topDealers:"Top-Händler",dealerDashboard:"Händler-Dashboard",logout:"Abmelden",myVehicles:"Meine Fahrzeuge",addVehicle:"+ Fahrzeug hinzufügen",editDealerProfile:"Händlerprofil bearbeiten",publicPage:"Öffentliche Seite",save:"Speichern",cancel:"Abbrechen",login:"Einloggen",register:"Registrieren",freeRegister:"Kostenlos registrieren"});\nObject.assign(I18N.fr,{heroEyebrow:"LA PLACE DE MARCHÉ AUTOMOBILE DU LUXEMBOURG",heroLine1:"Votre prochaine voiture.",heroLine2:"Trouvée simplement.",heroText:"Parcourez les offres de plusieurs vendeurs au même endroit – rapidement, clairement et facilement.",benefit1:"✓ Profils vendeurs vérifiés",benefit2:"✓ Contact WhatsApp direct",benefit3:"✓ Plusieurs photos par véhicule",smartSearch:"Recherche intelligente AutoRadar",trustedPartners:"PARTENAIRES DE CONFIANCE",topDealers:"Meilleurs vendeurs",dealerDashboard:"Tableau de bord vendeur",logout:"Déconnexion",myVehicles:"Mes véhicules",addVehicle:"+ Ajouter un véhicule",editDealerProfile:"Modifier le profil vendeur",publicPage:"Page publique",save:"Enregistrer",cancel:"Annuler",login:"Se connecter",register:"S'inscrire",freeRegister:"S'inscrire gratuitement"});\nObject.assign(I18N.en,{heroEyebrow:"LUXEMBOURG'S CENTRAL CAR MARKETPLACE",heroLine1:"Your next car.",heroLine2:"Found easily.",heroText:"Browse vehicles from multiple dealers in one place – modern, fast and easy to understand.",benefit1:"✓ Verified dealer profiles",benefit2:"✓ Direct WhatsApp contact",benefit3:"✓ Multiple vehicle photos",smartSearch:"AutoRadar Smart Search",trustedPartners:"TRUSTED PARTNERS",topDealers:"Top dealers",dealerDashboard:"Dealer dashboard",logout:"Log out",myVehicles:"My vehicles",addVehicle:"+ Add vehicle",editDealerProfile:"Edit dealer profile",publicPage:"Public page",save:"Save",cancel:"Cancel",login:"Log in",register:"Register",freeRegister:"Register for free"});\nObject.assign(I18N.lu,{heroEyebrow:"LËTZEBUERGS ZENTRAL AUTOSPLATTFORM",heroLine1:"Däin nächsten Auto.",heroLine2:"Einfach fonnt.",heroText:"Kuck Offere vu verschiddenen Händler op enger Plaz – modern, séier an iwwersiichtlech.",benefit1:"✓ Gepréiften Händlerprofiler",benefit2:"✓ Direkte WhatsApp-Kontakt",benefit3:"✓ Méi Biller pro Gefier",smartSearch:"AutoRadar Smart Search",trustedPartners:"VERTRAUENSWIERDEG PARTNER",topDealers:"Top-Händler",dealerDashboard:"Händler-Dashboard",logout:"Ofmellen",myVehicles:"Meng Gefierer",addVehicle:"+ Gefier dobäisetzen",editDealerProfile:"Händlerprofil änneren",publicPage:"Ëffentlech Säit",save:"Späicheren",cancel:"Ofbriechen",login:"Aloggen",register:"Registréieren",freeRegister:"Gratis registréieren"});\nconst V53_STATIC={\n  'Fahrzeuge':'vehicles','Händler-Login':'dealerLogin','Aktuelle Fahrzeuge':'currentVehicles','Favoriten':'favorites','Vergleich':'compare',\n  'Händler-Dashboard':'dealerDashboard','Abmelden':'logout','Meine Fahrzeuge':'myVehicles','+ Fahrzeug hinzufügen':'addVehicle',\n  'Händlerprofil bearbeiten':'editDealerProfile','Öffentliche Seite':'publicPage','Speichern':'save','Abbrechen':'cancel',\n  'Einloggen':'login','Registrieren':'register','Kostenlos registrieren':'freeRegister'\n};\nfunction translateV53(){\n  document.querySelectorAll('[data-i18n]').forEach(el=>{let k=el.dataset.i18n;if(I18N[currentLang]?.[k])el.textContent=I18N[currentLang][k]});\n  document.querySelectorAll('button,h1,h2,h3,h4,th,label,span,strong,small,p').forEach(el=>{if(el.children.length&&!el.dataset.i18n)return;let raw=el.textContent.trim(),k=V53_STATIC[raw];if(k&&I18N[currentLang]?.[k])el.textContent=I18N[currentLang][k]});\n}\nconst v53SetLanguage=setLanguage;setLanguage=function(lang){v53SetLanguage(lang);setTimeout(translateV53,0)};\nconst v53RenderPublic=renderPublic;renderPublic=function(){v53RenderPublic();setTimeout(translateV53,0)};\nconst v53RenderDealer=renderDealer;renderDealer=function(){v53RenderDealer();setTimeout(translateV53,0)};\nconst v53OpenProfile=openProfileForm;openProfileForm=function(){v53OpenProfile();setTimeout(translateV53,0)};\nconst v53OpenForm=openForm;openForm=function(){v53OpenForm();setTimeout(translateV53,0)};\nconst v53EditVehicle=editVehicle;editVehicle=function(id){v53EditVehicle(id);setTimeout(translateV53,0)};\nsetTimeout(()=>setLanguage(currentLang),120);\n</script>\n</body></html>
+\n<script id="autoradar-v5-3-js">\nObject.assign(I18N.de,{heroEyebrow:"LUXEMBURGS ZENTRALE FAHRZEUGBÖRSE",heroLine1:"Dein nächstes Auto.",heroLine2:"Einfach gefunden.",heroText:"Durchsuche Angebote verschiedener Händler an einem Ort – modern, schnell und übersichtlich.",benefit1:"✓ Geprüfte Händlerprofile",benefit2:"✓ Direkter WhatsApp-Kontakt",benefit3:"✓ Mehrere Fahrzeugbilder",smartSearch:"AutoRadar Smart Search",trustedPartners:"VERTRAUENSWÜRDIGE PARTNER",topDealers:"Top-Händler",dealerDashboard:"Händler-Dashboard",logout:"Abmelden",myVehicles:"Meine Fahrzeuge",addVehicle:"+ Fahrzeug hinzufügen",editDealerProfile:"Händlerprofil bearbeiten",publicPage:"Öffentliche Seite",save:"Speichern",cancel:"Abbrechen",login:"Einloggen",register:"Registrieren",freeRegister:"Kostenlos registrieren"});\nObject.assign(I18N.fr,{heroEyebrow:"LA PLACE DE MARCHÉ AUTOMOBILE DU LUXEMBOURG",heroLine1:"Votre prochaine voiture.",heroLine2:"Trouvée simplement.",heroText:"Parcourez les offres de plusieurs vendeurs au même endroit – rapidement, clairement et facilement.",benefit1:"✓ Profils vendeurs vérifiés",benefit2:"✓ Contact WhatsApp direct",benefit3:"✓ Plusieurs photos par véhicule",smartSearch:"Recherche intelligente AutoRadar",trustedPartners:"PARTENAIRES DE CONFIANCE",topDealers:"Meilleurs vendeurs",dealerDashboard:"Tableau de bord vendeur",logout:"Déconnexion",myVehicles:"Mes véhicules",addVehicle:"+ Ajouter un véhicule",editDealerProfile:"Modifier le profil vendeur",publicPage:"Page publique",save:"Enregistrer",cancel:"Annuler",login:"Se connecter",register:"S'inscrire",freeRegister:"S'inscrire gratuitement"});\nObject.assign(I18N.en,{heroEyebrow:"LUXEMBOURG'S CENTRAL CAR MARKETPLACE",heroLine1:"Your next car.",heroLine2:"Found easily.",heroText:"Browse vehicles from multiple dealers in one place – modern, fast and easy to understand.",benefit1:"✓ Verified dealer profiles",benefit2:"✓ Direct WhatsApp contact",benefit3:"✓ Multiple vehicle photos",smartSearch:"AutoRadar Smart Search",trustedPartners:"TRUSTED PARTNERS",topDealers:"Top dealers",dealerDashboard:"Dealer dashboard",logout:"Log out",myVehicles:"My vehicles",addVehicle:"+ Add vehicle",editDealerProfile:"Edit dealer profile",publicPage:"Public page",save:"Save",cancel:"Cancel",login:"Log in",register:"Register",freeRegister:"Register for free"});\nObject.assign(I18N.lu,{heroEyebrow:"LËTZEBUERGS ZENTRAL AUTOSPLATTFORM",heroLine1:"Däin nächsten Auto.",heroLine2:"Einfach fonnt.",heroText:"Kuck Offere vu verschiddenen Händler op enger Plaz – modern, séier an iwwersiichtlech.",benefit1:"✓ Gepréiften Händlerprofiler",benefit2:"✓ Direkte WhatsApp-Kontakt",benefit3:"✓ Méi Biller pro Gefier",smartSearch:"AutoRadar Smart Search",trustedPartners:"VERTRAUENSWIERDEG PARTNER",topDealers:"Top-Händler",dealerDashboard:"Händler-Dashboard",logout:"Ofmellen",myVehicles:"Meng Gefierer",addVehicle:"+ Gefier dobäisetzen",editDealerProfile:"Händlerprofil änneren",publicPage:"Ëffentlech Säit",save:"Späicheren",cancel:"Ofbriechen",login:"Aloggen",register:"Registréieren",freeRegister:"Gratis registréieren"});\nconst V53_STATIC={\n  'Fahrzeuge':'vehicles','Händler-Login':'dealerLogin','Aktuelle Fahrzeuge':'currentVehicles','Favoriten':'favorites','Vergleich':'compare',\n  'Händler-Dashboard':'dealerDashboard','Abmelden':'logout','Meine Fahrzeuge':'myVehicles','+ Fahrzeug hinzufügen':'addVehicle',\n  'Händlerprofil bearbeiten':'editDealerProfile','Öffentliche Seite':'publicPage','Speichern':'save','Abbrechen':'cancel',\n  'Einloggen':'login','Registrieren':'register','Kostenlos registrieren':'freeRegister'\n};\nfunction translateV53(){\n  document.querySelectorAll('[data-i18n]').forEach(el=>{let k=el.dataset.i18n;if(I18N[currentLang]?.[k])el.textContent=I18N[currentLang][k]});\n  document.querySelectorAll('button,h1,h2,h3,h4,th,label,span,strong,small,p').forEach(el=>{if(el.children.length&&!el.dataset.i18n)return;let raw=el.textContent.trim(),k=V53_STATIC[raw];if(k&&I18N[currentLang]?.[k])el.textContent=I18N[currentLang][k]});\n}\nconst v53SetLanguage=setLanguage;setLanguage=function(lang){v53SetLanguage(lang);setTimeout(translateV53,0)};\nconst v53RenderPublic=renderPublic;renderPublic=function(){v53RenderPublic();setTimeout(translateV53,0)};\nconst v53RenderDealer=renderDealer;renderDealer=function(){v53RenderDealer();setTimeout(translateV53,0)};\nconst v53OpenProfile=openProfileForm;openProfileForm=function(){v53OpenProfile();setTimeout(translateV53,0)};\nconst v53OpenForm=openForm;openForm=function(){v53OpenForm();setTimeout(translateV53,0)};\nconst v53EditVehicle=editVehicle;editVehicle=function(id){v53EditVehicle(id);setTimeout(translateV53,0)};\nsetTimeout(()=>setLanguage(currentLang),120);\n</script>\n
+<script id="dealer-profile-language-fix">
+Object.assign(I18N.de, {
+  trustedPartners: "VERTRAUENSWÜRDIGE PARTNER",
+  topDealers: "Top-Händler",
+  profileTitle: "Händlerprofil",
+  dealerProfileLabel: "HÄNDLERPROFIL",
+  verifiedDealer: "VERIFIZIERTER HÄNDLER",
+  address: "ADRESSE",
+  phone: "TELEFON",
+  email: "E-MAIL",
+  since: "SEIT",
+  openingHours: "ÖFFNUNGSZEITEN",
+  aboutDealer: "ÜBER DAS AUTOHAUS",
+  vehicleStock: "FAHRZEUGBESTAND",
+  customerExperiences: "KUNDENERFAHRUNGEN",
+  reviews: "Bewertungen",
+  writeReview: "Bewertung schreiben",
+  call: "Anrufen",
+  website: "Webseite",
+  route: "Route",
+  notProvided: "Nicht angegeben"
+});
+
+Object.assign(I18N.fr, {
+  trustedPartners: "PARTENAIRES DE CONFIANCE",
+  topDealers: "Meilleurs vendeurs",
+  profileTitle: "Profil vendeur",
+  dealerProfileLabel: "PROFIL VENDEUR",
+  verifiedDealer: "VENDEUR VÉRIFIÉ",
+  address: "ADRESSE",
+  phone: "TÉLÉPHONE",
+  email: "E-MAIL",
+  since: "DEPUIS",
+  openingHours: "HORAIRES D’OUVERTURE",
+  aboutDealer: "À PROPOS DU VENDEUR",
+  vehicleStock: "STOCK DE VÉHICULES",
+  customerExperiences: "EXPÉRIENCES CLIENTS",
+  reviews: "Avis",
+  writeReview: "Laisser un avis",
+  call: "Appeler",
+  website: "Site web",
+  route: "Itinéraire",
+  notProvided: "Non renseigné"
+});
+
+Object.assign(I18N.en, {
+  trustedPartners: "TRUSTED PARTNERS",
+  topDealers: "Top dealers",
+  profileTitle: "Dealer profile",
+  dealerProfileLabel: "DEALER PROFILE",
+  verifiedDealer: "VERIFIED DEALER",
+  address: "ADDRESS",
+  phone: "PHONE",
+  email: "EMAIL",
+  since: "SINCE",
+  openingHours: "OPENING HOURS",
+  aboutDealer: "ABOUT THE DEALER",
+  vehicleStock: "VEHICLE STOCK",
+  customerExperiences: "CUSTOMER EXPERIENCES",
+  reviews: "Reviews",
+  writeReview: "Write a review",
+  call: "Call",
+  website: "Website",
+  route: "Directions",
+  notProvided: "Not provided"
+});
+
+Object.assign(I18N.lu, {
+  trustedPartners: "VERTRAUENSWIERDEG PARTNER",
+  topDealers: "Top-Händler",
+  profileTitle: "Händlerprofil",
+  dealerProfileLabel: "HÄNDLERPROFIL",
+  verifiedDealer: "VERIFIZÉIERTEN HÄNDLER",
+  address: "ADRESS",
+  phone: "TELEFON",
+  email: "E-MAIL",
+  since: "ZËNTER",
+  openingHours: "ËFFNUNGSZÄITEN",
+  aboutDealer: "IWWERT DEN AUTOHAUS",
+  vehicleStock: "GEFIERBESTAND",
+  customerExperiences: "CLIENTS-ERFARUNGEN",
+  reviews: "Bewäertungen",
+  writeReview: "Bewäertung schreiwen",
+  call: "Uruff",
+  website: "Websäit",
+  route: "Route",
+  notProvided: "Net uginn"
+});
+
+function translateDealerProfileNow() {
+  const modal = document.getElementById("dealerModal");
+  if (!modal || modal.classList.contains("hidden")) return;
+
+  const translations = {
+    "Händlerprofil": "profileTitle",
+    "Profil vendeur": "profileTitle",
+    "Dealer profile": "profileTitle",
+
+    "HÄNDLERPROFIL": "dealerProfileLabel",
+    "PROFIL VENDEUR": "dealerProfileLabel",
+    "DEALER PROFILE": "dealerProfileLabel",
+
+    "VERIFIZIERTER HÄNDLER": "verifiedDealer",
+    "VENDEUR VÉRIFIÉ": "verifiedDealer",
+    "VERIFIED DEALER": "verifiedDealer",
+    "VERIFIZÉIERTEN HÄNDLER": "verifiedDealer",
+
+    "ADRESSE": "address",
+    "ADDRESS": "address",
+    "ADRESS": "address",
+
+    "TELEFON": "phone",
+    "TÉLÉPHONE": "phone",
+    "PHONE": "phone",
+
+    "E-MAIL": "email",
+    "EMAIL": "email",
+
+    "SEIT": "since",
+    "DEPUIS": "since",
+    "SINCE": "since",
+    "ZËNTER": "since",
+
+    "ÖFFNUNGSZEITEN": "openingHours",
+    "HORAIRES D’OUVERTURE": "openingHours",
+    "OPENING HOURS": "openingHours",
+    "ËFFNUNGSZÄITEN": "openingHours",
+
+    "ÜBER DAS AUTOHAUS": "aboutDealer",
+    "À PROPOS DU VENDEUR": "aboutDealer",
+    "ABOUT THE DEALER": "aboutDealer",
+    "IWWERT DEN AUTOHAUS": "aboutDealer",
+
+    "FAHRZEUGBESTAND": "vehicleStock",
+    "STOCK DE VÉHICULES": "vehicleStock",
+    "VEHICLE STOCK": "vehicleStock",
+    "GEFIERBESTAND": "vehicleStock",
+
+    "KUNDENERFAHRUNGEN": "customerExperiences",
+    "EXPÉRIENCES CLIENTS": "customerExperiences",
+    "CUSTOMER EXPERIENCES": "customerExperiences",
+    "CLIENTS-ERFARUNGEN": "customerExperiences",
+
+    "Bewertungen": "reviews",
+    "Avis": "reviews",
+    "Reviews": "reviews",
+    "Bewäertungen": "reviews",
+
+    "Nicht angegeben": "notProvided",
+    "Non renseigné": "notProvided",
+    "Not provided": "notProvided",
+    "Net uginn": "notProvided"
+  };
+
+  modal
+    .querySelectorAll("h1, h2, h3, h4, span, strong, small, button, a")
+    .forEach((element) => {
+      const originalText = element.textContent.trim();
+      const cleanText = originalText.replace(/^📞\s*/, "");
+      const translationKey =
+        translations[originalText] || translations[cleanText];
+
+      if (translationKey) {
+        const icon = originalText.startsWith("📞") ? "📞 " : "";
+        element.textContent = icon + t(translationKey);
+      }
+
+      if (["Anrufen", "Appeler", "Call", "Uruff"].includes(cleanText)) {
+        element.textContent = "📞 " + t("call");
+      }
+
+      if (
+        ["Webseite", "Site web", "Website", "Websäit"].includes(cleanText)
+      ) {
+        element.textContent = t("website");
+      }
+
+      if (
+        ["Route", "Itinéraire", "Directions"].includes(cleanText)
+      ) {
+        element.textContent = t("route");
+      }
+
+      if (
+        [
+          "Bewertung schreiben",
+          "Laisser un avis",
+          "Write a review",
+          "Bewäertung schreiwen"
+        ].includes(cleanText)
+      ) {
+        element.textContent = t("writeReview");
+      }
+    });
+}
+
+function translateTopDealersNow() {
+  const section = document.getElementById("topDealersSection");
+  if (!section) return;
+
+  const eyebrow = section.querySelector(".dealerEyebrow");
+  const title = section.querySelector("h2");
+
+  if (eyebrow) eyebrow.textContent = t("trustedPartners");
+  if (title) title.textContent = t("topDealers");
+}
+
+const originalOpenDealerLanguageFix = openDealer;
+
+openDealer = function (id) {
+  originalOpenDealerLanguageFix(id);
+
+  setTimeout(() => {
+    translateDealerProfileNow();
+  }, 100);
+};
+
+const originalSetLanguageDealerFix = setLanguage;
+
+setLanguage = function (language) {
+  originalSetLanguageDealerFix(language);
+
+  setTimeout(() => {
+    translateTopDealersNow();
+    translateDealerProfileNow();
+  }, 100);
+};
+
+setTimeout(() => {
+  translateTopDealersNow();
+  translateDealerProfileNow();
+}, 200);
+</script></body></html>
