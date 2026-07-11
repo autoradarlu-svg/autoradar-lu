@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V4 – Marketplace Edition</title>
+<title>AutoRadar.lu V5 – Professional Edition</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -277,6 +277,26 @@ footer{background:rgba(4,7,13,.55)}
 @media(max-width:650px){.marketToolbar{align-items:flex-start;flex-direction:column}.featuredGrid,.v4filters{grid-template-columns:1fr}.favoriteBtn,.compareBtn{top:52px}.promoChoice{grid-template-columns:64px 1fr}.promoChoice .btn{grid-column:1/-1}}
 </style>
 
+
+<style id="autoradar-v5">
+.logoUploadBlock{padding:16px;border-radius:18px;border:1px dashed rgba(148,163,184,.28);background:rgba(8,14,25,.52)}
+.logoUploadRow{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;margin-top:12px}
+.logoPreview{width:120px;height:120px;border-radius:20px;background:#fff center/contain no-repeat;color:#7a8798;display:grid;place-items:center;text-align:center;font-weight:800;border:1px solid rgba(255,255,255,.16);overflow:hidden}
+.ratingSummary{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}
+.ratingStars{color:#ffc247;letter-spacing:2px;font-size:20px}
+.ratingBadge{padding:8px 11px;border-radius:999px;background:rgba(255,194,71,.1);border:1px solid rgba(255,194,71,.25);font-weight:900}
+.reviewsSection{margin-top:24px}
+.reviewGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.reviewCard{padding:16px;border-radius:17px;background:linear-gradient(180deg,#132038,#0b1422);border:1px solid rgba(148,163,184,.15)}
+.reviewCardHeader{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.reviewCard p{color:#b5c0d0;line-height:1.55;margin-bottom:0}
+.reviewStars{display:flex;gap:6px;margin:8px 0 4px}
+.reviewStars button{font-size:31px;line-height:1;border:0;background:transparent;color:#ffc247;cursor:pointer;padding:2px}
+.reviewStars button.off{color:#435066}
+.reviewDate{color:#7f8ea4;font-size:11px}
+@media(max-width:700px){.logoUploadRow,.reviewGrid{grid-template-columns:1fr}.logoPreview{margin:auto}}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><div class="brand">Auto<span>Radar</span>.lu</div><div class="row"><button class="btn" onclick="showPublic()">Fahrzeuge</button><button class="btn primary" onclick="openLogin()">Händler-Login</button></div></nav></div></header>
@@ -345,10 +365,32 @@ footer{background:rgba(4,7,13,.55)}
 </div>
 </div></div>
 <div id="vehicleModal" class="overlay hidden"><div class="modal"><div class="row space"><h2 id="formTitle">Fahrzeug hinzufügen</h2><button class="btn" onclick="closeForm()">×</button></div><input type="hidden" id="vid"><div class="formgrid"><div><label>Marke *</label><input id="brand" class="control"></div><div><label>Modell *</label><input id="model" class="control"></div><div><label>Preis € *</label><input id="price" type="number" class="control"></div><div><label>Baujahr *</label><input id="year" type="number" class="control"></div><div><label>Kilometer *</label><input id="mileage" type="number" class="control"></div><div><label>Leistung in PS</label><input id="horsepower" type="number" class="control"></div><div><label>Kraftstoff</label><select id="fuelType" class="control"><option>Benzin</option><option>Diesel</option><option>Hybrid</option><option>Elektro</option></select></div><div><label>Getriebe</label><select id="transmission" class="control"><option>Automatik</option><option>Schaltung</option></select></div><div><label>Standort</label><input id="vehicleLocation" class="control" value="Luxembourg"></div><div><label>Status</label><select id="vehicleStatus" class="control" onchange="soldToggle()"><option>Verfügbar</option><option>Reserviert</option><option>Verkauft</option></select></div><div id="soldPriceBox" class="hidden"><label>Verkaufspreis €</label><input id="soldPrice" type="number" class="control"></div><div id="soldAtBox" class="hidden"><label>Verkaufsdatum</label><input id="soldAt" type="datetime-local" class="control"></div><div class="full"><label>Fotos direkt auswählen (max. 15)</label><input id="imageFiles" type="file" accept="image/*" multiple class="control" onchange="previewFiles()"><div class="muted" style="font-size:12px;margin-top:6px">Du kannst bis zu 15 Bilder gleichzeitig auswählen. Die Bilder werden automatisch verkleinert und gespeichert.</div><div id="preview" class="preview"></div></div><div class="full"><label>Beschreibung</label><textarea id="description" rows="5" class="control"></textarea></div></div><div class="row" style="justify-content:flex-end;margin-top:16px"><button class="btn" onclick="closeForm()">Abbrechen</button><button id="saveBtn" class="btn primary" onclick="saveVehicle()">Speichern</button></div></div></div>
-<div id="profileModal" class="overlay hidden"><div class="modal"><div class="row space"><h2>Händlerprofil</h2><button class="btn" onclick="closeProfileForm()">×</button></div><div class="formgrid"><div><label>Firmenname *</label><input id="companyName" class="control"></div><div><label>Logo-URL</label><input id="logoUrl" class="control"></div><div><label>Telefon</label><input id="phone" class="control"></div><div><label>WhatsApp</label><input id="whatsapp" class="control"></div><div><label>E-Mail</label><input id="dealerEmail" class="control"></div><div><label>Webseite</label><input id="website" class="control"></div><div class="full"><label>Genaue Adresse *</label><input id="dealerLocation" class="control" placeholder="z. B. 12, Rue de Luxembourg, L-4000 Esch-sur-Alzette"></div><div class="full"><label>Öffnungszeiten</label><textarea id="openingHours" rows="6" class="control" placeholder="Montag–Freitag: 09:00–18:00&#10;Samstag: 09:00–14:00&#10;Sonntag: Geschlossen"></textarea></div><div class="full"><label>Beschreibung des Autohauses</label><textarea id="dealerDescription" rows="5" class="control" placeholder="Erzähle Kunden kurz etwas über dein Autohaus, deine Leistungen und deinen Fahrzeugbestand."></textarea></div></div><div class="row" style="justify-content:flex-end;margin-top:16px"><button class="btn" onclick="closeProfileForm()">Abbrechen</button><button class="btn primary" onclick="saveProfile()">Speichern</button></div></div></div>
+<div id="profileModal" class="overlay hidden"><div class="modal"><div class="row space"><h2>Händlerprofil</h2><button class="btn" onclick="closeProfileForm()">×</button></div><div class="formgrid"><div><label>Firmenname *</label><input id="companyName" class="control"></div><div class="full logoUploadBlock">
+<label>Autohaus-Logo direkt hochladen</label>
+<input id="logoFile" type="file" accept="image/*" class="control" onchange="previewDealerLogo(this)">
+<div class="logoUploadRow">
+  <div id="logoPreview" class="logoPreview">Logo-Vorschau</div>
+  <div class="muted">JPG, PNG oder WEBP auswählen. Das Bild wird automatisch verkleinert und direkt im Händlerprofil gespeichert.</div>
+</div>
+<input id="logoUrl" type="hidden">
+</div><div><label>Telefon</label><input id="phone" class="control"></div><div><label>WhatsApp</label><input id="whatsapp" class="control"></div><div><label>E-Mail</label><input id="dealerEmail" class="control"></div><div><label>Webseite</label><input id="website" class="control"></div><div class="full"><label>Genaue Adresse *</label><input id="dealerLocation" class="control" placeholder="z. B. 12, Rue de Luxembourg, L-4000 Esch-sur-Alzette"></div><div class="full"><label>Öffnungszeiten</label><textarea id="openingHours" rows="6" class="control" placeholder="Montag–Freitag: 09:00–18:00&#10;Samstag: 09:00–14:00&#10;Sonntag: Geschlossen"></textarea></div><div class="full"><label>Beschreibung des Autohauses</label><textarea id="dealerDescription" rows="5" class="control" placeholder="Erzähle Kunden kurz etwas über dein Autohaus, deine Leistungen und deinen Fahrzeugbestand."></textarea></div></div><div class="row" style="justify-content:flex-end;margin-top:16px"><button class="btn" onclick="closeProfileForm()">Abbrechen</button><button class="btn primary" onclick="saveProfile()">Speichern</button></div></div></div>
 
 <div id="detailModal" class="overlay hidden"><div class="modal"><div class="row space"><div><div class="muted" style="font-size:12px">FAHRZEUGANGEBOT</div><h2 id="detailTitle" style="margin:4px 0 0"></h2></div><button class="btn closeX" onclick="closeVehicleDetail()">×</button></div><div class="detailgrid" style="margin-top:16px"><div><div class="galleryMain"><img id="detailImage" alt="Fahrzeugbild"><div class="galleryNav"><button onclick="changeDetailImage(-1)" aria-label="Vorheriges Bild">‹</button><button onclick="changeDetailImage(1)" aria-label="Nächstes Bild">›</button></div><span id="imageCount" class="imageCount"></span></div><div id="detailThumbs" class="thumbs"></div></div><div><div id="detailStatus" class="muted"></div><div id="detailPrice" class="detailPrice"></div><div id="detailSpecs" class="specs"></div><h3>Beschreibung</h3><p id="detailDescription" class="muted" style="line-height:1.65;white-space:pre-wrap"></p><div id="detailDealerName" style="font-weight:900;margin:16px 0 10px"></div><div id="detailActions" class="detailActions"></div></div></div></div></div>
 <div id="dealerModal" class="overlay hidden"><div class="modal dealerPage"><div class="row space"><h2>Händlerprofil</h2><button class="btn" onclick="closeDealer()">×</button></div><div id="dealerContent"></div></div></div>
+
+
+<div id="reviewModal" class="overlay hidden"><div class="modal small">
+  <div class="row space"><div><div class="dealerEyebrow">HÄNDLERBEWERTUNG</div><h2>Bewertung abgeben</h2></div><button class="btn" onclick="closeReviewModal()">×</button></div>
+  <input type="hidden" id="reviewDealerId">
+  <label>Dein Name</label><input id="reviewName" class="control" placeholder="Vorname oder Firmenname">
+  <label style="margin-top:12px">Bewertung</label>
+  <div id="reviewStars" class="reviewStars">
+    <button onclick="setReviewRating(1)">★</button><button onclick="setReviewRating(2)">★</button><button onclick="setReviewRating(3)">★</button><button onclick="setReviewRating(4)">★</button><button onclick="setReviewRating(5)">★</button>
+  </div>
+  <input type="hidden" id="reviewRating" value="5">
+  <label style="margin-top:12px">Kommentar</label><textarea id="reviewComment" rows="5" class="control" placeholder="Wie war deine Erfahrung mit diesem Autohaus?"></textarea>
+  <button class="btn primary" style="width:100%;margin-top:14px" onclick="submitDealerReview()">Bewertung veröffentlichen</button>
+</div></div>
 
 <div id="compareModal" class="overlay hidden"><div class="modal compareModal"><div class="row space"><h2>Fahrzeuge vergleichen</h2><button class="btn" onclick="closeCompare()">×</button></div><div id="compareContent"></div></div></div>
 <div id="promotionModal" class="overlay hidden"><div class="modal promotionModal"><div class="row space"><div><div class="dealerEyebrow">AUTORADAR PREMIUM</div><h2>Anzeige hervorheben</h2></div><button class="btn" onclick="closePromotion()">×</button></div>
@@ -362,7 +404,7 @@ footer{background:rgba(4,7,13,.55)}
 <div class="paymentNotice">Die Anfrage wird gespeichert. Für echte automatische Zahlungen muss anschließend Stripe Checkout mit einem sicheren Server/Webhook verbunden werden. Bis dahin kannst du Anfragen manuell prüfen und freischalten.</div>
 </div></div>
 
-<footer><div class="wrap">AutoRadar.lu V4 · Marketplace Edition</div></footer>
+<footer><div class="wrap">AutoRadar.lu V5 · Professional Edition</div></footer>
 <script>
 const SUPABASE_URL='https://lfgbuncgqkvtclvvqgvs.supabase.co';
 const SUPABASE_KEY='sb_publishable_LSk555Qic_V--sijIMazWw_Bvj3wLqH';
@@ -617,6 +659,140 @@ async function selectPromo(price,days){
   closePromotion();
 }
 renderPublic();
+</script>
+
+
+<script id="autoradar-v5-js">
+let dealerReviews=[];
+let pendingDealerLogo='';
+
+async function loadDealerReviews(){
+  try{
+    let r=await db.from('dealer_reviews').select('*').eq('is_visible',true).order('created_at',{ascending:false});
+    dealerReviews=r.error?[]:(r.data||[]);
+  }catch(_){dealerReviews=[]}
+}
+const loadV4=load;
+load=async function(){
+  await Promise.all([loadV4(),loadDealerReviews()]);
+  renderPublic();
+}
+
+async function previewDealerLogo(input){
+  let file=input.files&&input.files[0];
+  if(!file)return;
+  if(!file.type.startsWith('image/'))return alert('Bitte eine Bilddatei auswählen.');
+  try{
+    pendingDealerLogo=await resize(file);
+    e('logoUrl').value=pendingDealerLogo;
+    e('logoPreview').style.backgroundImage=`url("${pendingDealerLogo}")`;
+    e('logoPreview').textContent='';
+  }catch(err){alert('Logo konnte nicht verarbeitet werden.')}
+}
+
+const openProfileFormV4=openProfileForm;
+openProfileForm=function(){
+  openProfileFormV4();
+  pendingDealerLogo=current.logo_url||'';
+  e('logoUrl').value=pendingDealerLogo;
+  e('logoFile').value='';
+  if(pendingDealerLogo){
+    e('logoPreview').style.backgroundImage=`url("${pendingDealerLogo}")`;
+    e('logoPreview').textContent='';
+  }else{
+    e('logoPreview').style.backgroundImage='none';
+    e('logoPreview').textContent='Logo-Vorschau';
+  }
+}
+
+const saveProfileV4=saveProfile;
+saveProfile=async function(){
+  if(pendingDealerLogo)e('logoUrl').value=pendingDealerLogo;
+  return saveProfileV4();
+}
+
+function dealerRatingData(dealerId){
+  let list=dealerReviews.filter(r=>Number(r.dealer_id)===Number(dealerId));
+  let avg=list.length?list.reduce((s,r)=>s+Number(r.rating||0),0)/list.length:0;
+  return {list,avg};
+}
+function starsText(avg){
+  let n=Math.round(Number(avg||0));
+  return '★'.repeat(n)+'☆'.repeat(5-n);
+}
+function openReviewModal(dealerId){
+  e('reviewDealerId').value=dealerId;
+  e('reviewName').value='';
+  e('reviewComment').value='';
+  setReviewRating(5);
+  e('reviewModal').classList.remove('hidden');
+}
+function closeReviewModal(){e('reviewModal').classList.add('hidden')}
+function setReviewRating(n){
+  e('reviewRating').value=n;
+  [...e('reviewStars').querySelectorAll('button')].forEach((b,i)=>b.classList.toggle('off',i>=n));
+}
+async function submitDealerReview(){
+  let dealerId=Number(e('reviewDealerId').value),name=e('reviewName').value.trim(),rating=Number(e('reviewRating').value),comment=e('reviewComment').value.trim();
+  if(!name)return alert('Bitte deinen Namen eintragen.');
+  if(!comment)return alert('Bitte einen kurzen Kommentar schreiben.');
+  let payload={dealer_id:dealerId,reviewer_name:name,rating,comment,is_visible:true};
+  let {error}=await db.from('dealer_reviews').insert(payload);
+  if(error)return alert('Bewertung konnte nicht gespeichert werden: '+error.message);
+  await loadDealerReviews();closeReviewModal();openDealer(dealerId);
+}
+
+openDealer=function(id){
+  let d=dealer(id);
+  if(!d){alert('Händler nicht gefunden.');return;}
+  let wa=(d.whatsapp||'').replace(/\D/g,'');
+  let dealerCars=vehicles.filter(v=>Number(v.dealer_id)===Number(d.id)&&v.status!=='Verkauft');
+  let maps=d.location?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(d.location):'';
+  let hours=safe(d.opening_hours||'Noch keine Öffnungszeiten eingetragen.').replace(/\n/g,'<br>');
+  let rd=dealerRatingData(d.id);
+  let reviewHtml=rd.list.slice(0,8).map(r=>`<article class="reviewCard">
+    <div class="reviewCardHeader"><strong>${safe(r.reviewer_name||'Kunde')}</strong><span class="ratingStars">${starsText(r.rating)}</span></div>
+    <div class="reviewDate">${new Date(r.created_at).toLocaleDateString('de-DE')}</div>
+    <p>${safe(r.comment||'')}</p>
+  </article>`).join('');
+  e('dealerContent').innerHTML=`
+    <section class="dealerHero">
+      <div class="dealerLogo" style="background-image:url('${safe(d.logo_url||'https://placehold.co/500x500/182231/ffffff?text=Autohaus')}')"></div>
+      <div class="dealerHeroText">
+        <div class="dealerEyebrow">${d.verified?'VERIFIZIERTES HÄNDLERPROFIL':'HÄNDLERPROFIL'}</div>
+        <h1>${safe(d.company_name||'Autohaus')}</h1>
+        <div class="ratingSummary">
+          <span class="ratingStars">${rd.list.length?starsText(rd.avg):'☆☆☆☆☆'}</span>
+          <span class="ratingBadge">${rd.list.length?rd.avg.toFixed(1):'Noch keine Bewertung'} ${rd.list.length?`· ${rd.list.length} Bewertungen`:''}</span>
+          <button class="btn" onclick="openReviewModal(${Number(d.id)})">Bewertung abgeben</button>
+        </div>
+        <p>${safe(d.description||'Dieser Händler hat noch keine Beschreibung eingetragen.')}</p>
+        <div class="dealerQuickActions">
+          ${d.phone?`<a class="btn" href="tel:${safe(d.phone)}">📞 Anrufen</a>`:''}
+          ${wa?`<a class="btn success" target="_blank" href="https://wa.me/${wa}">WhatsApp</a>`:''}
+          ${d.website?`<a class="btn" target="_blank" href="${safe(d.website)}">Webseite</a>`:''}
+          ${maps?`<a class="btn primary" target="_blank" href="${maps}">Route öffnen</a>`:''}
+        </div>
+      </div>
+    </section>
+    <section class="dealerInfoGrid">
+      <div class="dealerInfoCard"><span>Adresse</span><strong>${safe(d.location||'Noch keine Adresse eingetragen')}</strong></div>
+      <div class="dealerInfoCard"><span>Telefon</span><strong>${safe(d.phone||'Nicht angegeben')}</strong></div>
+      <div class="dealerInfoCard"><span>E-Mail</span><strong>${safe(d.email||'Nicht angegeben')}</strong></div>
+      <div class="dealerInfoCard dealerHours"><span>Öffnungszeiten</span><strong>${hours}</strong></div>
+    </section>
+    <section class="dealerVehicles">
+      <div class="dealerEyebrow">FAHRZEUGBESTAND</div><h2>${dealerCars.length} verfügbare Fahrzeuge</h2>
+      <div class="dealerMiniGrid">${dealerCars.slice(0,9).map(v=>{let imgs=parseImages(v.image_url),img=imgs[0]||'https://placehold.co/1000x650/182231/ffffff?text=AutoRadar.lu';return `<article class="dealerMiniCar" onclick="closeDealer();openVehicleDetail(${Number(v.id)})"><img src="${img}"><div><strong>${safe(v.brand)} ${safe(v.model)}</strong><span>${money(v.price)} · ${num(v.mileage)} km</span></div></article>`}).join('')||'<p class="muted">Aktuell sind keine Fahrzeuge verfügbar.</p>'}</div>
+    </section>
+    <section class="reviewsSection">
+      <div class="row space"><div><div class="dealerEyebrow">KUNDENERFAHRUNGEN</div><h2>Bewertungen</h2></div><button class="btn primary" onclick="openReviewModal(${Number(d.id)})">Bewertung schreiben</button></div>
+      <div class="reviewGrid">${reviewHtml||'<div class="reviewCard"><p>Noch keine Bewertungen vorhanden. Sei der Erste, der dieses Autohaus bewertet.</p></div>'}</div>
+    </section>`;
+  e('dealerModal').classList.remove('hidden');
+}
+
+load();
 </script>
 
 </body></html>
