@@ -2114,4 +2114,101 @@ setTimeout(() => {
   translateTopDealersNow();
   translateDealerProfileNow();
 }, 200);
+</script>
+
+<script id="dealer-label-language-fix">
+function fixDealerProfileLabels() {
+  const modal = document.getElementById("dealerModal");
+  if (!modal || modal.classList.contains("hidden")) return;
+
+  const languageTexts = {
+    de: {
+      profile: "HÄNDLERPROFIL",
+      since: "SEIT",
+      hours: "ÖFFNUNGSZEITEN",
+      about: "ÜBER DAS AUTOHAUS"
+    },
+    fr: {
+      profile: "PROFIL VENDEUR",
+      since: "DEPUIS",
+      hours: "HORAIRES D’OUVERTURE",
+      about: "À PROPOS DU VENDEUR"
+    },
+    en: {
+      profile: "DEALER PROFILE",
+      since: "SINCE",
+      hours: "OPENING HOURS",
+      about: "ABOUT THE DEALER"
+    },
+    lu: {
+      profile: "HÄNDLERPROFIL",
+      since: "ZËNTER",
+      hours: "ËFFNUNGSZÄITEN",
+      about: "IWWERT DEN AUTOHAUS"
+    }
+  };
+
+  const texts = languageTexts[currentLang] || languageTexts.de;
+
+  modal.querySelectorAll(".dealerEyebrow").forEach((element) => {
+    const value = element.textContent.trim().toUpperCase();
+
+    if (
+      value === "HÄNDLERPROFIL" ||
+      value === "PROFIL VENDEUR" ||
+      value === "DEALER PROFILE"
+    ) {
+      element.textContent = texts.profile;
+    }
+
+    if (
+      value === "ÜBER DAS AUTOHAUS" ||
+      value === "À PROPOS DU VENDEUR" ||
+      value === "ABOUT THE DEALER" ||
+      value === "IWWERT DEN AUTOHAUS"
+    ) {
+      element.textContent = texts.about;
+    }
+  });
+
+  modal.querySelectorAll(".dealerInfoCard > span").forEach((element) => {
+    const value = element.textContent.trim().toUpperCase();
+
+    if (
+      value === "SEIT" ||
+      value === "DEPUIS" ||
+      value === "SINCE" ||
+      value === "ZËNTER"
+    ) {
+      element.textContent = texts.since;
+    }
+
+    if (
+      value === "ÖFFNUNGSZEITEN" ||
+      value === "HORAIRES D’OUVERTURE" ||
+      value === "OPENING HOURS" ||
+      value === "ËFFNUNGSZÄITEN"
+    ) {
+      element.textContent = texts.hours;
+    }
+  });
+}
+
+const previousOpenDealerLabelFix = openDealer;
+
+openDealer = function(id) {
+  previousOpenDealerLabelFix(id);
+
+  setTimeout(fixDealerProfileLabels, 150);
+  setTimeout(fixDealerProfileLabels, 400);
+};
+
+const previousSetLanguageLabelFix = setLanguage;
+
+setLanguage = function(language) {
+  previousSetLanguageLabelFix(language);
+
+  setTimeout(fixDealerProfileLabels, 150);
+  setTimeout(fixDealerProfileLabels, 400);
+};
 </script></body></html>
