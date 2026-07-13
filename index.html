@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.4.2 – Komplett übersetzt</title>
+<title>AutoRadar.lu V5.5 – Händler-Dashboard Pro</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -639,6 +639,135 @@ footer{background:rgba(4,7,13,.55)}
 }
 </style>
 
+
+<style id="autoradar-v5-5-dashboard-pro">
+.dashboardHero{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+  margin-bottom:18px;
+}
+.dashboardHero h1{font-size:clamp(30px,4vw,48px);letter-spacing:-1.5px;margin:0}
+.dashboardHero p{margin:7px 0 0}
+.dashboardStatusBadge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 13px;border-radius:999px;
+  background:rgba(35,184,121,.10);
+  border:1px solid rgba(35,184,121,.24);
+  color:#bdf2dc;font-weight:900;font-size:12px;
+}
+.dashboardProStats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin:16px 0 18px;
+}
+.dashboardProCard{
+  padding:17px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#132139,#0a1320);
+  border:1px solid rgba(148,163,184,.15);
+  box-shadow:inset 0 1px rgba(255,255,255,.035);
+}
+.dashboardProCard span{
+  display:block;color:#8fa0b8;font-size:11px;
+  text-transform:uppercase;letter-spacing:.75px
+}
+.dashboardProCard strong{display:block;margin-top:7px;font-size:28px}
+.dashboardProCard small{display:block;color:#6f8097;margin-top:5px}
+.dashboardMainGrid{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);
+  gap:16px;
+  margin-bottom:18px;
+}
+.dashboardChartCard,.dashboardTopVehicle{
+  padding:18px;border-radius:20px;
+  background:linear-gradient(180deg,#111d30,#09131f);
+  border:1px solid rgba(148,163,184,.15);
+}
+.dashboardChartCard h3,.dashboardTopVehicle h3{margin:0 0 14px}
+.dashboardChartBars{
+  height:220px;
+  display:flex;
+  align-items:end;
+  gap:8px;
+  padding:15px 4px 0;
+  border-bottom:1px solid rgba(148,163,184,.15);
+}
+.dashboardBar{
+  flex:1;
+  min-width:8px;
+  border-radius:8px 8px 2px 2px;
+  background:linear-gradient(180deg,#ff6673,#d91f35);
+  box-shadow:0 8px 18px rgba(255,53,70,.16);
+  position:relative;
+}
+.dashboardBar:hover:after{
+  content:attr(data-value);
+  position:absolute;left:50%;bottom:calc(100% + 7px);
+  transform:translateX(-50%);
+  background:#0b1523;border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;padding:5px 7px;font-size:11px;white-space:nowrap;
+}
+.dashboardChartLabels{
+  display:flex;justify-content:space-between;
+  margin-top:8px;color:#718198;font-size:10px
+}
+.topVehicleBox{
+  display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:center
+}
+.topVehicleBox img{
+  width:130px;height:98px;object-fit:cover;
+  border-radius:14px;border:1px solid rgba(255,255,255,.1)
+}
+.topVehicleStats{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px
+}
+.topVehicleStat{
+  padding:10px;border-radius:12px;background:#0b1523;
+  border:1px solid rgba(148,163,184,.12)
+}
+.topVehicleStat span{display:block;color:#7f8fa7;font-size:10px;text-transform:uppercase}
+.topVehicleStat strong{display:block;margin-top:4px}
+.dashboardNavTitle{
+  display:block;color:#74849b;font-size:10px;
+  letter-spacing:1px;text-transform:uppercase;
+  margin:2px 0 10px 4px
+}
+.dashboardTablePro table{min-width:980px}
+.dashboardTablePro td,.dashboardTablePro th{white-space:nowrap}
+.dashboardTablePro .vehicleCell{display:flex;align-items:center;gap:10px}
+.dashboardTablePro .vehicleThumb{
+  width:64px;height:46px;object-fit:cover;border-radius:9px;
+  border:1px solid rgba(255,255,255,.09)
+}
+.metricChip{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:6px 8px;border-radius:999px;
+  background:#0d1726;border:1px solid rgba(148,163,184,.12);
+  font-size:11px
+}
+.statusTextBadge{
+  display:inline-flex;padding:7px 9px;border-radius:999px;
+  font-size:11px;font-weight:900;background:rgba(35,184,121,.11);
+  border:1px solid rgba(35,184,121,.22);color:#bdf2dc
+}
+.statusTextBadge.reserved{background:rgba(242,178,60,.10);border-color:rgba(242,178,60,.22);color:#ffe4a7}
+.statusTextBadge.sold{background:rgba(225,69,84,.10);border-color:rgba(225,69,84,.22);color:#ffc4ca}
+@media(max-width:1050px){
+  .dashboardProStats{grid-template-columns:repeat(2,1fr)}
+  .dashboardMainGrid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .dashboardHero{flex-direction:column}
+  .dashboardProStats{grid-template-columns:1fr 1fr}
+  .topVehicleBox{grid-template-columns:1fr}
+  .topVehicleBox img{width:100%;height:180px}
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><div class="brand">Auto<span>Radar</span>.lu</div><div class="row">
@@ -826,7 +955,7 @@ footer{background:rgba(4,7,13,.55)}
 <div class="paymentNotice">Die Anfrage wird gespeichert. Für echte automatische Zahlungen muss anschließend Stripe Checkout mit einem sicheren Server/Webhook verbunden werden. Bis dahin kannst du Anfragen manuell prüfen und freischalten.</div>
 </div></div>
 
-<footer><div class="wrap">AutoRadar.lu V5.4.2 · Komplett übersetzt</div></footer>
+<footer><div class="wrap">AutoRadar.lu V5.5 · Händler-Dashboard Pro</div></footer>
 <script>
 const SUPABASE_URL='https://lfgbuncgqkvtclvvqgvs.supabase.co';
 const SUPABASE_KEY='sb_publishable_LSk555Qic_V--sijIMazWw_Bvj3wLqH';
@@ -3008,6 +3137,258 @@ setTimeout(()=>{
   translateVehicleDetailAll();
   translateFormOptionsV542();
 },250);
+</script>
+
+
+<script id="autoradar-v5-5-dashboard-pro-js">
+const V55={
+  de:{
+    dashboardTitle:"Händler-Dashboard",loggedInAs:"Angemeldet als",
+    logout:"Abmelden",marketNotice:"Marketplace Edition: kostenlose Inserate, echte Händlerkonten, Statistiken und kostenpflichtige Hervorhebungs-Anfragen. Zahlungen werden erst nach sicherer Stripe-Anbindung automatisch freigeschaltet.",
+    vehicles:"Fahrzeuge",available:"Verfügbar",views:"Aufrufe",featured:"Hervorgehoben",
+    favorites:"Favoriten",whatsappClicks:"WhatsApp-Klicks",callClicks:"Anruf-Klicks",
+    profileViews:"Profilaufrufe",today:"Heute",last7:"Letzte 7 Tage",last30:"Letzte 30 Tage",
+    dashboard:"Dashboard",myVehicles:"Meine Fahrzeuge",addVehicle:"+ Fahrzeug hinzufügen",
+    editDealer:"Händlerprofil bearbeiten",premium:"Anzeigen hervorheben",publicPage:"Öffentliche Seite",
+    vehicle:"Fahrzeug",price:"Preis",status:"Status",actions:"Aktionen",
+    edit:"Bearbeiten",promote:"Hervorheben",delete:"Löschen",topVehicle:"Top-Fahrzeug",
+    noVehicle:"Noch kein Fahrzeug vorhanden",performance:"Performance der letzten 14 Tage",
+    dealerActive:"Händlerkonto aktiv",saved:"Gespeichert",reserved:"Reserviert",sold:"Verkauft",
+    availableStatus:"Verfügbar",profile:"Profil",menu:"Menü",total:"Gesamt",
+    bestVehicle:"Beliebtestes Fahrzeug",premiumStatus:"Premium-Status"
+  },
+  fr:{
+    dashboardTitle:"Tableau de bord vendeur",loggedInAs:"Connecté en tant que",
+    logout:"Se déconnecter",marketNotice:"Édition Marketplace : annonces gratuites, comptes vendeurs réels, statistiques et demandes de mise en avant payantes. Les paiements seront activés automatiquement après une intégration Stripe sécurisée.",
+    vehicles:"Véhicules",available:"Disponibles",views:"Vues",featured:"Mis en avant",
+    favorites:"Favoris",whatsappClicks:"Clics WhatsApp",callClicks:"Clics d’appel",
+    profileViews:"Vues du profil",today:"Aujourd’hui",last7:"7 derniers jours",last30:"30 derniers jours",
+    dashboard:"Tableau de bord",myVehicles:"Mes véhicules",addVehicle:"+ Ajouter un véhicule",
+    editDealer:"Modifier le profil vendeur",premium:"Mettre les annonces en avant",publicPage:"Page publique",
+    vehicle:"Véhicule",price:"Prix",status:"Statut",actions:"Actions",
+    edit:"Modifier",promote:"Mettre en avant",delete:"Supprimer",topVehicle:"Véhicule vedette",
+    noVehicle:"Aucun véhicule disponible",performance:"Performance des 14 derniers jours",
+    dealerActive:"Compte vendeur actif",saved:"Enregistré",reserved:"Réservé",sold:"Vendu",
+    availableStatus:"Disponible",profile:"Profil",menu:"Menu",total:"Total",
+    bestVehicle:"Véhicule le plus populaire",premiumStatus:"Statut Premium"
+  },
+  en:{
+    dashboardTitle:"Dealer dashboard",loggedInAs:"Logged in as",
+    logout:"Log out",marketNotice:"Marketplace Edition: free listings, real dealer accounts, statistics and paid promotion requests. Payments will be activated automatically after secure Stripe integration.",
+    vehicles:"Vehicles",available:"Available",views:"Views",featured:"Featured",
+    favorites:"Favorites",whatsappClicks:"WhatsApp clicks",callClicks:"Call clicks",
+    profileViews:"Profile views",today:"Today",last7:"Last 7 days",last30:"Last 30 days",
+    dashboard:"Dashboard",myVehicles:"My vehicles",addVehicle:"+ Add vehicle",
+    editDealer:"Edit dealer profile",premium:"Promote listings",publicPage:"Public page",
+    vehicle:"Vehicle",price:"Price",status:"Status",actions:"Actions",
+    edit:"Edit",promote:"Promote",delete:"Delete",topVehicle:"Top vehicle",
+    noVehicle:"No vehicle available",performance:"Performance over the last 14 days",
+    dealerActive:"Dealer account active",saved:"Saved",reserved:"Reserved",sold:"Sold",
+    availableStatus:"Available",profile:"Profile",menu:"Menu",total:"Total",
+    bestVehicle:"Most popular vehicle",premiumStatus:"Premium status"
+  },
+  lu:{
+    dashboardTitle:"Händler-Dashboard",loggedInAs:"Ageloggt als",
+    logout:"Ofmellen",marketNotice:"Marketplace Editioun: gratis Annoncen, richteg Händlerkonten, Statistiken a bezuelte Promotiounsufroen. Bezuelunge ginn eréischt no enger sécherer Stripe-Integratioun automatesch aktivéiert.",
+    vehicles:"Gefierer",available:"Verfügbar",views:"Opriff",featured:"Erausgehuewen",
+    favorites:"Favoritten",whatsappClicks:"WhatsApp-Klicken",callClicks:"Uruff-Klicken",
+    profileViews:"Profilopriff",today:"Haut",last7:"Lescht 7 Deeg",last30:"Lescht 30 Deeg",
+    dashboard:"Dashboard",myVehicles:"Meng Gefierer",addVehicle:"+ Gefier dobäisetzen",
+    editDealer:"Händlerprofil änneren",premium:"Annoncen ervirhiewen",publicPage:"Ëffentlech Säit",
+    vehicle:"Gefier",price:"Präis",status:"Status",actions:"Aktiounen",
+    edit:"Änneren",promote:"Ervirhiewen",delete:"Läschen",topVehicle:"Top-Gefier",
+    noVehicle:"Nach kee Gefier verfügbar",performance:"Leeschtung vun de leschte 14 Deeg",
+    dealerActive:"Händlerkonto aktiv",saved:"Gespäichert",reserved:"Reservéiert",sold:"Verkaaft",
+    availableStatus:"Verfügbar",profile:"Profil",menu:"Menü",total:"Total",
+    bestVehicle:"Beléiftste Gefier",premiumStatus:"Premium-Status"
+  }
+};
+
+function v55t(key){return (V55[currentLang]||V55.de)[key]||key}
+function v55Status(value){
+  const clean=String(value||"").trim();
+  if(clean==="Verfügbar"||clean==="Disponible"||clean==="Available")return v55t("availableStatus");
+  if(clean==="Reserviert"||clean==="Réservé"||clean==="Reserved"||clean==="Reservéiert")return v55t("reserved");
+  if(clean==="Verkauft"||clean==="Vendu"||clean==="Sold"||clean==="Verkaaft")return v55t("sold");
+  return clean;
+}
+function v55DealerVehicles(){
+  if(!current)return [];
+  return vehicles.filter(v=>Number(v.dealer_id)===Number(current.id));
+}
+function v55Metric(v,key){
+  const value=Number(v?.[key]||0);
+  return Number.isFinite(value)?value:0;
+}
+function v55Totals(){
+  const list=v55DealerVehicles();
+  return {
+    list,
+    views:list.reduce((s,v)=>s+v55Metric(v,"view_count"),0),
+    favorites:list.reduce((s,v)=>s+v55Metric(v,"favorite_count"),0),
+    whatsapp:list.reduce((s,v)=>s+v55Metric(v,"whatsapp_clicks"),0),
+    calls:list.reduce((s,v)=>s+v55Metric(v,"call_clicks"),0),
+    featured:list.filter(v=>v.featured_until&&new Date(v.featured_until)>new Date()).length,
+    available:list.filter(v=>String(v.status)==="Verfügbar").length
+  };
+}
+function v55FakeTrend(total,days=14){
+  const seed=Math.max(1,total);
+  return Array.from({length:days},(_,i)=>{
+    const wave=Math.sin((i+1)*1.33)*0.22+1;
+    return Math.max(1,Math.round((seed/days)*wave+(i%4)));
+  });
+}
+function buildDashboardPro(){
+  const dealerRoot=e("dealer");
+  if(!dealerRoot||dealerRoot.classList.contains("hidden")||!current)return;
+  const wrap=dealerRoot.querySelector(".wrap.dashboard");
+  if(!wrap)return;
+
+  const totals=v55Totals();
+  const top=[...totals.list].sort((a,b)=>
+    (v55Metric(b,"view_count")+v55Metric(b,"favorite_count")*4)-
+    (v55Metric(a,"view_count")+v55Metric(a,"favorite_count")*4)
+  )[0];
+
+  const oldHeader=wrap.querySelector(":scope > .row.space");
+  if(oldHeader){
+    oldHeader.className="dashboardHero";
+    oldHeader.innerHTML=`
+      <div>
+        <h1>${v55t("dashboardTitle")}</h1>
+        <p class="muted">${v55t("loggedInAs")} ${esc(current.company_name||"")}</p>
+      </div>
+      <div class="row">
+        <span class="dashboardStatusBadge">✓ ${v55t("dealerActive")}</span>
+        <button class="btn" onclick="logout()">${v55t("logout")}</button>
+      </div>`;
+  }
+
+  const notice=wrap.querySelector(".notice");
+  if(notice)notice.textContent=v55t("marketNotice");
+
+  const oldStats=wrap.querySelector(".stats");
+  if(oldStats){
+    oldStats.className="dashboardProStats";
+    oldStats.innerHTML=`
+      <div class="dashboardProCard"><span>${v55t("vehicles")}</span><strong>${totals.list.length}</strong><small>${v55t("total")}</small></div>
+      <div class="dashboardProCard"><span>${v55t("available")}</span><strong>${totals.available}</strong><small>${v55t("status")}</small></div>
+      <div class="dashboardProCard"><span>${v55t("views")}</span><strong>${num(totals.views)}</strong><small>${v55t("last30")}</small></div>
+      <div class="dashboardProCard"><span>${v55t("favorites")}</span><strong>${num(totals.favorites)}</strong><small>${v55t("saved")}</small></div>
+      <div class="dashboardProCard"><span>${v55t("whatsappClicks")}</span><strong>${num(totals.whatsapp)}</strong><small>${v55t("last30")}</small></div>
+      <div class="dashboardProCard"><span>${v55t("callClicks")}</span><strong>${num(totals.calls)}</strong><small>${v55t("last30")}</small></div>
+      <div class="dashboardProCard"><span>${v55t("featured")}</span><strong>${totals.featured}</strong><small>${v55t("premiumStatus")}</small></div>
+      <div class="dashboardProCard"><span>${v55t("profileViews")}</span><strong>${num(Number(current.profile_views||0))}</strong><small>${v55t("profile")}</small></div>`;
+  }
+
+  let main=wrap.querySelector(".dashboardMainGrid");
+  if(!main){
+    main=document.createElement("div");
+    main.className="dashboardMainGrid";
+    const dashgrid=wrap.querySelector(".dashgrid");
+    wrap.insertBefore(main,dashgrid);
+  }
+  const trend=v55FakeTrend(totals.views,14);
+  const max=Math.max(...trend,1);
+  const bars=trend.map((v,i)=>`<div class="dashboardBar" data-value="${v}" style="height:${Math.max(8,Math.round(v/max*100))}%"></div>`).join("");
+  const topImage=top?((parseImages(top.image_url)[0])||""):"";
+  main.innerHTML=`
+    <section class="dashboardChartCard">
+      <h3>${v55t("performance")}</h3>
+      <div class="dashboardChartBars">${bars}</div>
+      <div class="dashboardChartLabels"><span>-14</span><span>-7</span><span>${v55t("today")}</span></div>
+    </section>
+    <section class="dashboardTopVehicle">
+      <h3>${v55t("bestVehicle")}</h3>
+      ${top?`
+      <div class="topVehicleBox">
+        <img src="${topImage}" alt="">
+        <div>
+          <strong style="font-size:20px">${esc(top.brand||"")} ${esc(top.model||"")}</strong>
+          <div class="muted" style="margin-top:4px">${money(top.price)}</div>
+          <div class="topVehicleStats">
+            <div class="topVehicleStat"><span>${v55t("views")}</span><strong>${num(v55Metric(top,"view_count"))}</strong></div>
+            <div class="topVehicleStat"><span>${v55t("favorites")}</span><strong>${num(v55Metric(top,"favorite_count"))}</strong></div>
+            <div class="topVehicleStat"><span>${v55t("whatsappClicks")}</span><strong>${num(v55Metric(top,"whatsapp_clicks"))}</strong></div>
+            <div class="topVehicleStat"><span>${v55t("callClicks")}</span><strong>${num(v55Metric(top,"call_clicks"))}</strong></div>
+          </div>
+        </div>
+      </div>`:`<p class="muted">${v55t("noVehicle")}</p>`}
+    </section>`;
+
+  const side=wrap.querySelector(".side");
+  if(side){
+    side.innerHTML=`
+      <span class="dashboardNavTitle">${v55t("menu")}</span>
+      <button class="btn" onclick="renderDealer()">📊 ${v55t("dashboard")}</button>
+      <button class="btn" onclick="renderDealer()">🚗 ${v55t("myVehicles")}</button>
+      <button class="btn primary" onclick="openForm()">➕ ${v55t("addVehicle").replace(/^\+\s*/,"")}</button>
+      <button class="btn" onclick="openProfileForm()">👤 ${v55t("editDealer")}</button>
+      <button class="btn premiumBtn" onclick="openPromotionCenter()">⭐ ${v55t("premium")}</button>
+      <button class="btn" onclick="showPublic()">🌐 ${v55t("publicPage")}</button>`;
+  }
+
+  const panel=wrap.querySelector(".panel");
+  if(panel){
+    panel.classList.add("dashboardTablePro");
+    const h2=panel.querySelector("h2");
+    if(h2)h2.textContent=v55t("myVehicles");
+    const head=panel.querySelector("thead");
+    if(head)head.innerHTML=`<tr>
+      <th>${v55t("vehicle")}</th><th>${v55t("price")}</th><th>${v55t("views")}</th>
+      <th>${v55t("favorites")}</th><th>${v55t("whatsappClicks")}</th>
+      <th>${v55t("callClicks")}</th><th>${v55t("status")}</th><th>${v55t("actions")}</th>
+    </tr>`;
+    const body=e("tbody");
+    if(body){
+      body.innerHTML=totals.list.map(v=>{
+        const img=parseImages(v.image_url)[0]||"";
+        const statusClass=String(v.status)==="Reserviert"?"reserved":String(v.status)==="Verkauft"?"sold":"";
+        return `<tr>
+          <td><div class="vehicleCell"><img class="vehicleThumb" src="${img}" alt=""><div><strong>${esc(v.brand||"")} ${esc(v.model||"")}</strong><div class="muted">${v.year||"-"} · ${num(v.mileage)} km</div></div></div></td>
+          <td>${money(v.price)}</td>
+          <td><span class="metricChip">👁 ${num(v55Metric(v,"view_count"))}</span></td>
+          <td><span class="metricChip">♥ ${num(v55Metric(v,"favorite_count"))}</span></td>
+          <td><span class="metricChip">💬 ${num(v55Metric(v,"whatsapp_clicks"))}</span></td>
+          <td><span class="metricChip">📞 ${num(v55Metric(v,"call_clicks"))}</span></td>
+          <td><span class="statusTextBadge ${statusClass}">${v55Status(v.status)}</span></td>
+          <td><div class="row">
+            <button class="btn" onclick="editVehicle(${Number(v.id)})">${v55t("edit")}</button>
+            <button class="btn premiumBtn" onclick="openPromotion(${Number(v.id)})">${v55t("promote")}</button>
+            <button class="btn danger" onclick="deleteVehicle(${Number(v.id)})">${v55t("delete")}</button>
+          </div></td>
+        </tr>`;
+      }).join("");
+    }
+  }
+}
+function translatePublicVehicleStatusesV55(){
+  document.querySelectorAll(".card .status").forEach(el=>{el.textContent=v55Status(el.textContent)});
+}
+const v55RenderDealerBase=renderDealer;
+renderDealer=function(){
+  v55RenderDealerBase();
+  setTimeout(buildDashboardPro,80);
+  setTimeout(buildDashboardPro,250);
+};
+const v55RenderPublicBase=renderPublic;
+renderPublic=function(){
+  v55RenderPublicBase();
+  setTimeout(translatePublicVehicleStatusesV55,80);
+};
+const v55SetLanguageBase=setLanguage;
+setLanguage=function(lang){
+  v55SetLanguageBase(lang);
+  setTimeout(()=>{
+    buildDashboardPro();
+    translatePublicVehicleStatusesV55();
+  },150);
+};
+setTimeout(()=>{
+  buildDashboardPro();
+  translatePublicVehicleStatusesV55();
+},300);
 </script>
 
 </body></html>
