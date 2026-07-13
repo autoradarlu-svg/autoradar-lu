@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.3 – Vollständig mehrsprachig</title>
+<title>AutoRadar.lu V5.4 – Fahrzeugseite Pro</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -540,6 +540,105 @@ footer{background:rgba(4,7,13,.55)}
 <style id="autoradar-v5-3">
 [data-i18n]{transition:opacity .12s ease}.languageSwitcher button{min-width:44px}
 </style>
+
+<style id="autoradar-v5-4-vehicle-pro">
+.financeQuickCard,
+.pricePositionCard{
+  margin-top:14px;
+  padding:16px;
+  border-radius:17px;
+  background:linear-gradient(180deg,#101e32,#09131f);
+  border:1px solid rgba(148,163,184,.15);
+}
+.financeQuickCard h3,
+.pricePositionCard h3{margin:0 0 10px;font-size:17px}
+.financeMonthly{
+  font-size:32px;
+  font-weight:950;
+  letter-spacing:-1px;
+  margin:3px 0;
+}
+.financeSmall{font-size:12px;color:#91a0b5;line-height:1.5}
+.vehicleUtilityActions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:10px;
+}
+.priceMeter{
+  height:10px;
+  margin:12px 0 8px;
+  border-radius:999px;
+  overflow:hidden;
+  background:linear-gradient(90deg,#1ca46d 0 33%,#f2b23c 33% 66%,#e14554 66% 100%);
+  position:relative;
+}
+.priceMeterMarker{
+  position:absolute;
+  top:-4px;
+  width:4px;
+  height:18px;
+  border-radius:999px;
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(255,255,255,.18);
+  transform:translateX(-50%);
+}
+.pricePositionRow{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  color:#91a0b5;
+  font-size:11px;
+}
+.financeModalPro{width:min(760px,96vw)}
+.financeHero{
+  padding:18px;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(255,53,70,.13),rgba(17,31,52,.9));
+  border:1px solid rgba(255,91,105,.18);
+  margin-bottom:16px;
+}
+.financeHero strong{font-size:30px;display:block;margin-top:5px}
+.financeGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.financeResult{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+.financeResultCard{
+  padding:15px;
+  border-radius:15px;
+  background:#0b1523;
+  border:1px solid rgba(148,163,184,.14);
+}
+.financeResultCard span{display:block;color:#8798af;font-size:11px;text-transform:uppercase}
+.financeResultCard strong{display:block;margin-top:6px;font-size:21px}
+.shareToast{
+  position:fixed;
+  left:50%;
+  bottom:28px;
+  transform:translateX(-50%) translateY(20px);
+  opacity:0;
+  pointer-events:none;
+  z-index:999;
+  padding:12px 16px;
+  border-radius:12px;
+  background:#16243a;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 18px 45px rgba(0,0,0,.4);
+  transition:.2s ease;
+}
+.shareToast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:650px){
+  .vehicleUtilityActions,.financeGrid,.financeResult{grid-template-columns:1fr}
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><div class="brand">Auto<span>Radar</span>.lu</div><div class="row">
@@ -721,7 +820,7 @@ footer{background:rgba(4,7,13,.55)}
 <div class="paymentNotice">Die Anfrage wird gespeichert. Für echte automatische Zahlungen muss anschließend Stripe Checkout mit einem sicheren Server/Webhook verbunden werden. Bis dahin kannst du Anfragen manuell prüfen und freischalten.</div>
 </div></div>
 
-<footer><div class="wrap">AutoRadar.lu V5.3 · Vollständig mehrsprachig</div></footer>
+<footer><div class="wrap">AutoRadar.lu V5.4 · Fahrzeugseite Pro</div></footer>
 <script>
 const SUPABASE_URL='https://lfgbuncgqkvtclvvqgvs.supabase.co';
 const SUPABASE_KEY='sb_publishable_LSk555Qic_V--sijIMazWw_Bvj3wLqH';
@@ -2211,4 +2310,353 @@ setLanguage = function(language) {
   setTimeout(fixDealerProfileLabels, 150);
   setTimeout(fixDealerProfileLabels, 400);
 };
-</script></body></html>
+</script>
+<div id="financeModalPro" class="overlay hidden">
+  <div class="modal financeModalPro">
+    <div class="row space">
+      <div>
+        <div class="dealerEyebrow" data-i18n="financeCalculatorEyebrow">FINANZIERUNG</div>
+        <h2 data-i18n="financeCalculatorTitle">Monatsrate berechnen</h2>
+      </div>
+      <button class="btn" onclick="closeFinanceCalculator()">×</button>
+    </div>
+
+    <div class="financeHero">
+      <span class="muted" data-i18n="financeVehiclePrice">Fahrzeugpreis</span>
+      <strong id="financeVehiclePriceValue">0 €</strong>
+      <div id="financeVehicleName" class="muted"></div>
+    </div>
+
+    <div class="financeGrid">
+      <div>
+        <label data-i18n="financeDownPayment">Anzahlung</label>
+        <input id="financeDownPaymentInput" class="control" type="number" min="0" oninput="calculateFinancePro()">
+      </div>
+      <div>
+        <label data-i18n="financeTerm">Laufzeit</label>
+        <select id="financeTermInput" class="control" onchange="calculateFinancePro()">
+          <option value="24">24 Monate</option>
+          <option value="36">36 Monate</option>
+          <option value="48">48 Monate</option>
+          <option value="60" selected>60 Monate</option>
+          <option value="72">72 Monate</option>
+          <option value="84">84 Monate</option>
+        </select>
+      </div>
+      <div>
+        <label data-i18n="financeInterest">Effektiver Jahreszins</label>
+        <input id="financeInterestInput" class="control" type="number" step="0.01" min="0" value="5.99" oninput="calculateFinancePro()">
+      </div>
+      <div>
+        <label data-i18n="financeFinalPayment">Schlussrate</label>
+        <input id="financeFinalPaymentInput" class="control" type="number" min="0" value="0" oninput="calculateFinancePro()">
+      </div>
+    </div>
+
+    <div class="financeResult">
+      <div class="financeResultCard">
+        <span data-i18n="financeMonthlyRate">Monatsrate</span>
+        <strong id="financeMonthlyRateValue">0 €</strong>
+      </div>
+      <div class="financeResultCard">
+        <span data-i18n="financeAmount">Kreditbetrag</span>
+        <strong id="financeAmountValue">0 €</strong>
+      </div>
+      <div class="financeResultCard">
+        <span data-i18n="financeTotalCost">Gesamtbetrag</span>
+        <strong id="financeTotalCostValue">0 €</strong>
+      </div>
+    </div>
+
+    <p class="financeSmall" data-i18n="financeDisclaimer">
+      Unverbindliche Beispielrechnung. Konditionen können je nach Händler und Bonität abweichen.
+    </p>
+  </div>
+</div>
+<div id="shareToast" class="shareToast">Link kopiert</div>
+
+
+<script id="autoradar-v5-4-vehicle-pro-js">
+Object.assign(I18N.de,{
+  financeCalculatorEyebrow:"FINANZIERUNG",
+  financeCalculatorTitle:"Monatsrate berechnen",
+  financeVehiclePrice:"Fahrzeugpreis",
+  financeDownPayment:"Anzahlung",
+  financeTerm:"Laufzeit",
+  financeInterest:"Effektiver Jahreszins",
+  financeFinalPayment:"Schlussrate",
+  financeMonthlyRate:"Monatsrate",
+  financeAmount:"Kreditbetrag",
+  financeTotalCost:"Gesamtbetrag",
+  financeDisclaimer:"Unverbindliche Beispielrechnung. Konditionen können je nach Händler und Bonität abweichen.",
+  financeButton:"Finanzierung berechnen",
+  shareButton:"Teilen",
+  printButton:"Drucken",
+  marketPriceTitle:"Preisvergleich",
+  marketPriceGood:"Guter Preis",
+  marketPriceFair:"Fairer Preis",
+  marketPriceHigh:"Über Marktniveau",
+  marketPriceHint:"Verglichen mit ähnlichen Fahrzeugen auf AutoRadar.lu",
+  estimatedRate:"Geschätzte Monatsrate",
+  from:"ab",
+  copied:"Link kopiert"
+});
+Object.assign(I18N.fr,{
+  financeCalculatorEyebrow:"FINANCEMENT",
+  financeCalculatorTitle:"Calculer la mensualité",
+  financeVehiclePrice:"Prix du véhicule",
+  financeDownPayment:"Apport",
+  financeTerm:"Durée",
+  financeInterest:"Taux annuel effectif",
+  financeFinalPayment:"Dernière échéance",
+  financeMonthlyRate:"Mensualité",
+  financeAmount:"Montant financé",
+  financeTotalCost:"Montant total",
+  financeDisclaimer:"Simulation non contractuelle. Les conditions peuvent varier selon le vendeur et le dossier.",
+  financeButton:"Calculer le financement",
+  shareButton:"Partager",
+  printButton:"Imprimer",
+  marketPriceTitle:"Comparaison de prix",
+  marketPriceGood:"Bon prix",
+  marketPriceFair:"Prix correct",
+  marketPriceHigh:"Au-dessus du marché",
+  marketPriceHint:"Comparé à des véhicules similaires sur AutoRadar.lu",
+  estimatedRate:"Mensualité estimée",
+  from:"à partir de",
+  copied:"Lien copié"
+});
+Object.assign(I18N.en,{
+  financeCalculatorEyebrow:"FINANCE",
+  financeCalculatorTitle:"Calculate monthly payment",
+  financeVehiclePrice:"Vehicle price",
+  financeDownPayment:"Down payment",
+  financeTerm:"Term",
+  financeInterest:"Annual interest rate",
+  financeFinalPayment:"Final payment",
+  financeMonthlyRate:"Monthly payment",
+  financeAmount:"Amount financed",
+  financeTotalCost:"Total amount",
+  financeDisclaimer:"Non-binding example. Conditions may vary depending on dealer and credit assessment.",
+  financeButton:"Calculate finance",
+  shareButton:"Share",
+  printButton:"Print",
+  marketPriceTitle:"Price comparison",
+  marketPriceGood:"Good price",
+  marketPriceFair:"Fair price",
+  marketPriceHigh:"Above market",
+  marketPriceHint:"Compared with similar vehicles on AutoRadar.lu",
+  estimatedRate:"Estimated monthly payment",
+  from:"from",
+  copied:"Link copied"
+});
+Object.assign(I18N.lu,{
+  financeCalculatorEyebrow:"FINANZÉIERUNG",
+  financeCalculatorTitle:"Monatsrat berechnen",
+  financeVehiclePrice:"Gefierpräis",
+  financeDownPayment:"Abezuelung",
+  financeTerm:"Lafzäit",
+  financeInterest:"Effektiven Joreszëns",
+  financeFinalPayment:"Schlussrat",
+  financeMonthlyRate:"Monatsrat",
+  financeAmount:"Kreditbetrag",
+  financeTotalCost:"Gesamtbetrag",
+  financeDisclaimer:"Onverbindlech Beispillrechnung. Konditioune kënne jee no Händler a Bonitéit variéieren.",
+  financeButton:"Finanzéierung berechnen",
+  shareButton:"Deelen",
+  printButton:"Drécken",
+  marketPriceTitle:"Präisverglach",
+  marketPriceGood:"Gudde Präis",
+  marketPriceFair:"Faire Präis",
+  marketPriceHigh:"Iwwer Maartniveau",
+  marketPriceHint:"Verglach mat änleche Gefierer op AutoRadar.lu",
+  estimatedRate:"Geschate Monatsrat",
+  from:"vun",
+  copied:"Link kopéiert"
+});
+
+let financeVehiclePro=null;
+
+function estimateMonthlyRate(price, down=0, months=60, annual=5.99, finalPayment=0){
+  const principal=Math.max(0,Number(price||0)-Number(down||0)-Number(finalPayment||0));
+  const monthlyRate=Number(annual||0)/100/12;
+  if(months<=0)return 0;
+  if(monthlyRate===0)return principal/months;
+  return principal*(monthlyRate*Math.pow(1+monthlyRate,months))/(Math.pow(1+monthlyRate,months)-1);
+}
+
+function comparableVehiclesFor(v){
+  return vehicles.filter(x=>{
+    if(Number(x.id)===Number(v.id)||x.status==='Verkauft'||!x.price)return false;
+    const sameBrand=(x.brand||'').toLowerCase()===(v.brand||'').toLowerCase();
+    const sameBody=v.body_type && x.body_type===v.body_type;
+    const closeYear=!v.year||!x.year||Math.abs(Number(x.year)-Number(v.year))<=4;
+    return (sameBrand||sameBody)&&closeYear;
+  });
+}
+
+function marketPriceData(v){
+  const list=comparableVehiclesFor(v).map(x=>Number(x.price)).filter(Boolean).sort((a,b)=>a-b);
+  if(!list.length)return null;
+  const mid=Math.floor(list.length/2);
+  const median=list.length%2?list[mid]:(list[mid-1]+list[mid])/2;
+  const ratio=Number(v.price||0)/median;
+  let label=t("marketPriceFair"),position=50;
+  if(ratio<=0.93){label=t("marketPriceGood");position=20}
+  else if(ratio>=1.08){label=t("marketPriceHigh");position=82}
+  else position=50;
+  return {median,ratio,label,position,count:list.length};
+}
+
+function openFinanceCalculator(vehicleId){
+  const v=vehicles.find(x=>Number(x.id)===Number(vehicleId))||detailVehicle;
+  if(!v)return;
+  financeVehiclePro=v;
+  e("financeVehiclePriceValue").textContent=money(v.price);
+  e("financeVehicleName").textContent=`${v.brand||""} ${v.model||""}`.trim();
+  e("financeDownPaymentInput").value=Math.round(Number(v.price||0)*0.10);
+  e("financeFinalPaymentInput").value=0;
+  calculateFinancePro();
+  e("financeModalPro").classList.remove("hidden");
+  document.body.style.overflow="hidden";
+  setTimeout(applyTranslations,0);
+}
+
+function closeFinanceCalculator(){
+  e("financeModalPro").classList.add("hidden");
+  if(e("detailModal").classList.contains("hidden"))document.body.style.overflow="";
+}
+
+function calculateFinancePro(){
+  if(!financeVehiclePro)return;
+  const price=Number(financeVehiclePro.price||0);
+  const down=Number(e("financeDownPaymentInput").value||0);
+  const months=Number(e("financeTermInput").value||60);
+  const annual=Number(e("financeInterestInput").value||0);
+  const finalPayment=Number(e("financeFinalPaymentInput").value||0);
+  const amount=Math.max(0,price-down);
+  const monthly=estimateMonthlyRate(price,down,months,annual,finalPayment);
+  const total=down+(monthly*months)+finalPayment;
+  e("financeMonthlyRateValue").textContent=money(monthly);
+  e("financeAmountValue").textContent=money(amount);
+  e("financeTotalCostValue").textContent=money(total);
+}
+
+function showShareToast(){
+  const toast=e("shareToast");
+  toast.textContent=t("copied");
+  toast.classList.add("show");
+  setTimeout(()=>toast.classList.remove("show"),1800);
+}
+
+async function shareVehiclePro(vehicleId){
+  const v=vehicles.find(x=>Number(x.id)===Number(vehicleId))||detailVehicle;
+  if(!v)return;
+  const title=`${v.brand||""} ${v.model||""} – AutoRadar.lu`.trim();
+  const text=`${title} · ${money(v.price)} · ${num(v.mileage)} km`;
+  const url=location.href.split("#")[0]+`#vehicle-${v.id}`;
+  try{
+    if(navigator.share){
+      await navigator.share({title,text,url});
+    }else{
+      await navigator.clipboard.writeText(url);
+      showShareToast();
+    }
+  }catch(err){
+    if(err && err.name!=="AbortError"){
+      try{await navigator.clipboard.writeText(url);showShareToast()}catch(_){}
+    }
+  }
+}
+
+function printVehiclePro(){
+  window.print();
+}
+
+function enhanceVehicleDetailPro(v){
+  if(!v)return;
+  const actionBox=document.querySelector("#vehicleDetailContent .vehicleMainActions");
+  const purchasePanel=document.querySelector("#vehicleDetailContent .vehiclePurchasePanel");
+  const contentGrid=document.querySelector("#vehicleDetailContent .vehicleContentGrid");
+  if(!actionBox||!purchasePanel)return;
+
+  if(!actionBox.querySelector("[data-v54-finance]")){
+    const financeBtn=document.createElement("button");
+    financeBtn.className="btn primary";
+    financeBtn.dataset.v54Finance="1";
+    financeBtn.textContent="💳 "+t("financeButton");
+    financeBtn.onclick=()=>openFinanceCalculator(v.id);
+    actionBox.appendChild(financeBtn);
+
+    const utilities=document.createElement("div");
+    utilities.className="vehicleUtilityActions";
+    utilities.innerHTML=`
+      <button class="btn" onclick="shareVehiclePro(${Number(v.id)})">↗ ${t("shareButton")}</button>
+      <button class="btn" onclick="printVehiclePro()">🖨 ${t("printButton")}</button>`;
+    actionBox.appendChild(utilities);
+  }
+
+  if(!purchasePanel.querySelector(".financeQuickCard")){
+    const monthly=estimateMonthlyRate(v.price,Number(v.price||0)*0.10,60,5.99,0);
+    const quick=document.createElement("section");
+    quick.className="financeQuickCard";
+    quick.innerHTML=`
+      <h3>${t("estimatedRate")}</h3>
+      <div class="financeMonthly">${t("from")} ${money(monthly)} / Monat</div>
+      <div class="financeSmall">${money(Number(v.price||0)*0.10)} Anzahlung · 60 Monate · 5,99 %</div>`;
+    purchasePanel.appendChild(quick);
+  }
+
+  if(contentGrid && !document.querySelector("#vehicleDetailContent .pricePositionCard")){
+    const data=marketPriceData(v);
+    if(data){
+      const card=document.createElement("section");
+      card.className="vehicleSection sectionWide pricePositionCard";
+      card.innerHTML=`
+        <h3>${t("marketPriceTitle")}</h3>
+        <strong style="font-size:22px">${data.label}</strong>
+        <div class="priceMeter"><i class="priceMeterMarker" style="left:${data.position}%"></i></div>
+        <div class="pricePositionRow">
+          <span>${money(data.median*0.90)}</span>
+          <span>${money(data.median)}</span>
+          <span>${money(data.median*1.10)}</span>
+        </div>
+        <p class="financeSmall">${t("marketPriceHint")} · ${data.count} Vergleichsfahrzeuge</p>`;
+      contentGrid.appendChild(card);
+    }
+  }
+}
+
+const openVehicleDetailV54Base=openVehicleDetail;
+openVehicleDetail=async function(id){
+  await openVehicleDetailV54Base(id);
+  const v=vehicles.find(x=>Number(x.id)===Number(id));
+  setTimeout(()=>enhanceVehicleDetailPro(v),80);
+  setTimeout(()=>enhanceVehicleDetailPro(v),300);
+};
+
+const setLanguageV54VehicleBase=setLanguage;
+setLanguage=function(lang){
+  setLanguageV54VehicleBase(lang);
+  setTimeout(()=>{
+    if(detailVehicle&&!e("detailModal").classList.contains("hidden")){
+      enhanceVehicleDetailPro(detailVehicle);
+      document.querySelectorAll("[data-v54-finance]").forEach(btn=>btn.textContent="💳 "+t("financeButton"));
+      document.querySelectorAll(".vehicleUtilityActions button").forEach((btn,index)=>{
+        btn.textContent=index===0?"↗ "+t("shareButton"):"🖨 "+t("printButton");
+      });
+    }
+    applyTranslations();
+  },120);
+};
+
+window.addEventListener("hashchange",()=>{
+  const match=location.hash.match(/^#vehicle-(\d+)$/);
+  if(match)setTimeout(()=>openVehicleDetail(Number(match[1])),250);
+});
+window.addEventListener("load",()=>{
+  const match=location.hash.match(/^#vehicle-(\d+)$/);
+  if(match)setTimeout(()=>openVehicleDetail(Number(match[1])),700);
+});
+</script>
+
+</body></html>
