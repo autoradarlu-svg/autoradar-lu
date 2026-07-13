@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.5 – Händler-Dashboard Pro</title>
+<title>AutoRadar.lu V5.5.1 – Komplett mehrsprachig</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -955,7 +955,7 @@ footer{background:rgba(4,7,13,.55)}
 <div class="paymentNotice">Die Anfrage wird gespeichert. Für echte automatische Zahlungen muss anschließend Stripe Checkout mit einem sicheren Server/Webhook verbunden werden. Bis dahin kannst du Anfragen manuell prüfen und freischalten.</div>
 </div></div>
 
-<footer><div class="wrap">AutoRadar.lu V5.5 · Händler-Dashboard Pro</div></footer>
+<footer><div class="wrap">AutoRadar.lu V5.5.1 · Komplett mehrsprachig</div></footer>
 <script>
 const SUPABASE_URL='https://lfgbuncgqkvtclvvqgvs.supabase.co';
 const SUPABASE_KEY='sb_publishable_LSk555Qic_V--sijIMazWw_Bvj3wLqH';
@@ -3389,6 +3389,276 @@ setTimeout(()=>{
   buildDashboardPro();
   translatePublicVehicleStatusesV55();
 },300);
+</script>
+
+
+<script id="autoradar-v5-5-1-full-language-fix">
+const V551 = {
+  de: {
+    dealerDashboard:"Händler-Dashboard", loggedInAs:"Angemeldet als", logout:"Abmelden",
+    addVehicle:"+ Fahrzeug hinzufügen", myVehicles:"Meine Fahrzeuge",
+    editProfile:"Händlerprofil bearbeiten", promoteListings:"Anzeigen hervorheben",
+    publicPage:"Öffentliche Seite", vehicle:"Fahrzeug", price:"Preis", views:"Aufrufe",
+    favorites:"Favoriten", status:"Status", actions:"Aktionen", edit:"Bearbeiten",
+    promote:"Hervorheben", delete:"Löschen", dealerAccount:"Händlerkonto",
+    login:"Anmelden", register:"Registrieren", email:"E-Mail", password:"Passwort",
+    signIn:"Einloggen", freeRegister:"Kostenlos registrieren", companyName:"Firmenname",
+    phone:"Telefon", address:"Adresse", demoText:"Demo weiterhin möglich:",
+    available:"Verfügbar", reserved:"Reserviert", sold:"Verkauft",
+    dashboard:"Dashboard", menu:"Menü", featured:"Hervorgehoben",
+    whatsappClicks:"WhatsApp-Klicks", callClicks:"Anruf-Klicks",
+    profileViews:"Profilaufrufe", dealerActive:"Händlerkonto aktiv",
+    vehicles:"Fahrzeuge", total:"Gesamt", today:"Heute", last30:"Letzte 30 Tage",
+    saved:"Gespeichert", premiumStatus:"Premium-Status", performance:"Performance der letzten 14 Tage",
+    mostPopular:"Beliebtestes Fahrzeug", noVehicle:"Noch kein Fahrzeug vorhanden",
+    demoNotice:"Marketplace Edition: kostenlose Inserate, echte Händlerkonten, Statistiken und kostenpflichtige Hervorhebungs-Anfragen. Zahlungen werden erst nach sicherer Stripe-Anbindung automatisch freigeschaltet.",
+    registerHint:"Nach der Registrierung kann eine E-Mail-Bestätigung erforderlich sein.",
+    regPasswordHint:"Mindestens 6 Zeichen", regCompanyHint:"Mein Autohaus"
+  },
+  fr: {
+    dealerDashboard:"Tableau de bord vendeur", loggedInAs:"Connecté en tant que", logout:"Se déconnecter",
+    addVehicle:"+ Ajouter un véhicule", myVehicles:"Mes véhicules",
+    editProfile:"Modifier le profil vendeur", promoteListings:"Mettre les annonces en avant",
+    publicPage:"Page publique", vehicle:"Véhicule", price:"Prix", views:"Vues",
+    favorites:"Favoris", status:"Statut", actions:"Actions", edit:"Modifier",
+    promote:"Mettre en avant", delete:"Supprimer", dealerAccount:"Compte vendeur",
+    login:"Connexion", register:"Inscription", email:"E-mail", password:"Mot de passe",
+    signIn:"Se connecter", freeRegister:"S’inscrire gratuitement", companyName:"Nom de l’entreprise",
+    phone:"Téléphone", address:"Adresse", demoText:"Compte de démonstration :",
+    available:"Disponible", reserved:"Réservé", sold:"Vendu",
+    dashboard:"Tableau de bord", menu:"Menu", featured:"Mis en avant",
+    whatsappClicks:"Clics WhatsApp", callClicks:"Clics d’appel",
+    profileViews:"Vues du profil", dealerActive:"Compte vendeur actif",
+    vehicles:"Véhicules", total:"Total", today:"Aujourd’hui", last30:"30 derniers jours",
+    saved:"Enregistré", premiumStatus:"Statut Premium", performance:"Performance des 14 derniers jours",
+    mostPopular:"Véhicule le plus populaire", noVehicle:"Aucun véhicule disponible",
+    demoNotice:"Édition Marketplace : annonces gratuites, comptes vendeurs réels, statistiques et demandes de mise en avant payantes. Les paiements seront activés automatiquement après une intégration Stripe sécurisée.",
+    registerHint:"Une confirmation par e-mail peut être nécessaire après l’inscription.",
+    regPasswordHint:"Au moins 6 caractères", regCompanyHint:"Mon garage"
+  },
+  en: {
+    dealerDashboard:"Dealer dashboard", loggedInAs:"Logged in as", logout:"Log out",
+    addVehicle:"+ Add vehicle", myVehicles:"My vehicles",
+    editProfile:"Edit dealer profile", promoteListings:"Promote listings",
+    publicPage:"Public page", vehicle:"Vehicle", price:"Price", views:"Views",
+    favorites:"Favorites", status:"Status", actions:"Actions", edit:"Edit",
+    promote:"Promote", delete:"Delete", dealerAccount:"Dealer account",
+    login:"Sign in", register:"Register", email:"Email", password:"Password",
+    signIn:"Log in", freeRegister:"Register for free", companyName:"Company name",
+    phone:"Phone", address:"Address", demoText:"Demo account:",
+    available:"Available", reserved:"Reserved", sold:"Sold",
+    dashboard:"Dashboard", menu:"Menu", featured:"Featured",
+    whatsappClicks:"WhatsApp clicks", callClicks:"Call clicks",
+    profileViews:"Profile views", dealerActive:"Dealer account active",
+    vehicles:"Vehicles", total:"Total", today:"Today", last30:"Last 30 days",
+    saved:"Saved", premiumStatus:"Premium status", performance:"Performance over the last 14 days",
+    mostPopular:"Most popular vehicle", noVehicle:"No vehicle available",
+    demoNotice:"Marketplace Edition: free listings, real dealer accounts, statistics and paid promotion requests. Payments will be activated automatically after secure Stripe integration.",
+    registerHint:"Email confirmation may be required after registration.",
+    regPasswordHint:"At least 6 characters", regCompanyHint:"My dealership"
+  },
+  lu: {
+    dealerDashboard:"Händler-Dashboard", loggedInAs:"Ageloggt als", logout:"Ofmellen",
+    addVehicle:"+ Gefier dobäisetzen", myVehicles:"Meng Gefierer",
+    editProfile:"Händlerprofil änneren", promoteListings:"Annoncen ervirhiewen",
+    publicPage:"Ëffentlech Säit", vehicle:"Gefier", price:"Präis", views:"Opriff",
+    favorites:"Favoritten", status:"Status", actions:"Aktiounen", edit:"Änneren",
+    promote:"Ervirhiewen", delete:"Läschen", dealerAccount:"Händlerkonto",
+    login:"Umellen", register:"Registréieren", email:"E-Mail", password:"Passwuert",
+    signIn:"Aloggen", freeRegister:"Gratis registréieren", companyName:"Firmennumm",
+    phone:"Telefon", address:"Adress", demoText:"Demo-Konto:",
+    available:"Verfügbar", reserved:"Reservéiert", sold:"Verkaaft",
+    dashboard:"Dashboard", menu:"Menü", featured:"Erausgehuewen",
+    whatsappClicks:"WhatsApp-Klicken", callClicks:"Uruff-Klicken",
+    profileViews:"Profilopriff", dealerActive:"Händlerkonto aktiv",
+    vehicles:"Gefierer", total:"Total", today:"Haut", last30:"Lescht 30 Deeg",
+    saved:"Gespäichert", premiumStatus:"Premium-Status", performance:"Leeschtung vun de leschte 14 Deeg",
+    mostPopular:"Beléiftste Gefier", noVehicle:"Nach kee Gefier verfügbar",
+    demoNotice:"Marketplace Editioun: gratis Annoncen, richteg Händlerkonten, Statistiken a bezuelte Promotiounsufroen. Bezuelunge ginn eréischt no enger sécherer Stripe-Integratioun automatesch aktivéiert.",
+    registerHint:"No der Registréierung kann eng E-Mail-Bestätegung néideg sinn.",
+    regPasswordHint:"Mindestens 6 Zeechen", regCompanyHint:"Mäin Autohaus"
+  }
+};
+
+function v551t(key){ return (V551[currentLang] || V551.de)[key] || key; }
+
+function v551Status(text){
+  const s=String(text||"").trim();
+  const T=V551[currentLang]||V551.de;
+  const map={
+    "Verfügbar":T.available,"Disponible":T.available,"Available":T.available,
+    "Reserviert":T.reserved,"Réservé":T.reserved,"Reserved":T.reserved,"Reservéiert":T.reserved,
+    "Verkauft":T.sold,"Vendu":T.sold,"Sold":T.sold,"Verkaaft":T.sold
+  };
+  return map[s] || s;
+}
+
+function forceTranslateLoginV551(){
+  const root=document.getElementById("loginModal");
+  if(!root)return;
+  const T=V551[currentLang]||V551.de;
+
+  const title=root.querySelector("h2");
+  if(title)title.textContent=T.dealerAccount;
+
+  const loginTab=document.getElementById("loginTabBtn");
+  const registerTab=document.getElementById("registerTabBtn");
+  if(loginTab)loginTab.textContent=T.login;
+  if(registerTab)registerTab.textContent=T.register;
+
+  const loginPane=document.getElementById("loginPane");
+  if(loginPane){
+    const p=loginPane.querySelector("p");
+    if(p)p.innerHTML=`${T.demoText} <b>ddd@autoradar.lu</b> / <b>demo123</b>`;
+    const labels=loginPane.querySelectorAll("label");
+    if(labels[0])labels[0].textContent=T.email;
+    if(labels[1])labels[1].textContent=T.password;
+    const button=loginPane.querySelector("button.primary");
+    if(button)button.textContent=T.signIn;
+  }
+
+  const registerPane=document.getElementById("registerPane");
+  if(registerPane){
+    const labels=registerPane.querySelectorAll("label");
+    if(labels[0])labels[0].textContent=T.companyName+" *";
+    if(labels[1])labels[1].textContent=T.email+" *";
+    if(labels[2])labels[2].textContent=T.password+" *";
+    if(labels[3])labels[3].textContent=T.phone;
+    if(labels[4])labels[4].textContent=T.address+" *";
+    const button=registerPane.querySelector("button.primary");
+    if(button)button.textContent=T.freeRegister;
+    const hint=registerPane.querySelector("p.muted");
+    if(hint)hint.textContent=T.registerHint;
+    const company=document.getElementById("regCompany");
+    const pass=document.getElementById("regPass");
+    if(company)company.placeholder=T.regCompanyHint;
+    if(pass)pass.placeholder=T.regPasswordHint;
+  }
+}
+
+function forceTranslatePublicStatusesV551(){
+  document.querySelectorAll(".card .status").forEach(el=>{
+    el.textContent=v551Status(el.textContent);
+  });
+}
+
+function forceTranslateDashboardV551(){
+  const root=document.getElementById("dealer");
+  if(!root)return;
+  const T=V551[currentLang]||V551.de;
+
+  const title=root.querySelector(".dashboardHero h1, .dashboard > .row.space h1, h1");
+  if(title)title.textContent=T.dealerDashboard;
+
+  const welcome=document.getElementById("welcome");
+  if(welcome){
+    const company=current?.company_name || "Autohaus";
+    welcome.textContent=`${T.loggedInAs} ${company}`;
+  }
+
+  root.querySelectorAll("button").forEach(btn=>{
+    const raw=btn.textContent.trim().replace(/^[📊🚗➕👤⭐🌐]\s*/,"");
+    if(["Abmelden","Se déconnecter","Log out","Ofmellen"].includes(raw))btn.textContent=T.logout;
+    else if(["Dashboard","Tableau de bord"].includes(raw))btn.textContent="📊 "+T.dashboard;
+    else if(["Meine Fahrzeuge","Mes véhicules","My vehicles","Meng Gefierer"].includes(raw))btn.textContent="🚗 "+T.myVehicles;
+    else if(["Fahrzeug hinzufügen","Ajouter un véhicule","Add vehicle","Gefier dobäisetzen","+ Fahrzeug hinzufügen","+ Ajouter un véhicule","+ Add vehicle","+ Gefier dobäisetzen"].includes(raw))btn.textContent="➕ "+T.addVehicle.replace(/^\+\s*/,"");
+    else if(["Händlerprofil bearbeiten","Modifier le profil vendeur","Edit dealer profile","Händlerprofil änneren"].includes(raw))btn.textContent="👤 "+T.editProfile;
+    else if(["Anzeigen hervorheben","Mettre les annonces en avant","Promote listings","Annoncen ervirhiewen"].includes(raw))btn.textContent="⭐ "+T.promoteListings;
+    else if(["Öffentliche Seite","Page publique","Public page","Ëffentlech Säit"].includes(raw))btn.textContent="🌐 "+T.publicPage;
+    else if(["Bearbeiten","Modifier","Edit","Änneren"].includes(raw))btn.textContent=T.edit;
+    else if(["Hervorheben","Mettre en avant","Promote","Ervirhiewen"].includes(raw))btn.textContent=T.promote;
+    else if(["Löschen","Supprimer","Delete","Läschen"].includes(raw))btn.textContent=T.delete;
+  });
+
+  const notice=root.querySelector(".notice");
+  if(notice)notice.textContent=T.demoNotice;
+
+  root.querySelectorAll(".dashboardNavTitle").forEach(el=>el.textContent=T.menu);
+
+  const panelTitle=root.querySelector(".panel h2");
+  if(panelTitle)panelTitle.textContent=T.myVehicles;
+
+  const ths=root.querySelectorAll("thead th");
+  const headers=[T.vehicle,T.price,T.views,T.favorites,T.whatsappClicks,T.callClicks,T.status,T.actions];
+  ths.forEach((th,i)=>{if(headers[i])th.textContent=headers[i]});
+
+  root.querySelectorAll(".statusTextBadge").forEach(el=>el.textContent=v551Status(el.textContent));
+
+  root.querySelectorAll(".dashboardProCard").forEach(card=>{
+    const label=card.querySelector("span");
+    const small=card.querySelector("small");
+    if(!label)return;
+    const raw=label.textContent.trim();
+    const map={
+      "Fahrzeuge":"vehicles","Véhicules":"vehicles","Vehicles":"vehicles","Gefierer":"vehicles",
+      "Verfügbar":"available","Disponibles":"available","Available":"available",
+      "Aufrufe":"views","Vues":"views","Views":"views","Opriff":"views",
+      "Favoriten":"favorites","Favoris":"favorites","Favorites":"favorites",
+      "WhatsApp-Klicks":"whatsappClicks","Clics WhatsApp":"whatsappClicks","WhatsApp clicks":"whatsappClicks","WhatsApp-Klicken":"whatsappClicks",
+      "Anruf-Klicks":"callClicks","Clics d’appel":"callClicks","Call clicks":"callClicks","Uruff-Klicken":"callClicks",
+      "Hervorgehoben":"featured","Mis en avant":"featured","Featured":"featured","Erausgehuewen":"featured",
+      "Profilaufrufe":"profileViews","Vues du profil":"profileViews","Profile views":"profileViews","Profilopriff":"profileViews"
+    };
+    if(map[raw])label.textContent=T[map[raw]];
+    if(small){
+      const s=small.textContent.trim();
+      if(["Gesamt","Total"].includes(s))small.textContent=T.total;
+      else if(["Letzte 30 Tage","30 derniers jours","Last 30 days","Lescht 30 Deeg"].includes(s))small.textContent=T.last30;
+      else if(["Gespeichert","Enregistré","Saved","Gespäichert"].includes(s))small.textContent=T.saved;
+      else if(["Premium-Status","Statut Premium","Premium status"].includes(s))small.textContent=T.premiumStatus;
+      else if(["Profil","Profile"].includes(s))small.textContent="Profil";
+    }
+  });
+
+  const chartTitle=root.querySelector(".dashboardChartCard h3");
+  if(chartTitle)chartTitle.textContent=T.performance;
+  const todayLabel=root.querySelector(".dashboardChartLabels span:last-child");
+  if(todayLabel)todayLabel.textContent=T.today;
+  const topTitle=root.querySelector(".dashboardTopVehicle h3");
+  if(topTitle)topTitle.textContent=T.mostPopular;
+  const activeBadge=root.querySelector(".dashboardStatusBadge");
+  if(activeBadge)activeBadge.textContent="✓ "+T.dealerActive;
+}
+
+const v551SetLanguageBase=setLanguage;
+setLanguage=function(lang){
+  v551SetLanguageBase(lang);
+  setTimeout(()=>{
+    forceTranslateLoginV551();
+    forceTranslateDashboardV551();
+    forceTranslatePublicStatusesV551();
+  },120);
+  setTimeout(()=>{
+    forceTranslateLoginV551();
+    forceTranslateDashboardV551();
+    forceTranslatePublicStatusesV551();
+  },350);
+};
+
+const v551OpenLoginBase=openLogin;
+openLogin=function(){
+  v551OpenLoginBase();
+  setTimeout(forceTranslateLoginV551,80);
+};
+
+const v551RenderDealerBase=renderDealer;
+renderDealer=function(){
+  v551RenderDealerBase();
+  setTimeout(forceTranslateDashboardV551,120);
+  setTimeout(forceTranslateDashboardV551,350);
+};
+
+const v551RenderPublicBase=renderPublic;
+renderPublic=function(){
+  v551RenderPublicBase();
+  setTimeout(forceTranslatePublicStatusesV551,100);
+};
+
+setTimeout(()=>{
+  forceTranslateLoginV551();
+  forceTranslateDashboardV551();
+  forceTranslatePublicStatusesV551();
+},400);
 </script>
 
 </body></html>
