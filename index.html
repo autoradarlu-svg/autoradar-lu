@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.7 – Händlerpakete Premium</title>
+<title>AutoRadar.lu V5.7 – Premium Pakete komplett</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -769,13 +769,33 @@ footer{background:rgba(4,7,13,.55)}
 </style>
 
 
-<!-- V5.7 PACKAGE CONFIG
-FREE: 5 Fahrzeuge / 0€
-STARTER: 10 Fahrzeuge / 19€ / Starter Badge
-PRO: 20 Fahrzeuge / 39€ / Premium Händler Badge
-BUSINESS: 50 Fahrzeuge / 79€ / Top-Händler Badge
-PREMIUM PARTNER: Unlimited / 149€ / Premium Partner Badge
--->
+<style id="autoradar-v57-premium">
+.planStatusCard{padding:18px;border-radius:20px;background:linear-gradient(145deg,#111f34,#0a1422);border:1px solid rgba(148,163,184,.16);margin:16px 0}
+.planStatusTop{display:flex;justify-content:space-between;gap:14px;align-items:center}
+.planBadge{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border-radius:999px;font-size:11px;font-weight:900;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.24);color:#cfe5ff}
+.planBadge.starter{background:rgba(96,165,250,.12);color:#cfe5ff}
+.planBadge.pro{background:rgba(255,194,71,.12);border-color:rgba(255,194,71,.28);color:#ffe7a8}
+.planBadge.business{background:rgba(192,132,252,.12);border-color:rgba(192,132,252,.28);color:#e9d5ff}
+.planBadge.unlimited{background:linear-gradient(135deg,#f6c85f,#f08a24);color:#17130a;border:0}
+.planProgress{height:10px;border-radius:999px;background:#08111e;overflow:hidden;margin-top:14px;border:1px solid rgba(255,255,255,.06)}
+.planProgress span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#ff5362,#ffbd3c)}
+.planStatusMeta{display:flex;justify-content:space-between;gap:10px;margin-top:8px;color:#8fa0b8;font-size:11px}
+.packageGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px}
+.packageCard{position:relative;padding:18px;border-radius:20px;background:linear-gradient(180deg,#111d30,#09131f);border:1px solid rgba(148,163,184,.15);display:flex;flex-direction:column;min-height:365px}
+.packageCard.active{border-color:rgba(255,83,98,.55);box-shadow:0 0 0 1px rgba(255,83,98,.18),0 18px 45px rgba(255,53,70,.12)}
+.packageCard.popular:before{content:attr(data-popular);position:absolute;top:12px;right:12px;padding:5px 8px;border-radius:999px;background:#ff4a5d;color:white;font-size:9px;font-weight:900}
+.packageName{font-size:20px;font-weight:950}.packagePrice{font-size:30px;font-weight:950;margin-top:10px}.packagePrice small{font-size:11px;color:#8fa0b8}
+.packageLimit{margin-top:7px;color:#cbd5e1;font-weight:800}
+.packageFeatures{display:grid;gap:8px;margin:16px 0;color:#9fb0c8;font-size:12px}
+.packageFeatures span:before{content:"✓";margin-right:7px;color:#42d7a2;font-weight:950}
+.packageCard .btn{margin-top:auto}
+.premiumVehicleBadge{display:inline-flex;align-items:center;gap:5px;padding:6px 8px;border-radius:999px;background:linear-gradient(135deg,#ffb52e,#ff5e45);color:#1a0d00;font-size:10px;font-weight:950;box-shadow:0 6px 18px rgba(255,151,35,.25)}
+.card.isPremium{border-color:rgba(255,177,48,.45)!important;box-shadow:0 0 0 1px rgba(255,177,48,.12),0 18px 38px rgba(255,151,35,.11)!important}
+.dealerPremiumBadge{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:950;margin-left:8px}
+.dealerPremiumBadge.starter{background:#15314e;color:#cfe5ff}.dealerPremiumBadge.pro{background:#3a2e11;color:#ffe7a8}.dealerPremiumBadge.business{background:#2b183f;color:#ead7ff}.dealerPremiumBadge.unlimited{background:linear-gradient(135deg,#f6c85f,#f08a24);color:#17130a}
+.packageNotice{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(242,178,60,.08);border:1px solid rgba(242,178,60,.18);color:#ffe8b2;font-size:12px}
+@media(max-width:1100px){.packageGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.packageGrid{grid-template-columns:1fr}.planStatusTop{align-items:flex-start;flex-direction:column}}
+</style>
 
 </head>
 <body>
@@ -4903,6 +4923,219 @@ window.addEventListener("load",()=>{
     v5510WatchWelcome();
   },ms));
 });
+</script>
+
+
+<div id="packageModalV57" class="overlay hidden">
+  <div class="modal" style="width:min(1180px,96vw)">
+    <div class="row space">
+      <div>
+        <div class="dealerEyebrow">AUTORADAR PRO</div>
+        <h2 id="packageModalTitleV57">Händlerpakete</h2>
+        <p id="packageModalSubtitleV57" class="muted"></p>
+      </div>
+      <button class="btn" onclick="closePackageModalV57()">×</button>
+    </div>
+    <div id="packageGridV57" class="packageGrid"></div>
+    <div id="packageNoticeV57" class="packageNotice"></div>
+  </div>
+</div>
+
+
+<script id="autoradar-v57-premium-js">
+const V57_TEXT={
+  de:{
+    title:"Händlerpakete",subtitle:"Wähle das Paket, das zu deinem Fahrzeugbestand passt.",
+    currentPlan:"Aktuelles Paket",vehiclesUsed:"Fahrzeuge verwendet",choosePlan:"Paket auswählen",
+    free:"Kostenlos",starter:"Starter",pro:"Pro",business:"Business",unlimited:"Premium Partner",
+    month:"Monat",upTo:"Bis zu",vehicles:"Fahrzeuge",unlimitedVehicles:"Unbegrenzte Fahrzeuge",
+    active:"Aktiv",popular:"Beliebt",choose:"Auswählen",
+    freeFeatures:["Bis zu 5 Fahrzeuge","Händlerprofil","WhatsApp, Telefon und Website","Basis-Statistiken"],
+    starterFeatures:["Bis zu 10 Fahrzeuge","Starter-Händler Badge","Erweiterte Statistiken","1 Hervorhebung pro Monat","Händlerprofil leicht hervorgehoben"],
+    proFeatures:["Bis zu 20 Fahrzeuge","Premium-Händler Badge","Bessere Sichtbarkeit","3 Hervorhebungen pro Monat","Priorität in Suchergebnissen","Erweiterte Statistiken"],
+    businessFeatures:["Bis zu 50 Fahrzeuge","Top-Händler Badge","10 Hervorhebungen pro Monat","Priorisierte Anzeigen","Händlerprofil bevorzugt","Vorteil im Händler-Ranking"],
+    unlimitedFeatures:["Unbegrenzte Fahrzeuge","Premium-Partner Badge","Unbegrenzte Hervorhebungen","Maximale Sichtbarkeit","Höchste Priorität","Premium-Support","Künftige Premium-Funktionen enthalten"],
+    notice:"Demo-Modus: Die Paketauswahl wird lokal gespeichert. Echte Abos und Zahlungen werden später sicher über Stripe aktiviert.",
+    limitReached:"Du hast das Fahrzeuglimit deines Pakets erreicht.",upgradeFirst:"Wähle ein größeres Paket, um weitere Fahrzeuge hinzuzufügen.",
+    packageSaved:"Paket wurde gespeichert.",standardDealer:"Standard-Händler",
+    starterBadge:"Starter-Händler",proBadge:"Premium-Händler",businessBadge:"Top-Händler",unlimitedBadge:"Premium Partner"
+  },
+  fr:{
+    title:"Forfaits vendeurs",subtitle:"Choisissez le forfait adapté à votre stock de véhicules.",
+    currentPlan:"Forfait actuel",vehiclesUsed:"Véhicules utilisés",choosePlan:"Choisir un forfait",
+    free:"Gratuit",starter:"Starter",pro:"Pro",business:"Business",unlimited:"Partenaire Premium",
+    month:"mois",upTo:"Jusqu’à",vehicles:"véhicules",unlimitedVehicles:"Véhicules illimités",
+    active:"Actif",popular:"Populaire",choose:"Choisir",
+    freeFeatures:["Jusqu’à 5 véhicules","Profil vendeur","WhatsApp, téléphone et site web","Statistiques de base"],
+    starterFeatures:["Jusqu’à 10 véhicules","Badge vendeur Starter","Statistiques avancées","1 mise en avant par mois","Profil légèrement mis en avant"],
+    proFeatures:["Jusqu’à 20 véhicules","Badge vendeur Premium","Meilleure visibilité","3 mises en avant par mois","Priorité dans les résultats","Statistiques avancées"],
+    businessFeatures:["Jusqu’à 50 véhicules","Badge Top vendeur","10 mises en avant par mois","Annonces prioritaires","Profil vendeur prioritaire","Avantage dans le classement"],
+    unlimitedFeatures:["Véhicules illimités","Badge Partenaire Premium","Mises en avant illimitées","Visibilité maximale","Priorité maximale","Support Premium","Fonctions Premium futures incluses"],
+    notice:"Mode démo : le forfait est enregistré localement. Les abonnements et paiements réels seront ensuite activés avec Stripe.",
+    limitReached:"Vous avez atteint la limite de véhicules de votre forfait.",upgradeFirst:"Choisissez un forfait supérieur pour ajouter d’autres véhicules.",
+    packageSaved:"Forfait enregistré.",standardDealer:"Vendeur standard",
+    starterBadge:"Vendeur Starter",proBadge:"Vendeur Premium",businessBadge:"Top vendeur",unlimitedBadge:"Partenaire Premium"
+  },
+  en:{
+    title:"Dealer packages",subtitle:"Choose the package that matches your vehicle stock.",
+    currentPlan:"Current package",vehiclesUsed:"Vehicles used",choosePlan:"Choose package",
+    free:"Free",starter:"Starter",pro:"Pro",business:"Business",unlimited:"Premium Partner",
+    month:"month",upTo:"Up to",vehicles:"vehicles",unlimitedVehicles:"Unlimited vehicles",
+    active:"Active",popular:"Popular",choose:"Choose",
+    freeFeatures:["Up to 5 vehicles","Dealer profile","WhatsApp, phone and website","Basic statistics"],
+    starterFeatures:["Up to 10 vehicles","Starter dealer badge","Advanced statistics","1 featured listing per month","Slightly highlighted profile"],
+    proFeatures:["Up to 20 vehicles","Premium dealer badge","Better visibility","3 featured listings per month","Search priority","Advanced statistics"],
+    businessFeatures:["Up to 50 vehicles","Top dealer badge","10 featured listings per month","Priority listings","Priority dealer profile","Dealer ranking advantage"],
+    unlimitedFeatures:["Unlimited vehicles","Premium Partner badge","Unlimited featured listings","Maximum visibility","Highest priority","Premium support","Future Premium features included"],
+    notice:"Demo mode: the selected package is stored locally. Real subscriptions and payments will later be enabled securely with Stripe.",
+    limitReached:"You have reached your package vehicle limit.",upgradeFirst:"Choose a larger package to add more vehicles.",
+    packageSaved:"Package saved.",standardDealer:"Standard dealer",
+    starterBadge:"Starter dealer",proBadge:"Premium dealer",businessBadge:"Top dealer",unlimitedBadge:"Premium Partner"
+  },
+  lu:{
+    title:"Händlerpaketer",subtitle:"Wiel de Pak, dee bei däi Gefierbestand passt.",
+    currentPlan:"Aktuelle Pak",vehiclesUsed:"Gefierer benotzt",choosePlan:"Pak auswielen",
+    free:"Gratis",starter:"Starter",pro:"Pro",business:"Business",unlimited:"Premium Partner",
+    month:"Mount",upTo:"Bis zu",vehicles:"Gefierer",unlimitedVehicles:"Onlimitéiert Gefierer",
+    active:"Aktiv",popular:"Beléift",choose:"Auswielen",
+    freeFeatures:["Bis zu 5 Gefierer","Händlerprofil","WhatsApp, Telefon a Websäit","Basis-Statistiken"],
+    starterFeatures:["Bis zu 10 Gefierer","Starter-Händler Badge","Erweidert Statistiken","1 Hervirhiewung pro Mount","Profil liicht ervirgehuewen"],
+    proFeatures:["Bis zu 20 Gefierer","Premium-Händler Badge","Besser Visibilitéit","3 Hervirhiewunge pro Mount","Prioritéit an der Sich","Erweidert Statistiken"],
+    businessFeatures:["Bis zu 50 Gefierer","Top-Händler Badge","10 Hervirhiewunge pro Mount","Prioriséiert Annoncen","Profil bevorzugt","Virdeel am Händler-Ranking"],
+    unlimitedFeatures:["Onlimitéiert Gefierer","Premium-Partner Badge","Onlimitéiert Hervirhiewungen","Maximal Visibilitéit","Héchst Prioritéit","Premium-Support","Künfteg Premium-Funktiounen abegraff"],
+    notice:"Demo-Modus: De Pak gëtt lokal gespäichert. Richteg Abonnementer a Bezuelunge ginn herno sécher mat Stripe aktivéiert.",
+    limitReached:"Du hues d'Gefierlimit vun dengem Pak erreecht.",upgradeFirst:"Wiel e méi grousse Pak, fir weider Gefierer dobäizesetzen.",
+    packageSaved:"Pak gespäichert.",standardDealer:"Standard-Händler",
+    starterBadge:"Starter-Händler",proBadge:"Premium-Händler",businessBadge:"Top-Händler",unlimitedBadge:"Premium Partner"
+  }
+};
+
+const V57_PACKAGES={
+  free:{limit:5,price:0,badge:"standard"},
+  starter:{limit:10,price:19,badge:"starter"},
+  pro:{limit:20,price:39,badge:"pro"},
+  business:{limit:50,price:79,badge:"business"},
+  unlimited:{limit:Infinity,price:149,badge:"unlimited"}
+};
+
+function v57Text(){return V57_TEXT[currentLang]||V57_TEXT.de}
+function v57Key(){return current?.id?`autoradar_plan_${current.id}`:"autoradar_plan_demo"}
+function v57Plan(){try{const p=localStorage.getItem(v57Key());return V57_PACKAGES[p]?p:"free"}catch(_){return"free"}}
+function v57SavePlan(plan){if(!V57_PACKAGES[plan])return;localStorage.setItem(v57Key(),plan);closePackageModalV57();renderDealer();setTimeout(()=>alert(v57Text().packageSaved),50)}
+function v57DealerVehicles(){if(!current)return[];return (vehicles||[]).filter(v=>Number(v.dealer_id)===Number(current.id))}
+function v57BadgeLabel(plan){
+  const T=v57Text();
+  if(plan==="starter")return T.starterBadge;
+  if(plan==="pro")return T.proBadge;
+  if(plan==="business")return T.businessBadge;
+  if(plan==="unlimited")return T.unlimitedBadge;
+  return T.standardDealer;
+}
+function v57CanAdd(){const p=V57_PACKAGES[v57Plan()];return p.limit===Infinity||v57DealerVehicles().length<p.limit}
+
+function openPackageModalV57(){renderPackagesV57();document.getElementById("packageModalV57")?.classList.remove("hidden")}
+function closePackageModalV57(){document.getElementById("packageModalV57")?.classList.add("hidden")}
+
+function renderPackagesV57(){
+  const root=document.getElementById("packageModalV57");if(!root)return;
+  const T=v57Text(),active=v57Plan();
+  document.getElementById("packageModalTitleV57").textContent=T.title;
+  document.getElementById("packageModalSubtitleV57").textContent=T.subtitle;
+  document.getElementById("packageNoticeV57").textContent=T.notice;
+  const plans=["free","starter","pro","business","unlimited"];
+  document.getElementById("packageGridV57").innerHTML=plans.map(plan=>{
+    const info=V57_PACKAGES[plan],isActive=active===plan;
+    const features=T[plan+"Features"];
+    const limit=info.limit===Infinity?T.unlimitedVehicles:`${T.upTo} ${info.limit} ${T.vehicles}`;
+    const price=info.price===0?"0 €":`${info.price} €`;
+    return `<article class="packageCard ${isActive?"active":""} ${plan==="pro"?"popular":""}" data-popular="${T.popular}">
+      <div class="packageName">${T[plan]}</div>
+      <div class="packagePrice">${price} <small>/ ${T.month}</small></div>
+      <div class="packageLimit">${limit}</div>
+      <div class="packageFeatures">${features.map(x=>`<span>${x}</span>`).join("")}</div>
+      <button class="btn ${isActive?"":"primary"}" ${isActive?"disabled":""} onclick="v57SavePlan('${plan}')">${isActive?T.active:T.choose}</button>
+    </article>`;
+  }).join("");
+}
+
+function renderPlanCardV57(){
+  const dealer=document.getElementById("dealer");
+  if(!dealer||dealer.classList.contains("hidden")||!current)return;
+  const wrap=dealer.querySelector(".wrap.dashboard");if(!wrap)return;
+  let card=wrap.querySelector(".planStatusCard");
+  if(!card){
+    card=document.createElement("section");card.className="planStatusCard";
+    const stats=wrap.querySelector(".dashboardProStats,.stats");
+    stats?.insertAdjacentElement("afterend",card);
+  }
+  const plan=v57Plan(),info=V57_PACKAGES[plan],used=v57DealerVehicles().length,T=v57Text();
+  const percent=info.limit===Infinity?100:Math.min(100,Math.round((used/info.limit)*100));
+  card.innerHTML=`<div class="planStatusTop">
+    <div><div class="muted">${T.currentPlan}</div><strong style="font-size:22px">${T[plan]}</strong></div>
+    <div class="row"><span class="planBadge ${info.badge}">${v57BadgeLabel(plan)}</span><button class="btn primary" onclick="openPackageModalV57()">${T.choosePlan}</button></div>
+  </div>
+  <div class="planProgress"><span style="width:${percent}%"></span></div>
+  <div class="planStatusMeta"><span>${T.vehiclesUsed}: ${used}</span><span>${info.limit===Infinity?T.unlimitedVehicles:`${used} / ${info.limit}`}</span></div>`;
+}
+
+function applyDealerBadgeV57(){
+  const plan=v57Plan();
+  if(plan==="free")return;
+  document.querySelectorAll(".dealerProMeta h1,.dealerHeroText h1").forEach(h=>{
+    if(h.querySelector(".dealerPremiumBadge"))return;
+    h.insertAdjacentHTML("beforeend",`<span class="dealerPremiumBadge ${V57_PACKAGES[plan].badge}">${v57BadgeLabel(plan)}</span>`);
+  });
+}
+
+function applyPremiumCardsV57(){
+  const plan=v57Plan();
+  if(plan==="free"||plan==="starter")return;
+  document.querySelectorAll(".card").forEach(card=>{
+    const txt=card.textContent||"";
+    if(current?.company_name && txt.includes(current.company_name)){
+      card.classList.add("isPremium");
+      if(!card.querySelector(".premiumVehicleBadge")){
+        const target=card.querySelector(".status")||card.querySelector(".badge");
+        target?.insertAdjacentHTML("afterend",`<span class="premiumVehicleBadge">★ ${v57BadgeLabel(plan)}</span>`);
+      }
+    }
+  });
+}
+
+const v57OpenFormBase=openForm;
+openForm=function(){
+  if(!v57CanAdd()){
+    const T=v57Text();
+    alert(T.limitReached+"\n"+T.upgradeFirst);
+    openPackageModalV57();
+    return;
+  }
+  return v57OpenFormBase();
+};
+
+const v57RenderDealerBase=renderDealer;
+renderDealer=function(){
+  const r=v57RenderDealerBase();
+  [80,220,500].forEach(ms=>setTimeout(()=>{renderPlanCardV57();applyDealerBadgeV57()},ms));
+  return r;
+};
+
+const v57RenderPublicBase=renderPublic;
+renderPublic=function(){
+  const r=v57RenderPublicBase();
+  [100,260].forEach(ms=>setTimeout(applyPremiumCardsV57,ms));
+  return r;
+};
+
+const v57SwitchBase=switchLanguageStable;
+switchLanguageStable=function(lang){
+  v57SwitchBase(lang);
+  [100,260,500].forEach(ms=>setTimeout(()=>{
+    renderPlanCardV57();
+    if(!document.getElementById("packageModalV57")?.classList.contains("hidden"))renderPackagesV57();
+    applyDealerBadgeV57();applyPremiumCardsV57();
+  },ms));
+};
 </script>
 
 </body></html>
