@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.5.7 – Resttexte & Tabellen Fix</title>
+<title>AutoRadar.lu V5.5.8 – Letzter Dashboard Fix</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -955,7 +955,7 @@ footer{background:rgba(4,7,13,.55)}
 <div class="paymentNotice">Die Anfrage wird gespeichert. Für echte automatische Zahlungen muss anschließend Stripe Checkout mit einem sicheren Server/Webhook verbunden werden. Bis dahin kannst du Anfragen manuell prüfen und freischalten.</div>
 </div></div>
 
-<footer><div class="wrap">AutoRadar.lu V5.5.7 · Resttexte & Tabellen Fix</div></footer>
+<footer><div class="wrap">AutoRadar.lu V5.5.8 · Letzter Dashboard Fix</div></footer>
 <script>
 const SUPABASE_URL='https://lfgbuncgqkvtclvvqgvs.supabase.co';
 const SUPABASE_KEY='sb_publishable_LSk555Qic_V--sijIMazWw_Bvj3wLqH';
@@ -4546,6 +4546,111 @@ openVehicleDetail=async function(id){
 };
 
 setTimeout(applyV557,500);
+</script>
+
+
+<script id="autoradar-v5-5-8-final-dashboard-fix">
+let v558DealerName="";
+
+function v558CurrentTranslations(){
+  const lang=currentLang||localStorage.getItem("autoradar_language")||"de";
+  const data={
+    de:{logged:"Angemeldet als",available:"Verfügbar",reserved:"Reserviert",sold:"Verkauft"},
+    fr:{logged:"Connecté en tant que",available:"Disponible",reserved:"Réservé",sold:"Vendu"},
+    en:{logged:"Logged in as",available:"Available",reserved:"Reserved",sold:"Sold"},
+    lu:{logged:"Ageloggt als",available:"Verfügbar",reserved:"Reservéiert",sold:"Verkaaft"}
+  };
+  return data[lang]||data.de;
+}
+
+function v558CaptureDealerName(){
+  if(window.current&&current.company_name){
+    v558DealerName=String(current.company_name).trim();
+    return;
+  }
+
+  const welcome=document.getElementById("welcome");
+  if(welcome){
+    const text=welcome.textContent.trim();
+    const cleaned=text
+      .replace(/^Angemeldet als\s*/i,"")
+      .replace(/^Connecté en tant que\s*/i,"")
+      .replace(/^Logged in as\s*/i,"")
+      .replace(/^Ageloggt als\s*/i,"")
+      .trim();
+
+    if(cleaned)v558DealerName=cleaned;
+  }
+
+  if(!v558DealerName){
+    try{
+      const cached=localStorage.getItem("autoradar_current_dealer_name");
+      if(cached)v558DealerName=cached;
+    }catch(_){}
+  }
+
+  if(v558DealerName){
+    try{localStorage.setItem("autoradar_current_dealer_name",v558DealerName)}catch(_){}
+  }
+}
+
+function v558FixWelcome(){
+  v558CaptureDealerName();
+  const welcome=document.getElementById("welcome");
+  if(!welcome)return;
+
+  const T=v558CurrentTranslations();
+  const name=v558DealerName || (window.current&&current.company_name) || "";
+  welcome.textContent=name ? `${T.logged} ${name}` : T.logged;
+}
+
+function v558TranslateStatusValue(text){
+  const T=v558CurrentTranslations();
+  const clean=String(text||"").trim();
+
+  if(["Verfügbar","Disponible","Available"].includes(clean))return T.available;
+  if(["Reserviert","Réservé","Reserved","Reservéiert"].includes(clean))return T.reserved;
+  if(["Verkauft","Vendu","Sold","Verkaaft"].includes(clean))return T.sold;
+  return clean;
+}
+
+function v558FixEveryDashboardStatus(){
+  const root=document.getElementById("dealer");
+  if(!root)return;
+
+  root.querySelectorAll("td,span,div").forEach(el=>{
+    if(el.children.length>0)return;
+    const original=el.textContent.trim();
+    const translated=v558TranslateStatusValue(original);
+    if(translated!==original)el.textContent=translated;
+  });
+}
+
+function v558ApplyFinalDashboardFix(){
+  v558FixWelcome();
+  v558FixEveryDashboardStatus();
+}
+
+const v558SwitchBase=switchLanguageStable;
+switchLanguageStable=function(lang){
+  v558CaptureDealerName();
+  v558SwitchBase(lang);
+  [20,80,180,350,650].forEach(ms=>setTimeout(v558ApplyFinalDashboardFix,ms));
+};
+
+const v558RenderDealerBase=renderDealer;
+renderDealer=function(){
+  v558CaptureDealerName();
+  const result=v558RenderDealerBase();
+  [30,100,220,450].forEach(ms=>setTimeout(v558ApplyFinalDashboardFix,ms));
+  return result;
+};
+
+window.addEventListener("load",()=>{
+  [150,400,800].forEach(ms=>setTimeout(v558ApplyFinalDashboardFix,ms));
+});
+
+setTimeout(v558ApplyFinalDashboardFix,500);
 </script>
 
 </body></html>
