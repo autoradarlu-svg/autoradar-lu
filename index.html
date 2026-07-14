@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.8.3 – Ranking Stabil Fix</title>
+<title>AutoRadar.lu V5.8.4 – Premium Persistenz & Ranking Fix</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -825,6 +825,30 @@ footer{background:rgba(4,7,13,.55)}
 .card.v58-priority-4{order:-100}
 @media(max-width:980px){.v58-ranking-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.v58-ranking-grid{grid-template-columns:1fr}.v58-ranking-head{align-items:flex-start;flex-direction:column}}
+</style>
+
+
+<style id="autoradar-v584-fixes">
+/* Premium-Badge nicht mehr über dem Händlernamen platzieren */
+.card .premiumVehicleBadge,
+.card .v584-card-plan-badge{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  top:auto;
+  right:auto;
+  z-index:4;
+  max-width:calc(100% - 24px);
+  white-space:nowrap;
+}
+.card .photo{position:relative}
+.v584-ranking-empty{
+  padding:16px;
+  border-radius:16px;
+  background:#0d1726;
+  border:1px solid rgba(148,163,184,.14);
+  color:#8fa0b8;
+}
 </style>
 
 </head>
@@ -5596,6 +5620,203 @@ window.addEventListener("load",()=>{
   [100,400,900,1600].forEach(ms=>setTimeout(v583SafeRefresh,ms));
 });
 setTimeout(v583SafeRefresh,120);
+</script>
+
+
+<script id="autoradar-v584-premium-persistence-ranking-fix">
+function v584PlanForDealerId(dealerId){
+  try{
+    const saved=localStorage.getItem(`autoradar_plan_${dealerId}`);
+    return ["free","starter","pro","business","unlimited"].includes(saved)?saved:"free";
+  }catch(_){return "free"}
+}
+
+function v584DealerFromCard(card){
+  const cardText=(card.textContent||"").trim();
+  return (Array.isArray(dealers)?dealers:[]).find(d=>{
+    const name=String(d.company_name||"").trim();
+    return name && cardText.includes(name);
+  }) || null;
+}
+
+function v584PlanBadgeText(plan){
+  const lang=currentLang||localStorage.getItem("autoradar_language")||"de";
+  const labels={
+    de:{starter:"Starter-Händler",pro:"Premium-Händler",business:"Top-Händler",unlimited:"Premium Partner"},
+    fr:{starter:"Vendeur Starter",pro:"Vendeur Premium",business:"Top vendeur",unlimited:"Partenaire Premium"},
+    en:{starter:"Starter dealer",pro:"Premium dealer",business:"Top dealer",unlimited:"Premium Partner"},
+    lu:{starter:"Starter-Händler",pro:"Premium-Händler",business:"Top-Händler",unlimited:"Premium Partner"}
+  };
+  return labels[lang]?.[plan]||labels.de[plan]||"";
+}
+
+function v584ApplyPremiumCards(){
+  document.querySelectorAll("#cars .card,.featuredGrid .card").forEach(card=>{
+    card.classList.remove("isPremium","v58-priority-1","v58-priority-2","v58-priority-3","v58-priority-4");
+    card.querySelectorAll(".premiumVehicleBadge,.v584-card-plan-badge").forEach(x=>x.remove());
+
+    const dealer=v584DealerFromCard(card);
+    if(!dealer)return;
+
+    const plan=v584PlanForDealerId(dealer.id);
+    const priority={starter:1,pro:2,business:3,unlimited:4}[plan]||0;
+    if(priority)card.classList.add(`v58-priority-${priority}`);
+
+    if(["pro","business","unlimited"].includes(plan)){
+      card.classList.add("isPremium");
+    }
+
+    if(plan!=="free"){
+      const badge=document.createElement("span");
+      badge.className="premiumVehicleBadge v584-card-plan-badge";
+      badge.textContent=(plan==="starter"?"🔹 ":plan==="pro"?"⭐ ":plan==="business"?"🏆 ":"🚀 ")+v584PlanBadgeText(plan);
+      const photo=card.querySelector(".photo");
+      if(photo)photo.appendChild(badge);
+    }
+  });
+}
+
+function v584Text(){
+  const lang=currentLang||localStorage.getItem("autoradar_language")||"de";
+  return {
+    de:{eyebrow:"AUTORADAR RANKING",title:"Top-Händler diese Woche",month:"Händler des Monats",vehicles:"Fahrzeuge",views:"Aufrufe",favorites:"Favoriten",reviews:"Bewertungen",none:"Noch keine Händler verfügbar",trusted:"VERTRAUENSWÜRDIGE PARTNER",top:"Top-Händler",foundOne:"1 Fahrzeug gefunden",foundMany:n=>`${n} Fahrzeuge gefunden`},
+    fr:{eyebrow:"CLASSEMENT AUTORADAR",title:"Meilleurs vendeurs de la semaine",month:"Vendeur du mois",vehicles:"Véhicules",views:"Vues",favorites:"Favoris",reviews:"Avis",none:"Aucun vendeur disponible",trusted:"PARTENAIRES DE CONFIANCE",top:"Meilleurs vendeurs",foundOne:"1 véhicule trouvé",foundMany:n=>`${n} véhicules trouvés`},
+    en:{eyebrow:"AUTORADAR RANKING",title:"Top dealers this week",month:"Dealer of the month",vehicles:"Vehicles",views:"Views",favorites:"Favorites",reviews:"Reviews",none:"No dealers available",trusted:"TRUSTED PARTNERS",top:"Top dealers",foundOne:"1 vehicle found",foundMany:n=>`${n} vehicles found`},
+    lu:{eyebrow:"AUTORADAR RANKING",title:"Top-Händler dës Woch",month:"Händler vum Mount",vehicles:"Gefierer",views:"Opriff",favorites:"Favoritten",reviews:"Bewäertungen",none:"Nach keng Händler verfügbar",trusted:"VERTRAUENSWIERDEG PARTNER",top:"Top-Händler",foundOne:"1 Gefier fonnt",foundMany:n=>`${n} Gefierer fonnt`}
+  }[lang];
+}
+
+function v584DealerStats(dealer){
+  const list=(Array.isArray(vehicles)?vehicles:[]).filter(v=>Number(v.dealer_id)===Number(dealer.id));
+  const active=list.filter(v=>!["Verkauft","Vendu","Sold","Verkaaft"].includes(String(v.status||"")));
+  const views=list.reduce((s,v)=>s+Number(v.view_count||0),0);
+  const favorites=list.reduce((s,v)=>s+Number(v.favorite_count||0),0);
+  const ratingCount=Number(dealer.rating_count||dealer.review_count||0);
+  const ratingAverage=Number(dealer.rating_average||dealer.rating||0);
+  const plan=v584PlanForDealerId(dealer.id);
+  const priority={free:0,starter:1,pro:2,business:3,unlimited:4}[plan]||0;
+  const score=priority*100000+views*10+favorites*50+ratingCount*100+ratingAverage*500+active.length;
+  return {dealer,active,views,favorites,ratingCount,ratingAverage,plan,score};
+}
+
+function v584RenderRanking(){
+  let section=document.getElementById("v58RankingSection");
+  if(!section){
+    section=document.createElement("section");
+    section.id="v58RankingSection";
+    section.className="wrap v58-ranking";
+    const toolbar=document.querySelector(".marketToolbar");
+    if(toolbar)toolbar.insertAdjacentElement("afterend",section);
+  }
+  if(!section)return;
+
+  const dealerList=Array.isArray(dealers)?dealers:[];
+  const T=v584Text();
+
+  if(!dealerList.length){
+    section.innerHTML=`<div class="v584-ranking-empty">${window.v582SupabaseFinished?T.none:"Händler werden geladen …"}</div>`;
+    return;
+  }
+
+  const ranked=dealerList.map(v584DealerStats).sort((a,b)=>b.score-a.score);
+  const winner=ranked[0];
+  const top=ranked.slice(0,3);
+
+  const escSafe=v=>String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+  const fmt=n=>new Intl.NumberFormat(currentLang==="fr"?"fr-FR":currentLang==="en"?"en-GB":currentLang==="lu"?"lb-LU":"de-DE").format(Number(n||0));
+  const badge=item=>item.plan==="free"?"":`<span class="v58-card-badge ${item.plan==="starter"?"v58-starter":item.plan==="pro"?"v58-pro":item.plan==="business"?"v58-business":"v58-unlimited"}">${item.plan==="starter"?"🔹":item.plan==="pro"?"⭐":item.plan==="business"?"🏆":"🚀"} ${v584PlanBadgeText(item.plan)}</span>`;
+
+  section.innerHTML=`
+    <div class="v58-ranking-head">
+      <div><div class="dealerEyebrow">${T.eyebrow}</div><h2>${T.title}</h2></div>
+    </div>
+    <div class="v58-ranking-grid">
+      <article class="v58-month-dealer" onclick="openDealer(${Number(winner.dealer.id)})" style="cursor:pointer">
+        <div class="dealerEyebrow">${T.month}</div>
+        <div class="v58-rank-top" style="margin-top:10px">
+          <div class="v58-rank-medal">🏆</div>
+          <div class="v58-rank-logo" ${winner.dealer.logo_url?`style="background-image:url('${escSafe(winner.dealer.logo_url)}')"`:""}></div>
+          <div><strong>${escSafe(winner.dealer.company_name||"Händler")}</strong><small>${escSafe(winner.dealer.location||"")}</small>${badge(winner)}</div>
+        </div>
+        <div class="v58-rank-stats">
+          <div class="v58-rank-stat"><span>${T.vehicles}</span><b>${winner.active.length}</b></div>
+          <div class="v58-rank-stat"><span>${T.views}</span><b>${fmt(winner.views)}</b></div>
+          <div class="v58-rank-stat"><span>${T.favorites}</span><b>${fmt(winner.favorites)}</b></div>
+        </div>
+      </article>
+      ${top.map((item,index)=>`
+      <article class="v58-rank-card" onclick="openDealer(${Number(item.dealer.id)})" style="cursor:pointer">
+        <div class="v58-rank-top">
+          <div class="v58-rank-medal">${["🥇","🥈","🥉"][index]}</div>
+          <div class="v58-rank-logo" ${item.dealer.logo_url?`style="background-image:url('${escSafe(item.dealer.logo_url)}')"`:""}></div>
+          <div><strong>${escSafe(item.dealer.company_name||"Händler")}</strong><small>${escSafe(item.dealer.location||"")}</small>${badge(item)}</div>
+        </div>
+        <div class="v58-rank-stats">
+          <div class="v58-rank-stat"><span>${T.vehicles}</span><b>${item.active.length}</b></div>
+          <div class="v58-rank-stat"><span>${T.views}</span><b>${fmt(item.views)}</b></div>
+          <div class="v58-rank-stat"><span>${T.reviews}</span><b>${item.ratingCount}</b></div>
+        </div>
+      </article>`).join("")}
+    </div>`;
+}
+
+function v584FixRemainingTranslations(){
+  const T=v584Text();
+  const count=document.getElementById("count");
+  if(count){
+    const n=parseInt(count.textContent,10);
+    if(Number.isFinite(n))count.textContent=n===1?T.foundOne:T.foundMany(n);
+  }
+  const eyebrow=document.querySelector("#topDealersSection .dealerEyebrow");
+  const title=document.querySelector("#topDealersSection h2");
+  if(eyebrow)eyebrow.textContent=T.trusted;
+  if(title)title.textContent=T.top;
+}
+
+function v584RefreshAll(){
+  try{v584RenderRanking()}catch(e){console.error("ranking",e)}
+  try{v584ApplyPremiumCards()}catch(e){console.error("premium cards",e)}
+  try{v584FixRemainingTranslations()}catch(e){}
+}
+
+/* Alte instabile Ranking-Funktionen überschreiben */
+renderV58Ranking=v584RenderRanking;
+applyV58CardPriority=v584ApplyPremiumCards;
+applyPremiumCardsV57=v584ApplyPremiumCards;
+v582RenderRankingSafe=v584RefreshAll;
+v581WaitForSupabaseData=v584RefreshAll;
+
+if(typeof v57SavePlan==="function"){
+  const v584SaveBase=v57SavePlan;
+  v57SavePlan=function(plan){
+    const result=v584SaveBase(plan);
+    [80,250,650].forEach(ms=>setTimeout(v584RefreshAll,ms));
+    return result;
+  };
+}
+
+if(typeof renderPublic==="function"){
+  const v584PublicBase=renderPublic;
+  renderPublic=function(){
+    const result=v584PublicBase();
+    [80,250,600].forEach(ms=>setTimeout(v584RefreshAll,ms));
+    return result;
+  };
+}
+
+if(typeof switchLanguageStable==="function"){
+  const v584LangBase=switchLanguageStable;
+  switchLanguageStable=function(lang){
+    const result=v584LangBase(lang);
+    [80,250,600].forEach(ms=>setTimeout(v584RefreshAll,ms));
+    return result;
+  };
+}
+
+window.addEventListener("load",()=>{
+  [100,400,900,1600].forEach(ms=>setTimeout(v584RefreshAll,ms));
+});
+setTimeout(v584RefreshAll,120);
 </script>
 
 </body></html>
