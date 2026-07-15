@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.8.6 – Testphase, neue Pakete & Ranking</title>
+<title>AutoRadar.lu V5.9 – Premium Marketplace Edition</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -868,6 +868,120 @@ footer{background:rgba(4,7,13,.55)}
 .v586HiddenNotice{
   padding:14px;border-radius:14px;background:rgba(225,69,84,.08);
   border:1px solid rgba(225,69,84,.22);color:#ffc4ca;margin-top:12px;font-size:12px
+}
+</style>
+
+
+<style id="autoradar-v59-premium-marketplace">
+:root{
+  --v59-gold:#f7c64b;
+  --v59-silver:#c9d6e7;
+  --v59-bronze:#d8873d;
+}
+.v59-trust-strip{
+  width:min(1220px,calc(100% - 28px));margin:18px auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  overflow:hidden;border-radius:18px;border:1px solid rgba(148,163,184,.16);
+  background:rgba(148,163,184,.12)
+}
+.v59-trust-item{
+  display:flex;align-items:center;gap:12px;padding:16px 18px;
+  background:linear-gradient(180deg,#101c2f,#0a1422)
+}
+.v59-trust-icon{font-size:23px}
+.v59-trust-item strong{display:block;font-size:12px}
+.v59-trust-item small{display:block;color:#91a0b5;margin-top:2px}
+
+#v58RankingSection{padding:24px!important}
+#v58RankingSection .v58-ranking-grid{
+  grid-template-columns:minmax(0,1.65fr) repeat(2,minmax(0,1fr))!important;
+  align-items:stretch
+}
+#v58RankingSection .v58-month-dealer{
+  min-height:310px;position:relative;
+  border:1px solid rgba(247,198,75,.65)!important;
+  box-shadow:0 0 0 1px rgba(247,198,75,.18),0 20px 55px rgba(247,198,75,.14);
+  background:
+    radial-gradient(circle at 15% 10%,rgba(247,198,75,.18),transparent 38%),
+    linear-gradient(145deg,#211a0f,#0b1523 70%)
+}
+#v58RankingSection .v58-rank-card:nth-child(2){
+  border-color:rgba(201,214,231,.42);
+  box-shadow:0 16px 35px rgba(201,214,231,.07)
+}
+#v58RankingSection .v58-rank-card:nth-child(3){
+  border-color:rgba(216,135,61,.38);
+  box-shadow:0 16px 35px rgba(216,135,61,.07)
+}
+.v59-rank-number{
+  position:absolute;top:-17px;left:-13px;width:58px;height:58px;border-radius:50%;
+  display:grid;place-items:center;font-size:25px;font-weight:1000;color:#17120a;
+  background:radial-gradient(circle at 34% 28%,#fff3b1,#f7c64b 42%,#b87a0e 100%);
+  border:3px solid #ffe89a;box-shadow:0 0 28px rgba(247,198,75,.44);z-index:4
+}
+.v59-rank-number.silver{
+  background:radial-gradient(circle at 34% 28%,#fff,#c9d6e7 48%,#77879a);
+  border-color:#edf4ff;box-shadow:0 0 20px rgba(201,214,231,.25)
+}
+.v59-rank-number.bronze{
+  background:radial-gradient(circle at 34% 28%,#ffd7ab,#d8873d 48%,#8d4517);
+  border-color:#ffd1a1;box-shadow:0 0 20px rgba(216,135,61,.22)
+}
+.v58-card-badge,.premiumVehicleBadge{font-size:9px!important;padding:5px 7px!important}
+.v59-verified{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:18px;height:18px;border-radius:50%;margin-left:5px;
+  background:#2697ff;color:white;font-size:11px;font-weight:1000;vertical-align:middle;
+  box-shadow:0 0 12px rgba(38,151,255,.3)
+}
+.v59-premium-slider{
+  width:min(1220px,calc(100% - 28px));margin:18px auto 4px;
+  border-radius:20px;padding:18px;background:linear-gradient(145deg,#101c2f,#09131f);
+  border:1px solid rgba(148,163,184,.15);overflow:hidden
+}
+.v59-slider-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.v59-slider-track::-webkit-scrollbar{height:6px}.v59-slider-track::-webkit-scrollbar-thumb{background:#25334a;border-radius:999px}
+.v59-slider-card{
+  min-width:270px;scroll-snap-align:start;padding:15px;border-radius:16px;
+  background:#0d1726;border:1px solid rgba(148,163,184,.14);cursor:pointer
+}
+.v59-slider-card.partner{border-color:rgba(247,198,75,.42);box-shadow:0 10px 28px rgba(247,198,75,.08)}
+.v59-slider-top{display:flex;gap:11px;align-items:center}
+.v59-slider-logo{width:48px;height:48px;border-radius:12px;background:#fff center/contain no-repeat}
+.v59-top-offer{
+  width:min(1220px,calc(100% - 28px));margin:18px auto;
+  display:grid;grid-template-columns:360px 1fr;border-radius:22px;overflow:hidden;
+  border:1px solid rgba(255,82,99,.24);
+  background:linear-gradient(145deg,rgba(255,82,99,.08),#0c1625 40%);
+}
+.v59-top-offer-photo{min-height:230px;background:center/cover no-repeat;position:relative}
+.v59-hot-badge{position:absolute;top:14px;left:14px;padding:8px 11px;border-radius:999px;background:#ff4658;color:white;font-size:11px;font-weight:950}
+.v59-top-offer-body{padding:24px;display:flex;flex-direction:column;justify-content:center}
+.v59-package-countdown{margin-top:12px;padding:13px;border-radius:14px;background:#0b1523;border:1px solid rgba(148,163,184,.13)}
+.v59-countdown-head{display:flex;justify-content:space-between;gap:10px;font-size:11px}
+.v59-countdown-bar{height:9px;margin-top:8px;border-radius:999px;overflow:hidden;background:#07111d}
+.v59-countdown-bar span{display:block;height:100%;background:linear-gradient(90deg,#ff5362,#f7c64b)}
+.v59-expired-warning{padding:14px;border-radius:14px;background:rgba(225,69,84,.1);border:1px solid rgba(225,69,84,.25);color:#ffc5cb}
+.v59-profile-premium{
+  padding:15px;border-radius:16px;background:linear-gradient(135deg,rgba(247,198,75,.11),rgba(13,23,38,.9));
+  border:1px solid rgba(247,198,75,.25);margin:14px 0
+}
+.v59-rating-summary{display:flex;align-items:center;gap:10px;margin-top:10px}
+.v59-stars{color:#ffc83d;letter-spacing:2px}
+.v59-payment-ready{
+  display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;
+  background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.23);font-size:10px;color:#c8c9ff
+}
+@media(max-width:980px){
+  .v59-trust-strip{grid-template-columns:1fr 1fr}
+  #v58RankingSection .v58-ranking-grid{grid-template-columns:1fr 1fr!important}
+  #v58RankingSection .v58-month-dealer{grid-column:1/-1}
+  .v59-top-offer{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .v59-trust-strip{grid-template-columns:1fr}
+  #v58RankingSection .v58-ranking-grid{grid-template-columns:1fr!important}
+  .v59-top-offer-photo{min-height:210px}
 }
 </style>
 
@@ -6299,6 +6413,289 @@ window.addEventListener("load",()=>{
   [150,500,1000,1800].forEach(ms=>setTimeout(v586RefreshAll,ms));
 });
 setTimeout(v586RefreshAll,200);
+</script>
+
+
+<script id="autoradar-v59-premium-marketplace">
+const V59_TEXT={
+de:{
+  trust1:"Verifizierte Händler",trust1s:"Geprüfte Unternehmensprofile",
+  trust2:"Geprüfte Anzeigen",trust2s:"Kontrollierte Fahrzeugdaten",
+  trust3:"Sichere Zahlung",trust3s:"Stripe-Anbindung vorbereitet",
+  trust4:"Premium-Support",trust4s:"Priorisierte Betreuung",
+  premiumPartners:"Premium-Partner",premiumSub:"Exklusive Händler mit hoher Sichtbarkeit",
+  topOffer:"Top-Angebot der Woche",details:"Details ansehen",
+  vehicles:"Fahrzeuge",views:"Aufrufe",favorites:"Favoriten",
+  verified:"Verifiziert",packageEnds:"Paketlaufzeit",daysLeft:"Tage verbleibend",
+  noExpiry:"Aktiv – Ablaufdatum wird mit Stripe gespeichert",
+  expired:"Paket abgelaufen",paused:"Fahrzeuge sind pausiert und nicht öffentlich sichtbar.",
+  renew:"Jetzt verlängern",rating:"Bewertung",reviews:"Bewertungen",
+  stripeReady:"Stripe Checkout vorbereitet"
+},
+fr:{
+  trust1:"Vendeurs vérifiés",trust1s:"Profils professionnels contrôlés",
+  trust2:"Annonces vérifiées",trust2s:"Informations véhicule contrôlées",
+  trust3:"Paiement sécurisé",trust3s:"Intégration Stripe préparée",
+  trust4:"Support Premium",trust4s:"Assistance prioritaire",
+  premiumPartners:"Partenaires Premium",premiumSub:"Vendeurs exclusifs à haute visibilité",
+  topOffer:"Meilleure offre de la semaine",details:"Voir les détails",
+  vehicles:"Véhicules",views:"Vues",favorites:"Favoris",
+  verified:"Vérifié",packageEnds:"Durée du forfait",daysLeft:"jours restants",
+  noExpiry:"Actif – la date d’expiration sera enregistrée avec Stripe",
+  expired:"Forfait expiré",paused:"Les véhicules sont en pause et ne sont plus visibles publiquement.",
+  renew:"Renouveler maintenant",rating:"Note",reviews:"Avis",
+  stripeReady:"Stripe Checkout préparé"
+},
+en:{
+  trust1:"Verified dealers",trust1s:"Checked business profiles",
+  trust2:"Verified listings",trust2s:"Checked vehicle information",
+  trust3:"Secure payment",trust3s:"Stripe integration prepared",
+  trust4:"Premium support",trust4s:"Priority assistance",
+  premiumPartners:"Premium Partners",premiumSub:"Exclusive dealers with high visibility",
+  topOffer:"Top offer of the week",details:"View details",
+  vehicles:"Vehicles",views:"Views",favorites:"Favorites",
+  verified:"Verified",packageEnds:"Package term",daysLeft:"days remaining",
+  noExpiry:"Active – expiry date will be stored with Stripe",
+  expired:"Package expired",paused:"Vehicles are paused and no longer publicly visible.",
+  renew:"Renew now",rating:"Rating",reviews:"Reviews",
+  stripeReady:"Stripe Checkout prepared"
+},
+lu:{
+  trust1:"Verifizéiert Händler",trust1s:"Gepréifte Firmenprofiler",
+  trust2:"Gepréiften Annoncen",trust2s:"Kontrolléiert Gefierdaten",
+  trust3:"Sécher Bezuelung",trust3s:"Stripe-Integratioun virbereet",
+  trust4:"Premium-Support",trust4s:"Prioriséiert Ënnerstëtzung",
+  premiumPartners:"Premium Partner",premiumSub:"Exklusiv Händler mat héijer Visibilitéit",
+  topOffer:"Top-Offer vun der Woch",details:"Detailer kucken",
+  vehicles:"Gefierer",views:"Opriff",favorites:"Favoritten",
+  verified:"Verifizéiert",packageEnds:"Paklafzäit",daysLeft:"Deeg iwwreg",
+  noExpiry:"Aktiv – den Oflafdatum gëtt mat Stripe gespäichert",
+  expired:"Pak ofgelaf",paused:"D'Gefierer si pauséiert an net méi ëffentlech sichtbar.",
+  renew:"Elo verlängeren",rating:"Bewäertung",reviews:"Bewäertungen",
+  stripeReady:"Stripe Checkout virbereet"
+}
+};
+
+function v59T(key){return (V59_TEXT[currentLang]||V59_TEXT.de)[key]||key}
+function v59Esc(value){
+  return String(value??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+}
+function v59Plan(dealerId){return typeof v586GetPlanForDealer==="function"?v586GetPlanForDealer(dealerId):"free"}
+function v59Priority(plan){return {free:0,starter:1,pro:2,business:3,unlimited:4,partner:5}[plan]||0}
+function v59Verified(dealer){return dealer?.verified!==false}
+function v59VerifiedBadge(dealer){return v59Verified(dealer)?`<span class="v59-verified" title="${v59T("verified")}">✓</span>`:""}
+
+function v59DealerMetrics(dealer){
+  const list=(Array.isArray(vehicles)?vehicles:[]).filter(v=>Number(v.dealer_id)===Number(dealer.id));
+  return {
+    list,
+    views:list.reduce((s,v)=>s+Number(v.view_count||0),0),
+    favorites:list.reduce((s,v)=>s+Number(v.favorite_count||0),0),
+    rating:Number(dealer.rating_average||dealer.rating||5),
+    reviews:Number(dealer.rating_count||dealer.review_count||0),
+    plan:v59Plan(dealer.id)
+  };
+}
+
+function v59RenderTrustStrip(){
+  let strip=document.getElementById("v59TrustStrip");
+  if(!strip){
+    strip=document.createElement("section");
+    strip.id="v59TrustStrip";
+    strip.className="v59-trust-strip";
+    const ranking=document.getElementById("v58RankingSection");
+    if(ranking)ranking.insertAdjacentElement("afterend",strip);
+    else document.querySelector(".marketToolbar")?.insertAdjacentElement("afterend",strip);
+  }
+  strip.innerHTML=`
+    <div class="v59-trust-item"><div class="v59-trust-icon">🛡️</div><div><strong>${v59T("trust1")}</strong><small>${v59T("trust1s")}</small></div></div>
+    <div class="v59-trust-item"><div class="v59-trust-icon">✅</div><div><strong>${v59T("trust2")}</strong><small>${v59T("trust2s")}</small></div></div>
+    <div class="v59-trust-item"><div class="v59-trust-icon">🔒</div><div><strong>${v59T("trust3")}</strong><small>${v59T("trust3s")}</small></div></div>
+    <div class="v59-trust-item"><div class="v59-trust-icon">🎧</div><div><strong>${v59T("trust4")}</strong><small>${v59T("trust4s")}</small></div></div>`;
+}
+
+function v59RenderPremiumSlider(){
+  let section=document.getElementById("v59PremiumSlider");
+  if(!section){
+    section=document.createElement("section");
+    section.id="v59PremiumSlider";
+    section.className="v59-premium-slider";
+    document.getElementById("v59TrustStrip")?.insertAdjacentElement("afterend",section);
+  }
+  const premium=(Array.isArray(dealers)?dealers:[])
+    .map(d=>({dealer:d,...v59DealerMetrics(d)}))
+    .filter(x=>["business","unlimited","partner"].includes(x.plan))
+    .sort((a,b)=>v59Priority(b.plan)-v59Priority(a.plan)||b.views-a.views);
+
+  if(!premium.length){section.style.display="none";return}
+  section.style.display="";
+  section.innerHTML=`
+    <div class="row space" style="margin-bottom:12px">
+      <div><div class="dealerEyebrow">AUTORADAR PRO</div><h2 style="margin:4px 0">${v59T("premiumPartners")}</h2><div class="muted">${v59T("premiumSub")}</div></div>
+    </div>
+    <div class="v59-slider-track">
+      ${premium.map(x=>`
+        <article class="v59-slider-card ${x.plan==="partner"?"partner":""}" onclick="openDealer(${Number(x.dealer.id)})">
+          <div class="v59-slider-top">
+            <div class="v59-slider-logo" ${x.dealer.logo_url?`style="background-image:url('${v59Esc(x.dealer.logo_url)}')"`:""}></div>
+            <div><strong>${v59Esc(x.dealer.company_name||"Händler")}${v59VerifiedBadge(x.dealer)}</strong><div class="muted">${v59Esc(x.dealer.location||"Luxembourg")}</div></div>
+          </div>
+          <div class="v58-card-badge ${x.plan==="partner"?"v58-unlimited":"v58-business"}" style="margin-top:12px">${x.plan==="partner"?"🚀":"🏆"} ${v57BadgeLabel(x.plan)}</div>
+          <div class="v58-rank-stats">
+            <div class="v58-rank-stat"><span>${v59T("vehicles")}</span><b>${x.list.length}</b></div>
+            <div class="v58-rank-stat"><span>${v59T("views")}</span><b>${x.views}</b></div>
+            <div class="v58-rank-stat"><span>${v59T("favorites")}</span><b>${x.favorites}</b></div>
+          </div>
+        </article>`).join("")}
+    </div>`;
+}
+
+function v59RenderTopOffer(){
+  let section=document.getElementById("v59TopOffer");
+  if(!section){
+    section=document.createElement("section");
+    section.id="v59TopOffer";
+    section.className="v59-top-offer";
+    document.getElementById("v59PremiumSlider")?.insertAdjacentElement("afterend",section);
+  }
+  const publicVehicles=typeof v586VisibleVehicles==="function"?v586VisibleVehicles():(vehicles||[]);
+  const ranked=publicVehicles
+    .filter(v=>String(v.status)!=="Verkauft")
+    .map(v=>({vehicle:v,score:Number(v.favorite_count||0)*20+Number(v.view_count||0)+v59Priority(v59Plan(v.dealer_id))*500}))
+    .sort((a,b)=>b.score-a.score);
+  const best=ranked[0]?.vehicle;
+  if(!best){section.style.display="none";return}
+  const dd=(dealers||[]).find(d=>Number(d.id)===Number(best.dealer_id));
+  const image=(typeof parseImages==="function"?parseImages(best.image_url):[])[0]||"";
+  section.style.display="grid";
+  section.innerHTML=`
+    <div class="v59-top-offer-photo" style="background-image:url('${v59Esc(image)}')"><span class="v59-hot-badge">🔥 ${v59T("topOffer")}</span></div>
+    <div class="v59-top-offer-body">
+      <div class="dealerEyebrow">${v59Esc(dd?.company_name||"Autohaus")}${v59VerifiedBadge(dd)}</div>
+      <h2 style="font-size:31px;margin:8px 0">${v59Esc(best.brand)} ${v59Esc(best.model)}</h2>
+      <div class="price" style="font-size:30px">${typeof money==="function"?money(best.price):best.price+" €"}</div>
+      <div class="muted" style="margin:8px 0 18px">${best.year||""} · ${typeof num==="function"?num(best.mileage):best.mileage||0} km · ${v59Esc(best.fuel_type||"")}</div>
+      <div><button class="btn primary" onclick="openVehicleDetail(${Number(best.id)})">${v59T("details")}</button></div>
+    </div>`;
+}
+
+function v59DecorateRanking(){
+  const ranking=document.getElementById("v58RankingSection");if(!ranking)return;
+  const month=ranking.querySelector(".v58-month-dealer");
+  if(month && !month.querySelector(".v59-rank-number"))month.insertAdjacentHTML("afterbegin",'<span class="v59-rank-number">1</span>');
+  const cards=ranking.querySelectorAll(".v58-rank-card");
+  cards.forEach((card,i)=>{
+    if(!card.querySelector(".v59-rank-number")){
+      const cls=i===0?"silver":"bronze";
+      card.style.position="relative";
+      card.insertAdjacentHTML("afterbegin",`<span class="v59-rank-number ${cls}">${i+2}</span>`);
+    }
+  });
+  ranking.querySelectorAll("strong").forEach(strong=>{
+    const dealer=(dealers||[]).find(d=>strong.textContent.includes(d.company_name||""));
+    if(dealer&&!strong.querySelector(".v59-verified"))strong.insertAdjacentHTML("beforeend",v59VerifiedBadge(dealer));
+  });
+}
+
+function v59PackageExpiryInfo(dealerId){
+  const plan=v59Plan(dealerId);
+  if(plan==="free"){
+    const trial=typeof v586TrialInfo==="function"?v586TrialInfo(dealerId):{remainingDays:30,expired:false};
+    return {days:trial.remainingDays,expired:trial.expired,total:30};
+  }
+  try{
+    const key=`autoradar_package_expiry_${dealerId}`;
+    const saved=Number(localStorage.getItem(key)||0);
+    if(!saved)return {days:null,expired:false,total:30};
+    const ms=saved-Date.now();
+    return {days:Math.max(0,Math.ceil(ms/86400000)),expired:ms<=0,total:30};
+  }catch(_){return {days:null,expired:false,total:30}}
+}
+
+function v59RenderPackageCountdown(){
+  const card=document.querySelector(".planStatusCard");if(!card||!current?.id)return;
+  let box=card.querySelector(".v59-package-countdown");
+  if(!box){box=document.createElement("div");box.className="v59-package-countdown";card.appendChild(box)}
+  const info=v59PackageExpiryInfo(current.id);
+  if(info.expired){
+    box.innerHTML=`<div class="v59-expired-warning"><strong>${v59T("expired")}</strong><div style="margin-top:5px">${v59T("paused")}</div><button class="btn primary" style="margin-top:10px" onclick="openPackageModalV57()">${v59T("renew")}</button></div>`;
+    return;
+  }
+  const percent=info.days===null?100:Math.max(0,Math.min(100,info.days/info.total*100));
+  box.innerHTML=`
+    <div class="v59-countdown-head"><strong>${v59T("packageEnds")}</strong><span>${info.days===null?v59T("noExpiry"):`${info.days} ${v59T("daysLeft")}`}</span></div>
+    <div class="v59-countdown-bar"><span style="width:${percent}%"></span></div>
+    <div style="margin-top:9px"><span class="v59-payment-ready">🔒 ${v59T("stripeReady")}</span></div>`;
+}
+
+function v59EnhanceDealerProfile(){
+  const root=document.getElementById("dealerContent");if(!root||!window.dealerDetail)return;
+  const metrics=v59DealerMetrics(dealerDetail);
+  const heroTitle=root.querySelector(".dealerHeroText h1");
+  if(heroTitle&&!heroTitle.querySelector(".v59-verified"))heroTitle.insertAdjacentHTML("beforeend",v59VerifiedBadge(dealerDetail));
+  let box=root.querySelector(".v59-profile-premium");
+  if(!box){
+    box=document.createElement("div");box.className="v59-profile-premium";
+    const hero=root.querySelector(".dealerHeroText");
+    hero?.appendChild(box);
+  }
+  if(box){
+    box.innerHTML=`
+      <strong>${v57BadgeLabel(metrics.plan)}</strong>
+      <div class="v59-rating-summary"><span class="v59-stars">★★★★★</span><b>${metrics.rating.toFixed(1)}</b><span class="muted">(${metrics.reviews} ${v59T("reviews")})</span></div>`;
+  }
+}
+
+function v59PrepareStripeButtons(){
+  document.querySelectorAll("#packageGridV57 .packageCard button").forEach(btn=>{
+    if(btn.disabled)return;
+    btn.dataset.stripeReady="true";
+    btn.title=v59T("stripeReady");
+  });
+}
+
+function v59Refresh(){
+  try{v59RenderTrustStrip()}catch(e){}
+  try{v59RenderPremiumSlider()}catch(e){}
+  try{v59RenderTopOffer()}catch(e){}
+  try{v59DecorateRanking()}catch(e){}
+  try{v59RenderPackageCountdown()}catch(e){}
+  try{v59EnhanceDealerProfile()}catch(e){}
+  try{v59PrepareStripeButtons()}catch(e){}
+}
+
+const v59PublicBase=renderPublic;
+renderPublic=function(){
+  const r=v59PublicBase();
+  [100,300,700].forEach(ms=>setTimeout(v59Refresh,ms));
+  return r;
+};
+const v59DealerBase=renderDealer;
+renderDealer=function(){
+  const r=v59DealerBase();
+  [100,300,700].forEach(ms=>setTimeout(v59Refresh,ms));
+  return r;
+};
+const v59OpenDealerBase=openDealer;
+openDealer=function(id){
+  const r=v59OpenDealerBase(id);
+  [120,350,700].forEach(ms=>setTimeout(v59Refresh,ms));
+  return r;
+};
+const v59PackagesBase=renderPackagesV57;
+renderPackagesV57=function(){
+  const r=v59PackagesBase();
+  [80,220].forEach(ms=>setTimeout(v59PrepareStripeButtons,ms));
+  return r;
+};
+const v59LangBase=switchLanguageStable;
+switchLanguageStable=function(lang){
+  const r=v59LangBase(lang);
+  [100,300,700].forEach(ms=>setTimeout(v59Refresh,ms));
+  return r;
+};
+window.addEventListener("load",()=>[120,450,1000,1800].forEach(ms=>setTimeout(v59Refresh,ms)));
+setTimeout(v59Refresh,180);
 </script>
 
 </body></html>
