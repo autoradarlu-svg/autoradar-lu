@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V5.9.1 – Supabase Abos</title>
+<title>AutoRadar.lu V6.0 – Dealer Business System</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -983,6 +983,45 @@ footer{background:rgba(4,7,13,.55)}
   #v58RankingSection .v58-ranking-grid{grid-template-columns:1fr!important}
   .v59-top-offer-photo{min-height:210px}
 }
+</style>
+
+
+<style id="autoradar-v60-business">
+.v60-business-banner{
+  margin:16px 0;padding:18px;border-radius:18px;
+  background:linear-gradient(135deg,rgba(15,31,53,.96),rgba(8,18,31,.96));
+  border:1px solid rgba(148,163,184,.16)
+}
+.v60-business-grid{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px
+}
+.v60-kpi{
+  padding:14px;border-radius:15px;background:#0a1524;
+  border:1px solid rgba(148,163,184,.12)
+}
+.v60-kpi span{display:block;color:#8798b0;font-size:10px;text-transform:uppercase}
+.v60-kpi strong{display:block;margin-top:5px;font-size:21px}
+.v60-warning{
+  margin-top:14px;padding:14px;border-radius:14px;
+  border:1px solid rgba(242,178,60,.3);
+  background:rgba(242,178,60,.09);color:#ffe4a2
+}
+.v60-warning.danger{
+  border-color:rgba(225,69,84,.32);
+  background:rgba(225,69,84,.1);color:#ffc4cb
+}
+.v60-status-pill{
+  display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;
+  font-size:10px;font-weight:950;border:1px solid rgba(148,163,184,.15)
+}
+.v60-status-pill.active{background:rgba(56,189,248,.11);color:#bae8ff}
+.v60-status-pill.trialing{background:rgba(96,165,250,.11);color:#cfe5ff}
+.v60-status-pill.expired,.v60-status-pill.canceled{background:rgba(225,69,84,.12);color:#ffc4cb}
+.v60-status-pill.past_due{background:rgba(242,178,60,.12);color:#ffe4a2}
+.v60-featured-meter{height:9px;border-radius:999px;background:#07111d;overflow:hidden;margin-top:8px}
+.v60-featured-meter span{display:block;height:100%;background:linear-gradient(90deg,#ff5362,#f7c64b)}
+@media(max-width:900px){.v60-business-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.v60-business-grid{grid-template-columns:1fr}}
 </style>
 
 </head>
@@ -6826,6 +6865,182 @@ load=async function(){
 window.addEventListener("load",()=>{
   [250,900].forEach(ms=>setTimeout(v591LoadEntitlements,ms));
 });
+</script>
+
+
+<script id="autoradar-v60-business-system">
+window.v60PublicVehicles = [];
+window.v60Entitlements = new Map();
+window.v60OwnSubscription = null;
+window.v60Ready = false;
+
+const V60_TEXT={
+de:{active:"Aktiv",trialing:"Testphase",expired:"Abgelaufen",canceled:"Gekündigt",past_due:"Zahlung offen",
+days:"Tage übrig",vehicleLimit:"Fahrzeuglimit",featured:"Hervorhebungen",used:"verwendet",
+package:"Aktuelles Paket",access:"Öffentliche Sichtbarkeit",visible:"Anzeigen sind sichtbar",
+hidden:"Anzeigen sind gespeichert, aber nicht öffentlich sichtbar.",renew:"Paket auswählen",
+warning7:"Dein Paket läuft bald ab.",warning3:"Dein Paket läuft in wenigen Tagen ab.",
+expiredTitle:"Dein Paket ist abgelaufen.",stripe:"Zahlungen werden in V6.1 über Stripe aktiviert."},
+fr:{active:"Actif",trialing:"Période d’essai",expired:"Expiré",canceled:"Résilié",past_due:"Paiement en attente",
+days:"jours restants",vehicleLimit:"Limite de véhicules",featured:"Mises en avant",used:"utilisées",
+package:"Forfait actuel",access:"Visibilité publique",visible:"Les annonces sont visibles",
+hidden:"Les annonces restent enregistrées mais ne sont plus publiques.",renew:"Choisir un forfait",
+warning7:"Votre forfait arrive bientôt à expiration.",warning3:"Votre forfait expire dans quelques jours.",
+expiredTitle:"Votre forfait est expiré.",stripe:"Les paiements seront activés avec Stripe dans V6.1."},
+en:{active:"Active",trialing:"Trial",expired:"Expired",canceled:"Canceled",past_due:"Payment due",
+days:"days remaining",vehicleLimit:"Vehicle limit",featured:"Featured listings",used:"used",
+package:"Current package",access:"Public visibility",visible:"Listings are publicly visible",
+hidden:"Listings remain saved but are not publicly visible.",renew:"Choose package",
+warning7:"Your package will expire soon.",warning3:"Your package expires in a few days.",
+expiredTitle:"Your package has expired.",stripe:"Payments will be activated through Stripe in V6.1."},
+lu:{active:"Aktiv",trialing:"Testphas",expired:"Ofgelaf",canceled:"Gekënnegt",past_due:"Bezuelung op",
+days:"Deeg iwwreg",vehicleLimit:"Gefierlimit",featured:"Hervirhiewungen",used:"benotzt",
+package:"Aktuelle Pak",access:"Ëffentlech Visibilitéit",visible:"D'Annoncë sinn ëffentlech sichtbar",
+hidden:"D'Annoncë bleiwen gespäichert, sinn awer net ëffentlech sichtbar.",renew:"Pak auswielen",
+warning7:"Däi Pak leeft geschwënn of.",warning3:"Däi Pak leeft an e puer Deeg of.",
+expiredTitle:"Däi Pak ass ofgelaf.",stripe:"Bezuelunge ginn an V6.1 iwwer Stripe aktivéiert."}
+};
+function v60T(k){return (V60_TEXT[currentLang]||V60_TEXT.de)[k]||k}
+function v60StatusLabel(status){return v60T(status)||status}
+
+async function v60LoadBusinessData(){
+  try{
+    const publicResult=await db.rpc("get_public_dealer_entitlements");
+    if(publicResult.error)throw publicResult.error;
+    window.v60Entitlements=new Map((publicResult.data||[]).map(row=>[Number(row.dealer_id),row]));
+
+    const vehiclesResult=await db.rpc("get_public_active_vehicles");
+    if(vehiclesResult.error)throw vehiclesResult.error;
+    window.v60PublicVehicles=vehiclesResult.data||[];
+
+    if(current?.id){
+      const own=await db.rpc("get_my_subscription");
+      if(!own.error && own.data?.length){
+        window.v60OwnSubscription=own.data[0];
+      }
+    }
+    window.v60Ready=true;
+    [50,220,500].forEach(ms=>setTimeout(v60Refresh,ms));
+  }catch(error){
+    console.warn("V6.0 business system:",error?.message||error);
+    window.v60Ready=false;
+  }
+}
+
+function v60Entitlement(dealerId){
+  return window.v60Entitlements.get(Number(dealerId))||null;
+}
+
+v586DealerHasActiveAccess=function(dealerId){
+  const e=v60Entitlement(dealerId);
+  if(!window.v60Ready)return true;
+  return !!e?.is_active;
+};
+
+v586GetPlanForDealer=function(dealerId){
+  const e=v60Entitlement(dealerId);
+  const map={trial:"free",pack_5:"starter",pack_10:"pro",pack_20:"business",pack_50:"unlimited",partner_100:"partner"};
+  return map[e?.plan_code]||"free";
+};
+
+v586VisibleVehicles=function(){
+  if(window.v60Ready)return window.v60PublicVehicles.slice();
+  return Array.isArray(vehicles)?vehicles.slice():[];
+};
+
+v586TrialInfo=function(dealerId){
+  const e=v60Entitlement(dealerId);
+  if(!e)return {remainingDays:0,expired:window.v60Ready};
+  return {
+    remainingDays:Number(e.remaining_days||0),
+    expired:!e.is_active,
+    end:e.access_ends_at?new Date(e.access_ends_at).getTime():null
+  };
+};
+
+function v60RenderBusinessPanel(){
+  const dealer=document.getElementById("dealer");
+  if(!dealer||dealer.classList.contains("hidden")||!current?.id)return;
+  const wrap=dealer.querySelector(".wrap.dashboard");if(!wrap)return;
+
+  let box=wrap.querySelector(".v60-business-banner");
+  if(!box){
+    box=document.createElement("section");
+    box.className="v60-business-banner";
+    const planCard=wrap.querySelector(".planStatusCard");
+    (planCard||wrap.firstElementChild)?.insertAdjacentElement("afterend",box);
+  }
+
+  const s=window.v60OwnSubscription||v60Entitlement(current.id);
+  if(!s){
+    box.innerHTML=`<div class="muted">Paketdaten werden geladen …</div>`;
+    return;
+  }
+
+  const planName=s.plan_name_de
+    ? (currentLang==="fr"?s.plan_name_fr:currentLang==="en"?s.plan_name_en:currentLang==="lu"?s.plan_name_lu:s.plan_name_de)
+    : (s.plan_code||"");
+  const limit=Number(s.vehicle_limit||0);
+  const featuredLimit=Number(s.featured_limit||0);
+  const featuredUsed=Number(s.featured_used||0);
+  const vehicleCount=(vehicles||[]).filter(v=>Number(v.dealer_id)===Number(current.id)).length;
+  const status=s.status||"expired";
+  const active=Boolean(s.is_active??["trialing","active"].includes(status));
+  const days=Number(s.remaining_days||0);
+  const featuredPercent=featuredLimit?Math.min(100,featuredUsed/featuredLimit*100):0;
+
+  let warning="";
+  if(!active){
+    warning=`<div class="v60-warning danger"><strong>${v60T("expiredTitle")}</strong><div style="margin-top:5px">${v60T("hidden")}</div><button class="btn primary" style="margin-top:10px" onclick="openPackageModalV57()">${v60T("renew")}</button></div>`;
+  }else if(days<=3){
+    warning=`<div class="v60-warning danger">${v60T("warning3")} · ${days} ${v60T("days")}</div>`;
+  }else if(days<=7){
+    warning=`<div class="v60-warning">${v60T("warning7")} · ${days} ${v60T("days")}</div>`;
+  }
+
+  box.innerHTML=`
+    <div class="row space">
+      <div><div class="muted">${v60T("package")}</div><strong style="font-size:24px">${planName}</strong></div>
+      <span class="v60-status-pill ${status}">${v60StatusLabel(status)}</span>
+    </div>
+    <div class="v60-business-grid">
+      <div class="v60-kpi"><span>${v60T("days")}</span><strong>${days}</strong></div>
+      <div class="v60-kpi"><span>${v60T("vehicleLimit")}</span><strong>${vehicleCount} / ${limit}</strong></div>
+      <div class="v60-kpi"><span>${v60T("featured")}</span><strong>${featuredUsed} / ${featuredLimit}</strong><div class="v60-featured-meter"><span style="width:${featuredPercent}%"></span></div></div>
+      <div class="v60-kpi"><span>${v60T("access")}</span><strong style="font-size:14px">${active?v60T("visible"):v60T("hidden")}</strong></div>
+    </div>
+    ${warning}
+    <div class="muted" style="margin-top:12px">${v60T("stripe")}</div>`;
+}
+
+function v60Refresh(){
+  try{renderPublic()}catch(_){}
+  try{v60RenderBusinessPanel()}catch(_){}
+  try{v59Refresh()}catch(_){}
+}
+
+const v60LoadBase=load;
+load=async function(){
+  const result=await v60LoadBase();
+  await v60LoadBusinessData();
+  return result;
+};
+
+const v60RenderDealerBase=renderDealer;
+renderDealer=function(){
+  const r=v60RenderDealerBase();
+  [80,250,600].forEach(ms=>setTimeout(v60RenderBusinessPanel,ms));
+  return r;
+};
+
+const v60LangBase=switchLanguageStable;
+switchLanguageStable=function(lang){
+  const r=v60LangBase(lang);
+  [80,250,600].forEach(ms=>setTimeout(v60RenderBusinessPanel,ms));
+  return r;
+};
+
+window.addEventListener("load",()=>[250,900].forEach(ms=>setTimeout(v60LoadBusinessData,ms)));
 </script>
 
 </body></html>
