@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V6.3.4 – Kundenanfragen Fix</title>
+<title>AutoRadar.lu V6.4 – Stripe & automatische Paketaktivierung</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -1095,6 +1095,15 @@ footer{background:rgba(4,7,13,.55)}
 .v63-status-pill.closed{background:rgba(225,69,84,.13);color:#ffc4cb}
 .v63-inquiry-empty{padding:18px;border-radius:15px;background:#0b1523;color:#8393a8}
 @media(max-width:650px){.v63-form-grid{grid-template-columns:1fr}.v63-form-grid .full{grid-column:auto}}
+</style>
+
+
+<style id="autoradar-v64-stripe">
+.v64-checkout-status{margin-top:12px;padding:11px 13px;border-radius:13px;background:#0b1523;border:1px solid rgba(148,163,184,.13);font-size:11px}
+.v64-checkout-status.success{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.24);color:#c9f9e8}
+.v64-checkout-status.error{background:rgba(225,69,84,.1);border-color:rgba(225,69,84,.24);color:#ffc4cb}
+.v64-stripe-note{margin-top:12px;font-size:10px;color:#8494aa}
+.v64-pay-button[disabled]{opacity:.55;cursor:not-allowed}
 </style>
 
 </head>
@@ -7614,6 +7623,132 @@ v63RenderDealerInquiries = async function(){
 };
 
 setTimeout(v63RenderDealerInquiries,600);
+</script>
+
+
+<script id="autoradar-v64-stripe">
+const V64_TEXT={
+de:{pay:"Sicher mit Stripe bezahlen",loading:"Stripe Checkout wird geöffnet …",notReady:"Dieses Paket ist noch nicht mit Stripe verbunden.",error:"Checkout konnte nicht gestartet werden.",success:"Zahlung erfolgreich. Dein Paket wird automatisch aktiviert.",cancelled:"Zahlung wurde abgebrochen.",login:"Bitte zuerst mit deinem echten Händlerkonto anmelden.",note:"Die Aktivierung erfolgt sicher über einen signierten Stripe-Webhook."},
+fr:{pay:"Payer en toute sécurité avec Stripe",loading:"Ouverture de Stripe Checkout …",notReady:"Ce forfait n’est pas encore connecté à Stripe.",error:"Le paiement n’a pas pu être démarré.",success:"Paiement réussi. Votre forfait sera activé automatiquement.",cancelled:"Le paiement a été annulé.",login:"Connectez-vous d’abord avec votre compte vendeur.",note:"L’activation est effectuée via un webhook Stripe signé."},
+en:{pay:"Pay securely with Stripe",loading:"Opening Stripe Checkout …",notReady:"This package is not connected to Stripe yet.",error:"Checkout could not be started.",success:"Payment successful. Your package will be activated automatically.",cancelled:"Payment was cancelled.",login:"Please sign in with your real dealer account first.",note:"Activation is handled through a signed Stripe webhook."},
+lu:{pay:"Sécher mat Stripe bezuelen",loading:"Stripe Checkout gëtt opgemaach …",notReady:"Dëse Pak ass nach net mat Stripe verbonnen.",error:"Checkout konnt net gestart ginn.",success:"Bezuelung erfollegräich. Däi Pak gëtt automatesch aktivéiert.",cancelled:"Bezuelung gouf ofgebrach.",login:"Mell dech fir d’éischt mat dengem richtegen Händlerkonto un.",note:"D'Aktivéierung leeft iwwer e signéierte Stripe-Webhook."}
+};
+function v64T(k){return(V64_TEXT[currentLang]||V64_TEXT.de)[k]||k}
+
+async function v64StartCheckout(planCode,button){
+  const status=document.getElementById("v64CheckoutStatus");
+  const session=await db.auth.getSession();
+  if(!session.data?.session){
+    if(status){status.className="v64-checkout-status error";status.textContent=v64T("login")}
+    return;
+  }
+
+  if(button){button.disabled=true;button.textContent=v64T("loading")}
+  if(status){status.className="v64-checkout-status";status.textContent=v64T("loading")}
+
+  try{
+    const base=window.location.origin+window.location.pathname;
+    const result=await db.functions.invoke("create-checkout-session",{
+      body:{
+        plan_code:planCode,
+        success_url:base,
+        cancel_url:base
+      }
+    });
+
+    if(result.error)throw result.error;
+    if(!result.data?.url)throw new Error(result.data?.error||v64T("error"));
+    window.location.assign(result.data.url);
+  }catch(error){
+    console.error("Stripe checkout:",error);
+    if(status){
+      status.className="v64-checkout-status error";
+      status.textContent=String(error?.message||v64T("error"));
+    }
+    if(button){button.disabled=false;button.textContent=v64T("pay")}
+  }
+}
+
+function v64EnhancePackageModal(){
+  const modal=document.getElementById("promotionModal");
+  if(!modal||modal.classList.contains("hidden"))return;
+
+  let status=modal.querySelector("#v64CheckoutStatus");
+  if(!status){
+    status=document.createElement("div");
+    status.id="v64CheckoutStatus";
+    status.className="v64-checkout-status";
+    status.textContent=v64T("note");
+    const content=modal.querySelector(".modal,.modalCard,.promotionModalContent")||modal.firstElementChild;
+    content?.appendChild(status);
+  }
+
+  const planMap=[
+    ["pack_5",["99","5"]],
+    ["pack_10",["179","10"]],
+    ["pack_20",["299","20"]],
+    ["pack_50",["499","50"]],
+    ["partner_100",["899","100"]]
+  ];
+
+  const cards=[...modal.querySelectorAll(".packageCard,.planCard,.v57-package-card,.pricingCard")];
+
+  cards.forEach(card=>{
+    const text=card.textContent||"";
+    const match=planMap.find(([,tokens])=>tokens.every(token=>text.includes(token)));
+    if(!match)return;
+    const planCode=match[0];
+
+    let button=card.querySelector(".v64-pay-button");
+    if(!button){
+      button=document.createElement("button");
+      button.className="btn primary v64-pay-button";
+      button.type="button";
+      button.style.marginTop="10px";
+      button.textContent=v64T("pay");
+      button.onclick=()=>v64StartCheckout(planCode,button);
+      card.appendChild(button);
+    }else{
+      button.textContent=v64T("pay");
+    }
+  });
+}
+
+function v64HandleReturn(){
+  const params=new URLSearchParams(location.search);
+  const checkout=params.get("checkout");
+  if(!checkout)return;
+  const message=checkout==="success"?v64T("success"):v64T("cancelled");
+  setTimeout(()=>alert(message),300);
+  params.delete("checkout");
+  params.delete("session_id");
+  const clean=location.pathname+(params.toString()?`?${params}`:"")+location.hash;
+  history.replaceState({},document.title,clean);
+  if(checkout==="success"&&typeof v60LoadBusinessData==="function"){
+    [500,1800,4000].forEach(ms=>setTimeout(v60LoadBusinessData,ms));
+  }
+}
+
+const v64PackageBase=typeof openPackageModalV57==="function"?openPackageModalV57:null;
+if(v64PackageBase){
+  openPackageModalV57=function(){
+    const result=v64PackageBase();
+    [80,250,600].forEach(ms=>setTimeout(v64EnhancePackageModal,ms));
+    return result;
+  };
+}
+
+const v64LangBase=switchLanguageStable;
+switchLanguageStable=function(lang){
+  const result=v64LangBase(lang);
+  [100,300].forEach(ms=>setTimeout(v64EnhancePackageModal,ms));
+  return result;
+};
+
+window.addEventListener("load",()=>{
+  v64HandleReturn();
+  [350,1000].forEach(ms=>setTimeout(v64EnhancePackageModal,ms));
+});
 </script>
 
 </body></html>
