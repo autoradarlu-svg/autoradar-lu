@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V6.5.1 – Dashboard-Menü Fix</title>
+<title>AutoRadar.lu V6.5.5 – Dashboard Paketübersicht</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -8148,6 +8148,244 @@ window.addEventListener("load",()=>{
   }
 
   scheduleMenuFix651();
+})();
+</script>
+
+
+<style id="autoradar-v655-package-dashboard-style">
+.v655-package-dashboard{
+  margin:18px 0 22px;
+  padding:20px;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 92% 8%,rgba(255,53,70,.15),transparent 32%),
+    linear-gradient(145deg,rgba(20,35,58,.98),rgba(8,15,26,.98));
+  border:1px solid rgba(148,163,184,.18);
+  box-shadow:0 18px 45px rgba(0,0,0,.22);
+}
+.v655-package-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.v655-package-name{font-size:28px;font-weight:950;margin-top:4px;letter-spacing:-.7px}
+.v655-status{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.6px;border:1px solid rgba(255,255,255,.12)}
+.v655-status.active,.v655-status.trialing{background:rgba(31,195,120,.14);color:#79f0b5}
+.v655-status.past_due{background:rgba(255,177,48,.14);color:#ffd37a}
+.v655-status.expired,.v655-status.canceled{background:rgba(255,53,70,.14);color:#ff9aa4}
+.v655-package-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.v655-package-card{padding:16px;border-radius:17px;background:rgba(7,13,23,.66);border:1px solid rgba(148,163,184,.14)}
+.v655-package-card span{display:block;color:#91a0b7;font-size:12px;margin-bottom:7px}
+.v655-package-card strong{font-size:22px}
+.v655-meter{height:8px;margin-top:12px;background:#07101d;border-radius:999px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.v655-meter>i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#ff3546,#ff7b86)}
+.v655-package-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px}
+.v655-expiry{color:#b5c0d2;font-size:13px}
+.v655-package-error{padding:14px;border-radius:14px;background:rgba(255,53,70,.1);border:1px solid rgba(255,53,70,.25);color:#ffb4bb}
+@media(max-width:900px){.v655-package-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.v655-package-grid{grid-template-columns:1fr}.v655-package-name{font-size:23px}}
+</style>
+
+<script id="autoradar-v655-package-dashboard">
+(function(){
+  const TEXT={
+    de:{eyebrow:"DEIN HÄNDLERPAKET",loading:"Paketdaten werden geladen …",plan:"Aktuelles Paket",
+      vehicles:"Fahrzeuge",free:"freie Plätze",boosts:"Hervorhebungen",remaining:"verfügbar",
+      expires:"Nächste Verlängerung",noExpiry:"Kein Ablaufdatum",days:"Tage übrig",
+      status:"Status",active:"Aktiv",trialing:"Testphase",past_due:"Zahlung offen",
+      expired:"Abgelaufen",canceled:"Gekündigt",manage:"Paket ändern",error:"Paketdaten konnten nicht geladen werden."},
+    fr:{eyebrow:"VOTRE FORFAIT PRO",loading:"Chargement du forfait …",plan:"Forfait actuel",
+      vehicles:"Véhicules",free:"places libres",boosts:"Mises en avant",remaining:"disponibles",
+      expires:"Prochain renouvellement",noExpiry:"Aucune date d’expiration",days:"jours restants",
+      status:"Statut",active:"Actif",trialing:"Essai",past_due:"Paiement en attente",
+      expired:"Expiré",canceled:"Résilié",manage:"Changer de forfait",error:"Impossible de charger le forfait."},
+    en:{eyebrow:"YOUR DEALER PACKAGE",loading:"Loading package data …",plan:"Current package",
+      vehicles:"Vehicles",free:"free slots",boosts:"Featured listings",remaining:"available",
+      expires:"Next renewal",noExpiry:"No expiry date",days:"days remaining",
+      status:"Status",active:"Active",trialing:"Trial",past_due:"Payment due",
+      expired:"Expired",canceled:"Canceled",manage:"Change package",error:"Package data could not be loaded."},
+    lu:{eyebrow:"DÄIN HÄNDLERPAK",loading:"Pakdaten gi gelueden …",plan:"Aktuelle Pak",
+      vehicles:"Gefierer",free:"fräi Plazen",boosts:"Hervirhiewungen",remaining:"disponibel",
+      expires:"Nächst Verlängerung",noExpiry:"Keen Oflafdatum",days:"Deeg iwwreg",
+      status:"Status",active:"Aktiv",trialing:"Testphas",past_due:"Bezuelung op",
+      expired:"Ofgelaf",canceled:"Gekënnegt",manage:"Pak änneren",error:"Pakdaten konnten net geluede ginn."}
+  };
+
+  window.v655PackageUsage=null;
+  window.v655PackageLoading=false;
+
+  function lang(){
+    return window.currentLang || localStorage.getItem("autoradar_language") || "de";
+  }
+  function tx(key){
+    const L=TEXT[lang()]||TEXT.de;
+    return L[key]||TEXT.de[key]||key;
+  }
+  function esc(value){
+    return String(value??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
+  }
+  function fmtDate(value){
+    if(!value)return tx("noExpiry");
+    const d=new Date(value);
+    if(Number.isNaN(d.getTime()))return tx("noExpiry");
+    return new Intl.DateTimeFormat(
+      lang()==="fr"?"fr-FR":lang()==="en"?"en-GB":lang()==="lu"?"lb-LU":"de-DE",
+      {day:"2-digit",month:"2-digit",year:"numeric"}
+    ).format(d);
+  }
+  function daysLeft(value){
+    if(!value)return null;
+    const ms=new Date(value).getTime()-Date.now();
+    return Math.max(0,Math.ceil(ms/86400000));
+  }
+  function statusLabel(status){
+    return tx(status)||status;
+  }
+  function ensureBox(){
+    const wrap=document.querySelector("#dealer .wrap.dashboard");
+    if(!wrap)return null;
+    let box=wrap.querySelector(".v655-package-dashboard");
+    if(!box){
+      box=document.createElement("section");
+      box.className="v655-package-dashboard";
+      const stats=wrap.querySelector(".stats");
+      if(stats)stats.insertAdjacentElement("afterend",box);
+      else wrap.prepend(box);
+    }
+    return box;
+  }
+
+  window.v655RenderPackageDashboard=function(){
+    const box=ensureBox();
+    if(!box||!window.current)return;
+
+    const d=window.v655PackageUsage;
+    if(window.v655PackageLoading&&!d){
+      box.innerHTML=`<div class="muted">${esc(tx("loading"))}</div>`;
+      return;
+    }
+    if(!d){
+      box.innerHTML=`<div class="v655-package-error">${esc(tx("error"))}</div>`;
+      return;
+    }
+
+    const used=Number(d.vehicles_used||0);
+    const limit=Number(d.vehicle_limit||0);
+    const free=Number(d.vehicles_free??Math.max(0,limit-used));
+    const boostUsed=Number(d.featured_used||0);
+    const boostLimit=Number(d.featured_limit||0);
+    const boostFree=Number(d.featured_free??Math.max(0,boostLimit-boostUsed));
+    const vehiclePercent=limit?Math.min(100,(used/limit)*100):0;
+    const boostPercent=boostLimit?Math.min(100,(boostUsed/boostLimit)*100):0;
+    const status=String(d.subscription_status||"trialing");
+    const remainingDays=daysLeft(d.current_period_end);
+
+    box.innerHTML=`
+      <div class="v655-package-head">
+        <div>
+          <div class="dealerEyebrow">${esc(tx("eyebrow"))}</div>
+          <div class="v655-package-name">${esc(d.plan_name||d.plan_code||tx("plan"))}</div>
+        </div>
+        <span class="v655-status ${esc(status)}">● ${esc(statusLabel(status))}</span>
+      </div>
+
+      <div class="v655-package-grid">
+        <div class="v655-package-card">
+          <span>${esc(tx("vehicles"))}</span>
+          <strong>${used} / ${limit}</strong>
+          <div class="v655-meter"><i style="width:${vehiclePercent}%"></i></div>
+        </div>
+        <div class="v655-package-card">
+          <span>${esc(tx("free"))}</span>
+          <strong>${free}</strong>
+        </div>
+        <div class="v655-package-card">
+          <span>${esc(tx("boosts"))}</span>
+          <strong>${boostFree} / ${boostLimit}</strong>
+          <div class="v655-meter"><i style="width:${boostPercent}%"></i></div>
+        </div>
+        <div class="v655-package-card">
+          <span>${esc(tx("days"))}</span>
+          <strong>${remainingDays===null?"–":remainingDays}</strong>
+        </div>
+      </div>
+
+      <div class="v655-package-footer">
+        <div class="v655-expiry">
+          ${esc(tx("expires"))}: <b>${esc(fmtDate(d.current_period_end))}</b>
+          ${d.cancel_at_period_end?` · ${esc(statusLabel("canceled"))}`:""}
+        </div>
+        <button class="btn primary" type="button"
+          onclick="typeof openPackageModalV57==='function'?openPackageModalV57():null">
+          ${esc(tx("manage"))}
+        </button>
+      </div>`;
+  };
+
+  window.v655LoadPackageUsage=async function(){
+    if(!window.current?.id||!window.db)return;
+    window.v655PackageLoading=true;
+    window.v655RenderPackageDashboard();
+    try{
+      const result=await db.rpc("get_my_package_usage");
+      if(result.error)throw result.error;
+      window.v655PackageUsage=Array.isArray(result.data)?(result.data[0]||null):result.data;
+      // Bestehende Dashboard-Komponenten ebenfalls mit den echten Daten versorgen.
+      if(window.v655PackageUsage){
+        const p=window.v655PackageUsage;
+        window.v60OwnSubscription={
+          ...(window.v60OwnSubscription||{}),
+          plan_code:p.plan_code,
+          plan_name_de:p.plan_name,
+          plan_name_fr:p.plan_name,
+          plan_name_en:p.plan_name,
+          plan_name_lu:p.plan_name,
+          status:p.subscription_status,
+          vehicle_limit:p.vehicle_limit,
+          featured_limit:p.featured_limit,
+          featured_used:p.featured_used,
+          current_period_end:p.current_period_end,
+          remaining_days:daysLeft(p.current_period_end)??0,
+          is_active:["active","trialing"].includes(p.subscription_status)
+        };
+      }
+    }catch(error){
+      console.warn("AutoRadar package dashboard:",error?.message||error);
+      window.v655PackageUsage=null;
+    }finally{
+      window.v655PackageLoading=false;
+      window.v655RenderPackageDashboard();
+      try{if(typeof v62Render==="function")v62Render()}catch(_){}
+      try{if(typeof v60RenderBusinessPanel==="function")v60RenderBusinessPanel()}catch(_){}
+    }
+  };
+
+  const oldShowDealer=window.showDealer;
+  if(typeof oldShowDealer==="function"){
+    window.showDealer=function(){
+      const result=oldShowDealer.apply(this,arguments);
+      setTimeout(window.v655LoadPackageUsage,120);
+      return result;
+    };
+  }
+
+  const oldRenderDealer=window.renderDealer;
+  if(typeof oldRenderDealer==="function"){
+    window.renderDealer=function(){
+      const result=oldRenderDealer.apply(this,arguments);
+      setTimeout(window.v655RenderPackageDashboard,30);
+      return result;
+    };
+  }
+
+  document.addEventListener("click",(event)=>{
+    const target=event.target;
+    if(target instanceof Element && target.closest("[data-lang-btn],[data-lang],.lang")){
+      setTimeout(window.v655RenderPackageDashboard,100);
+    }
+  });
+
+  window.addEventListener("load",()=>{
+    setTimeout(()=>{
+      if(window.current?.id)window.v655LoadPackageUsage();
+    },500);
+  });
 })();
 </script>
 
