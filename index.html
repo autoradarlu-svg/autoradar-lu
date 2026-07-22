@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AutoRadar.lu V6.5.6 – Ablaufdatum Tageszähler Fix</title>
+<title>AutoRadar.lu V6.6 – Fahrzeug-Boosts</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--b:#090e17;--p:#121b29;--p2:#182538;--t:#f7f9fc;--m:#9eabc0;--l:#2a3a52;--a:#ff3737;--g:#159d68;--y:#a26b10;--r:#852424}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#17253b 0,transparent 35%),var(--b);color:var(--t)}button,input,select,textarea{font:inherit}.wrap{width:min(1220px,calc(100% - 28px));margin:auto}header{position:sticky;top:0;z-index:20;background:#090e17ee;border-bottom:1px solid var(--l);backdrop-filter:blur(12px)}nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:950}.brand span{color:var(--a)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--l);border-radius:12px;padding:11px 14px;background:var(--p2);color:#fff;font-weight:850;cursor:pointer;text-decoration:none}.primary{background:linear-gradient(135deg,#ff4b4b,#df1e2a);border-color:#ff6666}.danger{background:var(--r)}.success{background:var(--g)}.hero{padding:58px 0 25px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:0 0 14px;letter-spacing:-2px}.muted{color:var(--m)}.searchbox,.panel,.side,.card,.stat{background:#111a28ec;border:1px solid var(--l);border-radius:20px}.searchbox{padding:16px;margin-top:24px}.search-main{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.advanced{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.control{width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:#0c1420;color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;padding:24px 0 60px}.card{overflow:hidden}.photo{height:215px;background:#1e293b center/cover no-repeat;position:relative}.badge,.status{position:absolute;top:12px;padding:7px 10px;border-radius:9px;font-size:11px;font-weight:900;background:#000c}.badge{left:12px}.status{right:12px;background:var(--g)}.status.reserviert{background:var(--y)}.cardbody{padding:16px}.price{font-size:25px;font-weight:950}.title{font-size:20px;font-weight:950;margin:6px 0}.meta{font-size:13px;color:var(--m);line-height:1.7}.hidden{display:none!important}.overlay{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:15px}.modal{width:min(980px,100%);max-height:94vh;overflow:auto;background:var(--p);border:1px solid var(--l);border-radius:22px;padding:20px}.small{max-width:480px}.space{justify-content:space-between}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:block;color:var(--m);font-size:12px;font-weight:850;margin-bottom:6px}.dashboard{padding:34px 0 60px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:15px}.stat strong{display:block;font-size:25px;margin-top:6px}.dashgrid{display:grid;grid-template-columns:230px 1fr;gap:18px}.side,.panel{padding:16px}.side button{width:100%;text-align:left;margin-bottom:8px}.notice{padding:13px;border-radius:13px;border:1px solid #8e6b1f;background:#2d2412;color:#ffe2a3;margin:14px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--l);text-align:left;font-size:13px}th{color:var(--m)}.preview{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.preview img{width:100%;height:90px;object-fit:cover;border-radius:10px}.logo{width:95px;height:95px;border-radius:16px;background:#1e293b center/cover no-repeat}.profile{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:center}.loader{text-align:center;padding:40px;color:var(--m)}footer{border-top:1px solid var(--l);padding:25px 0;color:var(--m);font-size:12px}@media(max-width:950px){.search-main,.advanced{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}}@media(max-width:650px){nav{height:auto;padding:14px 0}.search-main,.advanced,.grid,.formgrid,.dashgrid,.stats{grid-template-columns:1fr}.photo{height:235px}.preview{grid-template-columns:repeat(2,1fr)}}
@@ -1106,6 +1106,16 @@ footer{background:rgba(4,7,13,.55)}
 .v64-pay-button[disabled]{opacity:.55;cursor:not-allowed}
 </style>
 
+<style id="autoradar-v66-boosts">
+.v66-boost-panel{margin:18px 0;padding:20px;border-radius:22px;background:linear-gradient(145deg,#111e32,#09131f);border:1px solid rgba(148,163,184,.16)}
+.v66-boost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.v66-boost-card{padding:16px;border-radius:17px;background:#0b1523;border:1px solid rgba(247,198,75,.2)}
+.v66-boost-card strong,.v66-boost-card span{display:block}.v66-boost-card .price{font-size:26px;margin:8px 0}.v66-boost-card button{width:100%;margin-top:12px}
+.v66-active-list{display:grid;gap:10px;margin-top:14px}.v66-active-item{display:flex;justify-content:space-between;gap:12px;padding:12px;border-radius:14px;background:#0b1523;border:1px solid rgba(148,163,184,.12)}
+.v66-boosted{border-color:rgba(247,198,75,.65)!important;box-shadow:0 0 0 1px rgba(247,198,75,.25),0 18px 35px rgba(0,0,0,.24)!important;position:relative}
+.v66-boosted:before{content:"TOP ANGEBOT";position:absolute;z-index:3;top:10px;left:10px;padding:6px 8px;border-radius:999px;background:linear-gradient(135deg,#f7c64b,#f08a24);color:#17130a;font-size:9px;font-weight:950}
+@media(max-width:800px){.v66-boost-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header><div class="wrap"><nav><div class="brand">Auto<span>Radar</span>.lu</div><div class="row">
@@ -8527,4 +8537,88 @@ window.addEventListener("load",()=>{
 })();
 </script>
 
+<script id="autoradar-v66-boosts-js">
+const V66_TEXT={
+de:{title:"Fahrzeug hervorheben",sub:"Mehr Sichtbarkeit für dein Inserat",choose:"Fahrzeug auswählen",buy:"Boost kaufen",active:"Aktive Boosts",none:"Keine aktiven Boosts",days:"Tage",success:"Boost erfolgreich gekauft und aktiviert.",cancel:"Boost-Zahlung abgebrochen.",login:"Bitte zuerst anmelden.",error:"Boost konnte nicht gestartet werden."},
+fr:{title:"Mettre un véhicule en avant",sub:"Plus de visibilité pour votre annonce",choose:"Choisir un véhicule",buy:"Acheter le boost",active:"Boosts actifs",none:"Aucun boost actif",days:"jours",success:"Boost acheté et activé.",cancel:"Paiement du boost annulé.",login:"Connectez-vous d’abord.",error:"Le boost n’a pas pu être lancé."},
+en:{title:"Boost a vehicle",sub:"More visibility for your listing",choose:"Choose vehicle",buy:"Buy boost",active:"Active boosts",none:"No active boosts",days:"days",success:"Boost purchased and activated.",cancel:"Boost payment cancelled.",login:"Please sign in first.",error:"Boost could not be started."},
+lu:{title:"Gefier ervirhiewen",sub:"Méi Visibilitéit fir deng Annonce",choose:"Gefier auswielen",buy:"Boost kafen",active:"Aktiv Boosts",none:"Keng aktiv Boosts",days:"Deeg",success:"Boost kaaft an aktivéiert.",cancel:"Boost-Bezuelung ofgebrach.",login:"Mell dech fir d’éischt un.",error:"Boost konnt net gestart ginn."}
+};
+function v66T(k){return(V66_TEXT[currentLang]||V66_TEXT.de)[k]||k}
+window.v66BoostPlans=[];window.v66ActiveBoosts=[];window.v66BoostedIds=new Set();
+
+async function v66LoadBoostData(){
+  try{
+    const plans=await db.rpc("get_public_boost_plans");
+    const active=await db.rpc("get_active_boosted_vehicle_ids");
+    const mine=current?.id?await db.rpc("get_my_boosts"):{data:[]};
+    if(!plans.error)window.v66BoostPlans=plans.data||[];
+    if(!active.error)window.v66BoostedIds=new Set((active.data||[]).map(x=>Number(x.vehicle_id)));
+    if(!mine.error)window.v66ActiveBoosts=(mine.data||[]).filter(x=>x.status==="active");
+    v66RenderBoostCenter();v66DecorateVehicles();
+  }catch(e){console.warn("V6.6 boost data",e)}
+}
+
+async function v66StartBoost(vehicleId,boostCode,button){
+  const session=(await db.auth.getSession()).data?.session;
+  if(!session)return alert(v66T("login"));
+  const old=button?.textContent;if(button){button.disabled=true;button.textContent="…"}
+  try{
+    const base=location.origin+location.pathname;
+    const result=await db.functions.invoke("create-boost-checkout",{
+      body:{vehicle_id:Number(vehicleId),boost_code:boostCode,success_url:base,cancel_url:base},
+      headers:{Authorization:`Bearer ${session.access_token}`}
+    });
+    if(result.error)throw result.error;
+    if(!result.data?.url)throw new Error(result.data?.error||v66T("error"));
+    location.assign(result.data.url);
+  }catch(e){
+    alert(`${v66T("error")} ${e?.message||""}`);
+    if(button){button.disabled=false;button.textContent=old||v66T("buy")}
+  }
+}
+
+function v66RenderBoostCenter(){
+  const dealer=document.getElementById("dealer");
+  if(!dealer||dealer.classList.contains("hidden")||!current)return;
+  const wrap=dealer.querySelector(".wrap.dashboard");if(!wrap)return;
+  let box=wrap.querySelector(".v66-boost-panel");
+  if(!box){box=document.createElement("section");box.className="v66-boost-panel";wrap.appendChild(box)}
+  const mine=(vehicles||[]).filter(v=>Number(v.dealer_id)===Number(current.id)&&!["sold","verkauft"].includes(String(v.status||"").toLowerCase()));
+  const opts=mine.map(v=>`<option value="${v.id}">${v601Esc(v.brand)} ${v601Esc(v.model)}</option>`).join("");
+  box.innerHTML=`<div class="dealerEyebrow">AUTORADAR BOOST</div><h2>${v66T("title")}</h2><div class="muted">${v66T("sub")}</div>
+  <select id="v66Vehicle" class="control" style="margin-top:14px"><option value="">${v66T("choose")}</option>${opts}</select>
+  <div class="v66-boost-grid">${window.v66BoostPlans.map(p=>{const name=currentLang==="fr"?p.name_fr:currentLang==="en"?p.name_en:currentLang==="lu"?p.name_lu:p.name_de;return`<article class="v66-boost-card"><strong>${v601Esc(name)}</strong><span>${p.duration_days} ${v66T("days")}</span><div class="price">${Number(p.price_eur).toFixed(2).replace(".",",")} €</div><button class="btn primary" onclick="v66BuySelected('${p.code}',this)">${v66T("buy")}</button></article>`}).join("")}</div>
+  <h3 style="margin-top:20px">${v66T("active")}</h3><div class="v66-active-list">${window.v66ActiveBoosts.length?window.v66ActiveBoosts.map(x=>`<div class="v66-active-item"><strong>${v601Esc(x.vehicle_name)}</strong><span>${x.remaining_days} ${v66T("days")}</span></div>`).join(""):`<div class="muted">${v66T("none")}</div>`}</div>`;
+}
+
+function v66BuySelected(code,button){
+  const id=document.getElementById("v66Vehicle")?.value;
+  if(!id)return alert(v66T("choose"));
+  v66StartBoost(id,code,button);
+}
+
+function v66DecorateVehicles(){
+  document.querySelectorAll("[data-vehicle-id]").forEach(card=>{
+    const id=Number(card.getAttribute("data-vehicle-id"));
+    card.classList.toggle("v66-boosted",window.v66BoostedIds.has(id));
+  });
+}
+
+function v66HandleReturn(){
+  const q=new URLSearchParams(location.search);const state=q.get("boost");if(!state)return;
+  setTimeout(()=>alert(state==="success"?v66T("success"):v66T("cancel")),250);
+  q.delete("boost");q.delete("session_id");
+  history.replaceState({},document.title,location.pathname+(q.toString()?`?${q}`:"")+location.hash);
+  if(state==="success")[700,2200].forEach(ms=>setTimeout(v66LoadBoostData,ms));
+}
+
+const v66RenderPublicBase=renderPublic;
+renderPublic=function(){const r=v66RenderPublicBase();setTimeout(v66DecorateVehicles,120);return r}
+const v66DealerBase=renderDealer;
+renderDealer=function(){const r=v66DealerBase();setTimeout(v66RenderBoostCenter,150);return r}
+const v66LangBase=switchLanguageStable;
+switchLanguageStable=function(lang){const r=v66LangBase(lang);[100,300].forEach(ms=>setTimeout(v66RenderBoostCenter,ms));return r}
+window.addEventListener("load",()=>{v66HandleReturn();[400,1200].forEach(ms=>setTimeout(v66LoadBoostData,ms))});
+</script>
 </body></html>
